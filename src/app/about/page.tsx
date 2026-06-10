@@ -1,12 +1,20 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, FC } from 'react';
 import Image from 'next/image';
 
-const Counter = ({ end, duration = 2000, prefix = '', suffix = '', label }) => {
-    const [count, setCount] = useState(0);
-    const countRef = useRef(null);
-    const [hasStarted, setHasStarted] = useState(false);
+interface CounterProps {
+  end: number;
+  duration?: number;
+  prefix?: string;
+  suffix?: string;
+  label: string;
+}
+
+const Counter: FC<CounterProps> = ({ end, duration = 2000, prefix = '', suffix = '', label }) => {
+    const [count, setCount] = useState<number>(0);
+    const countRef = useRef<HTMLDivElement>(null);
+    const [hasStarted, setHasStarted] = useState<boolean>(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -225,7 +233,7 @@ export default function About() {
                                     borderLeft: '4px solid var(--primary-color)',
                                     paddingLeft: '1.5rem'
                                 }}>
-                                    "A <strong>NATLOU</strong> não nasceu apenas para vender ar condicionado. Nascemos com a missão de trazer conforto, segurança e durabilidade para as famílias e empresas de Angola."
+                                    "A <strong>NATLOU</strong> não nasceu apenas para vender ar condicionado. Nascemos com a missão de trazer conforto, segurança e durabilidade para as famílias angolanas."
                                 </p>
 
                                 <p className="reveal delay-300" style={{
@@ -479,7 +487,7 @@ export default function About() {
                         <div className="reveal" style={{ flex: '1', minWidth: '320px', maxWidth: '600px' }}>
                             <div style={{ position: 'relative' }}>
                                 <svg width="60" height="60" viewBox="0 0 24 24" fill="var(--action-color)" style={{ opacity: 0.2, position: 'absolute', top: '-30px', left: '-20px' }}>
-                                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" />
+                                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V18C14.017 19.1046 13.1216 20 12.017 20H3C1.89543 20 1 19.1046 1 18V9C1 7.89543 1.89543 7 3 7H14.017V5C14.017 3.89543 14.9124 3 16.017 3H21.017C22.1216 3 23.017 3.89543 23.017 5V15C23.017 16.1046 22.1216 17 21.017 17H16.017C14.9124 17 14.017 16.1046 14.017 15V21Z"/>
                                 </svg>
 
                                 <h3 style={{
