@@ -1,17 +1,24 @@
 {
   "name": "site-natlou",
   "version": "1.0.0",
-  "description": "",
+  "description": "Site de climatização e vendas de ar condicionado - NATLOU",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "climatização",
+    "ar-condicionado",
+    "ac",
+    "natlou",
+    "angola"
+  ],
+  "author": "Cas Maravilha",
+  "license": "MIT",
   "dependencies": {
     "next": "^16.0.6",
     "react": "^19.2.0",
@@ -24,5 +31,9 @@
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.6",
     "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
