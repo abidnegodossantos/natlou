@@ -10,12 +10,27 @@
         {
             "src": "/icon-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
             "src": "/icon-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/favicon.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
+        }
+    ],
+    "categories": ["shopping", "utilities"],
+    "screenshots": [
+        {
+            "src": "/hero-banner-new.png",
+            "sizes": "540x720",
+            "form_factor": "narrow"
         }
     ]
 }
