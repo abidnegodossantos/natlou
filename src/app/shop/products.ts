@@ -32,8 +32,9 @@ export const products: Product[] = [
         shortDescription: 'Ideal para quartos pequenos. Silencioso.',
         description: 'Ideal para quartos pequenos e escritórios individuais. O Split Mural de 9.000 BTUs oferece conforto térmico com baixo consumo de energia.',
         badges: [
-            { text: 'Montagem Grátis', color: '#155724', bg: '#d4edda' }, // Green
-            { text: 'Entrega Grátis', color: '#004085', bg: '#cce5ff' } // Blue
+            { text: 'Montagem Grátis', color: '#155724', bg: '#d4edda' },
+            { text: 'Entrega Grátis', color: '#004085', bg: '#cce5ff' },
+            { text: 'Inverter Eco', color: '#004085', bg: '#e8f0fe' }
         ],
         image: '/ac-9000-btu.png',
         hoverImage: '/services-concept.jpg',
@@ -64,7 +65,8 @@ export const products: Product[] = [
         badges: [
             { text: 'Montagem Grátis', color: '#155724', bg: '#d4edda' },
             { text: 'Entrega Grátis', color: '#004085', bg: '#cce5ff' },
-            { text: 'Mais Vendido', color: '#856404', bg: '#fff3cd' }
+            { text: 'Mais Vendido', color: '#856404', bg: '#fff3cd' },
+            { text: 'Inverter - Classe A++', color: '#155724', bg: '#e8f5e9' }
         ],
         image: '/ac-12000-btu-v2.jpg',
         hoverImage: '/installation-team-v2.jpg',
@@ -94,7 +96,8 @@ export const products: Product[] = [
         description: 'Potência superior para ambientes amplos. Garante refrigeração rápida mesmo nos dias mais quentes. Perfeito para salas de estar e espaços abertos.',
         badges: [
             { text: 'Montagem Grátis', color: '#155724', bg: '#d4edda' },
-            { text: 'Entrega Grátis', color: '#004085', bg: '#cce5ff' }
+            { text: 'Entrega Grátis', color: '#004085', bg: '#cce5ff' },
+            { text: 'Inverter - Economia Pro', color: '#311b92', bg: '#ede7f6' }
         ],
         image: '/ac-18000-btu-v2.jpg',
         hoverImage: '/services-concept.jpg',
@@ -124,7 +127,8 @@ export const products: Product[] = [
         description: 'Design elegante para tecto falso. Distribuição de ar uniforme em 360 graus, perfeito para lojas e ambientes corporativos de médio porte.',
         badges: [
             { text: 'Montagem Incluída', color: '#155724', bg: '#d4edda' },
-            { text: 'Garantia Pro', color: '#004085', bg: '#cce5ff' }
+            { text: 'Garantia Pro', color: '#004085', bg: '#cce5ff' },
+            { text: 'Inverter Smart', color: '#0d47a1', bg: '#e3f2fd' }
         ],
         image: '/ac-cassette-v2.jpg',
         hoverImage: '/stock-infrastructure.jpg',

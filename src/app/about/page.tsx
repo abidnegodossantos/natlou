@@ -3,7 +3,15 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 
-const Counter = ({ end, duration = 2000, prefix = '', suffix = '', label }) => {
+interface CounterProps {
+    end: number;
+    duration?: number;
+    prefix?: string;
+    suffix?: string;
+    label: string;
+}
+
+const Counter = ({ end, duration = 2000, prefix = '', suffix = '', label }: CounterProps) => {
     const [count, setCount] = useState(0);
     const countRef = useRef(null);
     const [hasStarted, setHasStarted] = useState(false);

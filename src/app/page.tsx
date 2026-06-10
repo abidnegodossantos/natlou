@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import WaveDivider from '@/components/WaveDivider';
 import RevealOnScroll from '@/components/RevealOnScroll';
+import BtuCalculator from '@/components/BtuCalculator';
 
 export default function Home() {
     const images = [
@@ -129,6 +130,12 @@ export default function Home() {
                     backgroundColor: 'rgba(0, 40, 85, 0.6)', // Blue overlay
                     zIndex: 1
                 }}></div>
+
+                {/* Airflow Breeze Effects */}
+                <div className="airflow-wind-line" style={{ top: '20%', animationDelay: '0s' }}></div>
+                <div className="airflow-wind-line-2" style={{ top: '40%', animationDelay: '3s' }}></div>
+                <div className="airflow-wind-line" style={{ top: '65%', animationDelay: '6s', height: '3px' }}></div>
+                <div className="airflow-wind-line-2" style={{ top: '80%', animationDelay: '1.5s' }}></div>
 
                 {/* Content */}
                 <div className="container" style={{
@@ -309,6 +316,15 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* BTU Calculator Section */}
+            <section className="section" style={{ backgroundColor: '#ffffff', padding: '3rem 0' }}>
+                <div className="container">
+                    <RevealOnScroll>
+                        <BtuCalculator />
+                    </RevealOnScroll>
                 </div>
             </section>
 
