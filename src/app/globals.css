@@ -1,5 +1,30 @@
 @import './animations.css';
 
+/* ===== CRITICAL MOBILE RESET ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* BTU Calculator responsive grid */
+.btu-calc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .btu-calc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+
 /* ===== LIGHT MODE (DEFAULT) ===== */
 :root {
   /* Primary Brand Colors - Harmonious Blue Palette */

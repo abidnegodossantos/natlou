@@ -84,12 +84,7 @@ export default function BtuCalculator() {
                 Descubra a capacidade ideal de Ar Condicionado (BTU) necessária para climatizar o seu espaço de forma eficiente.
             </p>
 
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
-                gap: '2.5rem',
-                marginBottom: '2rem'
-            }}>
+            <div className="btu-calc-grid" style={{ marginBottom: '2rem' }}>
                 {/* Left Side: Inputs */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.8rem' }}>
                     {/* Area Slider */}

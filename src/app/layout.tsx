@@ -1,11 +1,18 @@
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Open_Sans, Montserrat } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans' });
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+};
 
 export const metadata: Metadata = {
     title: 'Natlou - Climatização e Vendas',
