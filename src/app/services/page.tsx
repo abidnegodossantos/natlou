@@ -4,7 +4,7 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 
 export default function Services() {
     return (
-        <div className="container section" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E6F3FF 100%)', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+        <div className="container section" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E6F3FF 100%)', minHeight: '100vh', position: 'relative', overflow: 'hidden', overflowX: 'hidden' }}>
             {/* Background Atmosphere Blobs */}
             <div style={{ position: 'absolute', top: '10%', left: '-15%', width: '600px', height: '600px', backgroundColor: 'rgba(0, 168, 232, 0.08)', borderRadius: '50%', filter: 'blur(100px)', zIndex: 0, pointerEvents: 'none' }}></div>
             <div style={{ position: 'absolute', top: '40%', right: '-15%', width: '500px', height: '500px', backgroundColor: 'rgba(0, 74, 173, 0.08)', borderRadius: '50%', filter: 'blur(120px)', zIndex: 0, pointerEvents: 'none' }}></div>
@@ -13,8 +13,9 @@ export default function Services() {
             <div style={{
                 position: 'relative',
                 height: '60vh',
-                minHeight: '500px',
+                minHeight: '400px',
                 width: '100vw',
+                maxWidth: '100vw',
                 marginLeft: 'calc(-50vw + 50%)', // Break out of container
                 marginBottom: '4rem',
                 overflow: 'hidden',
@@ -46,12 +47,12 @@ export default function Services() {
 
                 {/* Hero Content */}
                 <RevealOnScroll>
-                    <div style={{ padding: '0 2rem', maxWidth: '900px' }}>
+                    <div style={{ padding: '0 1.25rem', maxWidth: '900px', width: '100%', boxSizing: 'border-box' }}>
                         <h1 style={{
-                            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                            fontSize: 'clamp(1.6rem, 5vw, 4rem)',
                             fontWeight: '800',
-                            lineHeight: '1.1',
-                            marginBottom: '1.5rem',
+                            lineHeight: '1.2',
+                            marginBottom: '1.25rem',
                             textShadow: '0 4px 15px rgba(0,0,0,0.5)'
                         }}>
                             Especialistas em Climatização: Instalação, Manutenção e Reparação.
@@ -70,29 +71,35 @@ export default function Services() {
                         </p>
 
                         {/* CTA Button */}
-                        <a
-                            href="https://wa.me/244946776397?text=Olá, preciso de um Diagnóstico Técnico (3.000 Kz)."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn animate-ripple"
-                            style={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '1rem',
-                                backgroundColor: '#25D366',
-                                color: 'white',
-                                padding: '1rem 2.5rem',
-                                fontSize: '1.2rem',
-                                borderRadius: '50px',
-                                fontWeight: '700',
-                                textDecoration: 'none',
-                                boxShadow: '0 4px 25px rgba(37, 211, 102, 0.4)',
-                                border: '2px solid rgba(255,255,255,0.2)'
-                            }}
-                        >
-                            Pedir Diagnóstico (3.000 Kz)
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </a>
+                        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
+                            <a
+                                href="https://wa.me/244946776397?text=Olá, preciso de um Diagnóstico Técnico (3.000 Kz)."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn animate-ripple"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '0.75rem',
+                                    backgroundColor: '#25D366',
+                                    color: 'white',
+                                    padding: '0.9rem 2rem',
+                                    fontSize: 'clamp(0.95rem, 3.5vw, 1.2rem)',
+                                    borderRadius: '50px',
+                                    fontWeight: '700',
+                                    textDecoration: 'none',
+                                    boxShadow: '0 4px 25px rgba(37, 211, 102, 0.4)',
+                                    border: '2px solid rgba(255,255,255,0.2)',
+                                    width: '100%',
+                                    maxWidth: '360px',
+                                    whiteSpace: 'nowrap'
+                                }}
+                            >
+                                Pedir Diagnóstico (3.000 Kz)
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </a>
+                        </div>
                     </div>
                 </RevealOnScroll>
 
