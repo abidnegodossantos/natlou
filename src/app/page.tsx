@@ -26,183 +26,191 @@ export default function Home() {
     }, [images.length]);
 
     return (
-        <div>
-            {/* Mobile Hero Section (Stacked) */}
-            <section className="mobile-only section" style={{ padding: '0 0 2rem 0' }}>
-                <div style={{ position: 'relative' }}>
-                    <div style={{
-                        width: '100%',
-                        height: '50vh',
-                        position: 'relative',
-                        marginBottom: '2rem'
-                    }}>
-                        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                            <Image
-                                src="/ac-12000-btu.jpg"
-                                alt="Natlou AC"
-                                fill
-                                style={{
-                                    objectFit: 'cover',
-                                    boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-                                }}
-                                priority // Hero image should be priority
-                            />
-                        </div>
-                        {/* Optional Overlay for text visibility if needed, but we are stacking below */}
-                        <div style={{
-                            position: 'absolute', bottom: 0, left: 0, width: '100%', height: '50px',
-                            background: 'linear-gradient(to top, white, transparent)'
-                        }}></div>
-                    </div>
+    <div>
+      {/* Mobile Hero Section (Stacked) */}
+      <section className="mobile-only section" style={{ padding: '0 0 2rem 0' }} aria-label="Natlou - Ar Condicionado e Climatização">
+        <div style={{ position: 'relative' }}>
+          <div style={{
+            width: '100%',
+            height: '50vh',
+            position: 'relative',
+            marginBottom: '2rem'
+          }}>
+            <div style={{ 
+                position: 'relative', 
+                width: '100%', 
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'white'
+            }}>
+              <Image
+                src="/ac-12000-btu.jpg"
+                alt="Ar Condicionado Natlou - Mantenha sua casa fresca"
+                width={800}
+                height={600}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '100%',
+                  objectFit: 'contain'
+                }}
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
 
-                    <div className="container" style={{ textAlign: 'center', padding: '0 1.5rem' }}>
-                        <div className="typewriter-text" style={{ marginBottom: '1rem', justifyContent: 'center', display: 'flex' }}>
-                            <h1 style={{
-                                fontSize: '2.5rem', /* Min 24px requested, using larger */
-                                fontWeight: '900',
-                                color: 'var(--primary-color)',
-                                lineHeight: '1.2',
-                                display: 'flex',
-                                gap: '0.2rem'
-                            }}>
-                                {['N', 'A', 'T', 'L', 'O', 'U'].map((letter, i) => (
-                                    <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>{letter}</span>
-                                ))}
-                            </h1>
-                        </div>
+          <div className="container" style={{ textAlign: 'center', padding: '0 1.5rem' }}>
+            <div className="typewriter-text" style={{ marginBottom: '1rem', justifyContent: 'center', display: 'flex' }}>
+              <h1 style={{
+                fontSize: 'clamp(2rem, 8vw, 3rem)',
+                fontWeight: '900',
+                color: 'var(--primary-color)',
+                lineHeight: '1.2',
+                display: 'flex',
+                gap: '0.2rem'
+              }}>
+                {['N', 'A', 'T', 'L', 'O', 'U'].map((letter, i) => (
+                  <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>{letter}</span>
+                ))}
+              </h1>
+            </div>
 
-                        <h2 className="hero-mobile-title" style={{
-                            fontSize: '1.8rem', /* Approx 29px */
-                            fontWeight: '700',
-                            marginBottom: '1rem',
-                            color: '#333'
-                        }}>
-                            Mantenha a sua casa fresca.
-                        </h2>
+            <h2 className="hero-mobile-title" style={{
+              fontSize: 'clamp(1.5rem, 5vw, 1.8rem)',
+              fontWeight: '700',
+              marginBottom: '1rem',
+              color: '#333'
+            }}>
+              Mantenha a sua casa fresca.
+            </h2>
 
-                        <p style={{
-                            fontSize: '1.1rem',
-                            color: '#666',
-                            marginBottom: '2rem',
-                            lineHeight: '1.5'
-                        }}>
-                            Montagem Gratuita e Pagamento em Prestações.
-                        </p>
+            <p style={{
+              fontSize: 'clamp(1rem, 3vw, 1.1rem)',
+              color: '#666',
+              marginBottom: '2rem',
+              lineHeight: '1.5'
+            }}>
+              Montagem Gratuita e Pagamento em Prestações.
+            </p>
 
-                        <a href="https://wa.me/244946776397" className="btn animate-pulse-btn" style={{ width: '100%', maxWidth: '300px' }}>
-                            Quero o meu AC Agora
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <a href="https://wa.me/244946776397" className="btn animate-pulse-btn" style={{ width: '100%', maxWidth: '300px' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
+              Quero o meu AC Agora
+            </a>
+          </div>
+        </div>
+      </section>
 
             {/* Desktop Hero Section (Parallax) */}
-            <section
-                className="section hero-parallax desktop-only"
-                style={{
-                    padding: '0',
-                    height: '85vh',
-                    minHeight: '600px',
-                    width: '100%',
-                    position: 'relative',
-                    overflow: 'hidden'
-                }}
-            >
-                {/* Ken Burns Background */}
-                <div className="animate-ken-burns" style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    backgroundImage: "url('/ac-12000-btu.jpg')",
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    zIndex: 0
-                }}></div>
-                {/* Blue Overlay Filter */}
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    backgroundColor: 'rgba(0, 40, 85, 0.6)', // Blue overlay
-                    zIndex: 1
-                }}></div>
+      <section
+        className="section hero-parallax desktop-only"
+        style={{
+          padding: '0',
+          height: '85vh',
+          minHeight: '600px',
+          width: '100%',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+        aria-label="Natlou - Ar Condicionado e Climatização"
+      >
+        {/* Ken Burns Background */}
+        <div className="animate-ken-burns" style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage: "url('/ac-12000-btu.jpg')",
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          zIndex: 0
+        }} aria-hidden="true"></div>
+        {/* Blue Overlay Filter */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 40, 85, 0.6)', // Blue overlay
+          zIndex: 1
+        }} aria-hidden="true"></div>
 
-                {/* Airflow Breeze Effects */}
-                <div className="airflow-wind-line" style={{ top: '20%', animationDelay: '0s' }}></div>
-                <div className="airflow-wind-line-2" style={{ top: '40%', animationDelay: '3s' }}></div>
-                <div className="airflow-wind-line" style={{ top: '65%', animationDelay: '6s', height: '3px' }}></div>
-                <div className="airflow-wind-line-2" style={{ top: '80%', animationDelay: '1.5s' }}></div>
+        {/* Airflow Breeze Effects */}
+        <div className="airflow-wind-line" style={{ top: '20%', animationDelay: '0s' }} aria-hidden="true"></div>
+        <div className="airflow-wind-line-2" style={{ top: '40%', animationDelay: '3s' }} aria-hidden="true"></div>
+        <div className="airflow-wind-line" style={{ top: '65%', animationDelay: '6s', height: '3px' }} aria-hidden="true"></div>
+        <div className="airflow-wind-line-2" style={{ top: '80%', animationDelay: '1.5s' }} aria-hidden="true"></div>
 
-                {/* Content */}
-                <div className="container" style={{
-                    position: 'relative',
-                    zIndex: 2,
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'flex-start', // Left aligned
-                    color: 'white'
-                }}>
-                    <div className="typewriter-text" style={{ marginBottom: '1rem' }}>
-                        <h1 style={{
-                            fontSize: 'clamp(3rem, 6vw, 6rem)',
-                            fontWeight: '900',
-                            lineHeight: '1',
-                            color: 'white',
-                            textShadow: '0 4px 20px rgba(0,0,0,0.3)',
-                            display: 'flex',
-                            gap: '0.5rem'
-                        }}>
-                            {['N', 'A', 'T', 'L', 'O', 'U'].map((letter, i) => (
-                                <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>{letter}</span>
-                            ))}
-                        </h1>
-                    </div>
-                    <h2 className="animate-slide-in" style={{
-                        fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-                        fontWeight: '600',
-                        marginBottom: '1.5rem',
-                        maxWidth: '800px',
-                        textShadow: '0 2px 10px rgba(0,0,0,0.3)',
-                        animationDelay: '0.8s',
-                        opacity: 0 // Start hidden for animation
-                    }}>
-                        Mantenha a sua casa fresca.
-                    </h2>
+        {/* Content */}
+        <div className="container" style={{
+          position: 'relative',
+          zIndex: 2,
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'flex-start', // Left aligned
+          color: 'white'
+        }}>
+          <div className="typewriter-text" style={{ marginBottom: '1rem' }}>
+            <h1 style={{
+              fontSize: 'clamp(3rem, 6vw, 6rem)',
+              fontWeight: '900',
+              lineHeight: '1',
+              color: 'white',
+              textShadow: '0 4px 20px rgba(0,0,0,0.3)',
+              display: 'flex',
+              gap: '0.5rem'
+            }}>
+              {['N', 'A', 'T', 'L', 'O', 'U'].map((letter, i) => (
+                <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>{letter}</span>
+              ))}
+            </h1>
+          </div>
+          <h2 className="animate-slide-in" style={{
+            fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
+            fontWeight: '600',
+            marginBottom: '1.5rem',
+            maxWidth: '800px',
+            textShadow: '0 2px 10px rgba(0,0,0,0.3)',
+            animationDelay: '0.8s',
+            opacity: 0 // Start hidden for animation
+          }}>
+            Mantenha a sua casa fresca.
+          </h2>
 
-                    <p className="subtitle" style={{
-                        fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
-                        color: 'rgba(255,255,255,0.9)',
-                        marginBottom: '3rem',
-                        fontWeight: '400',
-                        maxWidth: '600px',
-                        borderLeft: '4px solid var(--action-color)',
-                        paddingLeft: '1rem'
-                    }}>
-                        Montagem Gratuita e Pagamento em Prestações.
-                    </p>
+          <p className="subtitle" style={{
+            fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
+            color: 'rgba(255,255,255,0.9)',
+            marginBottom: '3rem',
+            fontWeight: '400',
+            maxWidth: '600px',
+            borderLeft: '4px solid var(--action-color)',
+            paddingLeft: '1rem'
+          }}>
+            Montagem Gratuita e Pagamento em Prestações.
+          </p>
 
-                    <a href="https://wa.me/244946776397" target="_blank" rel="noopener noreferrer" className="btn animate-pulse-btn" style={{ fontSize: '1.2rem' }}>
-                        Quero o meu AC Agora
-                    </a>
-                </div>
+          <a href="https://wa.me/244946776397" target="_blank" rel="noopener noreferrer" className="btn animate-pulse-btn" style={{ fontSize: '1.2rem' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
+            Quero o meu AC Agora
+          </a>
+        </div>
 
-                {/* Wave Divider at Bottom of Hero */}
-                <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '100%', zIndex: 3 }}>
-                    <WaveDivider fillColor="#ffffff" flip />
-                </div>
-            </section>
+        {/* Wave Divider at Bottom of Hero */}
+        <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '100%', zIndex: 3 }} aria-hidden="true">
+          <WaveDivider fillColor="#ffffff" flip />
+        </div>
+      </section>
 
             {/* Services Preview */}
-            <section className="section" style={{ paddingTop: '2rem' }}>
+            <section className="section" style={{ paddingTop: '2rem' }} aria-labelledby="services-title">
                 <div className="container">
                     <RevealOnScroll>
-                        <h2 className="title" style={{ textAlign: 'center' }}>Nossos Serviços</h2>
+                        <h2 id="services-title" className="title" style={{ textAlign: 'center' }}>Nossos Serviços</h2>
                     </RevealOnScroll>
                     <div style={{
                         marginTop: '3rem',
@@ -226,6 +234,8 @@ export default function Home() {
                                     width={600}
                                     height={450}
                                     style={{ width: '100%', height: 'auto', display: 'block' }}
+                                    sizes="(min-width: 769px) 50vw, 100vw"
+                                    loading="lazy"
                                 />
                             </div>
                         </RevealOnScroll>
@@ -320,7 +330,7 @@ export default function Home() {
             </section>
 
             {/* BTU Calculator Section */}
-            <section className="section" style={{ backgroundColor: '#ffffff', padding: '3rem 0' }}>
+            <section className="section" style={{ backgroundColor: '#ffffff', padding: '3rem 0' }} aria-label="Calculadora de BTU">
                 <div className="container">
                     <RevealOnScroll>
                         <BtuCalculator />
@@ -340,6 +350,7 @@ export default function Home() {
                     position: 'relative',
                     padding: '8rem 0'
                 }}
+                aria-labelledby="stats-title"
             >
                 {/* Wave Divider at Top (Transition from White to Image) */}
                 <div style={{ position: 'absolute', top: '-1px', left: 0, width: '100%', zIndex: 3 }}>
@@ -353,7 +364,7 @@ export default function Home() {
 
                 <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white' }}>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1rem' }}>Sólida Infraestrutura</h2>
+                        <h2 id="stats-title" style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1rem' }}>Sólida Infraestrutura</h2>
                         <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>Somos 100% Angolana com stock garantido.</p>
                     </div>
 
@@ -431,7 +442,7 @@ export default function Home() {
             </section>
 
             {/* Contact / Face of Company Section */}
-            <section className="section" style={{ backgroundColor: '#f0f4f8', padding: '5rem 0' }}>
+            <section className="section" style={{ backgroundColor: '#f0f4f8', padding: '5rem 0' }} aria-labelledby="contact-title">
                 <div className="container">
                     <div style={{
                         display: 'flex',
@@ -492,7 +503,7 @@ export default function Home() {
                         <div style={{ flex: '1', minWidth: '300px' }}>
                             <div style={{ marginBottom: '1rem' }}>
                                 <span style={{ textTransform: 'uppercase', color: 'var(--secondary-color)', fontWeight: 'bold', fontSize: '0.9rem' }}>Atendimento Humanizado</span>
-                                <h2 style={{
+                                <h2 id="contact-title" style={{
                                     fontSize: '2.5rem',
                                     fontWeight: '800',
                                     color: '#002855',

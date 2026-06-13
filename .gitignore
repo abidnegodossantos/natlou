@@ -62,3 +62,6 @@ ts-debug.log*
 *.pem
 *.key
 *.cert
+
+# TypeScript build info
+*.tsbuildinfo

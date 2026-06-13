@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function BtuCalculator() {
@@ -8,6 +8,11 @@ export default function BtuCalculator() {
     const [sun, setSun] = useState<'low' | 'high'>('low');
     const [people, setPeople] = useState(2);
     const [electronics, setElectronics] = useState(1);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     // Calculate BTUs
     // Base: 600 BTUs per m² (low sun) or 800 BTUs per m² (high sun)
@@ -227,7 +232,7 @@ export default function BtuCalculator() {
                 }}>
                     <span style={{ fontSize: '0.85rem', color: '#888', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Carga Térmica Recomendada</span>
                     <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary-color)', margin: '0.5rem 0' }}>
-                        {totalBtu.toLocaleString()} <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>BTUs</span>
+                        {isClient ? totalBtu.toLocaleString() : totalBtu} <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>BTUs</span>
                     </span>
 
                     <div style={{
