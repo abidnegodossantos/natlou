@@ -668,6 +668,26 @@ a:focus-visible {
   box-shadow: 0 20px 40px var(--shadow-color);
 }
 
+/* Dark mode overrides for service-card to ensure excellent contrast and text readability */
+html.dark .service-card {
+  background: #1e2a3a;
+  border-color: #2d3f55;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+html.dark .service-card:hover {
+  background: #253549;
+  border-color: #3b506b;
+}
+
+html.dark .service-card h3 {
+  color: #ffffff !important;
+}
+
+html.dark .service-card p {
+  color: #cbd5e1 !important;
+}
+
 /* Product Card Image Swap */
 .product-card-image-container {
   position: relative;

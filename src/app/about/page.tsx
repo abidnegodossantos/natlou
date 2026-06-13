@@ -239,7 +239,7 @@ export default function About() {
                                 <p className="reveal delay-300" style={{
                                     fontSize: '1.2rem',
                                     lineHeight: '1.8',
-                                    color: '#555',
+                                    color: 'var(--text-secondary)',
                                     marginBottom: '2rem'
                                 }}>
                                     O que nos diferencia? <strong>Não é só a máquina.</strong>
@@ -248,9 +248,9 @@ export default function About() {
                                 <p className="reveal delay-400" style={{
                                     fontSize: '1.2rem',
                                     lineHeight: '1.8',
-                                    color: '#555',
+                                    color: 'var(--text-secondary)',
                                     marginBottom: '3rem',
-                                    backgroundColor: 'white',
+                                    backgroundColor: 'var(--bg-card)',
                                     padding: '1.5rem',
                                     borderRadius: '16px',
                                     boxShadow: '0 8px 20px rgba(0,0,0,0.05)'
@@ -474,7 +474,7 @@ export default function About() {
             </div>
 
             {/* Humanização - Quem Faz Acontecer */}
-            <div style={{ backgroundColor: '#fff', padding: '6rem 0' }}>
+            <div style={{ backgroundColor: 'var(--bg-color)', padding: '6rem 0' }}>
                 <div className="container">
                     <div style={{
                         display: 'flex',
@@ -561,7 +561,7 @@ export default function About() {
                 <div style={{
                     textAlign: 'center',
                     padding: '5rem 2rem',
-                    backgroundColor: '#fff',
+                    backgroundColor: 'var(--bg-card)',
                     borderRadius: '24px',
                     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
                     border: '1px solid rgba(0,0,0,0.03)',
@@ -576,7 +576,7 @@ export default function About() {
                         lineHeight: '1.2'
                     }}>
                         Já nos conhece. <br />
-                        <span style={{ color: '#555', fontWeight: '400', fontSize: '0.8em' }}>Agora deixe-nos cuidar do seu conforto.</span>
+                        <span style={{ color: 'var(--text-secondary)', fontWeight: '400', fontSize: '0.8em' }}>Agora deixe-nos cuidar do seu conforto.</span>
                     </h2>
 
                     <a href="/services" className="btn-premium-cta">

@@ -4,7 +4,7 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 
 export default function Services() {
     return (
-        <div className="container section" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E6F3FF 100%)', minHeight: '100vh', position: 'relative', overflow: 'hidden', overflowX: 'hidden' }}>
+        <div className="container section" style={{ background: 'linear-gradient(180deg, var(--bg-color) 0%, var(--bg-secondary) 100%)', minHeight: '100vh', position: 'relative', overflow: 'hidden', overflowX: 'hidden' }}>
             {/* Background Atmosphere Blobs */}
             <div style={{ position: 'absolute', top: '10%', left: '-15%', width: '600px', height: '600px', backgroundColor: 'rgba(0, 168, 232, 0.08)', borderRadius: '50%', filter: 'blur(100px)', zIndex: 0, pointerEvents: 'none' }}></div>
             <div style={{ position: 'absolute', top: '40%', right: '-15%', width: '500px', height: '500px', backgroundColor: 'rgba(0, 74, 173, 0.08)', borderRadius: '50%', filter: 'blur(120px)', zIndex: 0, pointerEvents: 'none' }}></div>
@@ -12,8 +12,7 @@ export default function Services() {
             {/* Hero Section: Ação Imediata */}
             <div style={{
                 position: 'relative',
-                height: '60vh',
-                minHeight: '400px',
+                minHeight: '60vh',
                 width: '100vw',
                 maxWidth: '100vw',
                 marginLeft: 'calc(-50vw + 50%)', // Break out of container
@@ -24,7 +23,8 @@ export default function Services() {
                 justifyContent: 'center',
                 color: 'white',
                 textAlign: 'center',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                paddingBottom: '120px' // Space for wave divider + button breathing room
             }}>
                 {/* Background Image */}
                 <Image
@@ -106,7 +106,7 @@ export default function Services() {
                 {/* Organic Wave Divider (Air Flow Effect) */}
                 <div style={{ position: 'absolute', bottom: -1, left: 0, width: '100%', overflow: 'hidden', lineHeight: 0, zIndex: 1 }}>
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{ position: 'relative', display: 'block', width: 'calc(100% + 1.3px)', height: '100px', transform: 'rotate(180deg)' }}>
-                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#FFFFFF"></path>
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="var(--bg-color)"></path>
                     </svg>
                 </div>
             </div>
@@ -126,10 +126,10 @@ export default function Services() {
                             {/* Drill Icon */}
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
                         </div>
-                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#1a1a1a', marginBottom: '1rem' }}>
+                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '1rem' }}>
                             Instalação & Montagem
                         </h3>
-                        <p style={{ fontSize: '1rem', color: '#555', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
+                        <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
                             Instalação segura para todas as marcas (Haier, TCL, etc.). Garantia de funcionamento perfeito e acabamento estético.
                         </p>
                         <div style={{
@@ -151,10 +151,10 @@ export default function Services() {
                             {/* Shield/Snowflake Icon */}
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                         </div>
-                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#1a1a1a', marginBottom: '1rem' }}>
+                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '1rem' }}>
                             Manutenção Preventiva
                         </h3>
-                        <p style={{ fontSize: '1rem', color: '#555', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
+                        <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
                             Aumente a vida útil do seu equipamento e poupe energia. Limpeza profunda, verificação de gás e filtros.
                         </p>
                         <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
@@ -174,10 +174,10 @@ export default function Services() {
                             {/* Wrench Icon */}
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /><circle cx="12" cy="12" r="3" /></svg>
                         </div>
-                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#1a1a1a', marginBottom: '1rem' }}>
+                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '1rem' }}>
                             Assistência Técnica
                         </h3>
-                        <p style={{ fontSize: '1rem', color: '#555', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
+                        <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
                             O AC parou? Faz barulho? Resolvemos avarias complexas e substituímos peças com rapidez.
                         </p>
                         <div style={{
@@ -235,7 +235,7 @@ export default function Services() {
             {/* Processo: Como Trabalhamos */}
             <div style={{
                 marginBottom: '6rem',
-                backgroundColor: '#f0f5fa', // Light blue-grey
+                backgroundColor: 'var(--bg-secondary)', // Theme variable instead of light gray
                 padding: '4rem 1rem',
                 margin: '0 -20px', // Break out
                 position: 'relative'
@@ -264,7 +264,7 @@ export default function Services() {
 
                         {/* Step 1 */}
                         <RevealOnScroll delay={0} className="process-step">
-                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: '#f0f5fa', padding: '1rem' }}>
+                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: 'var(--bg-card)', padding: '1.5rem 1.2rem', borderRadius: '16px', boxShadow: '0 8px 30px var(--shadow-color)' }}>
                                 <div style={{
                                     width: '80px', height: '80px', borderRadius: '50%', backgroundColor: '#25D366', color: 'white',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem',
@@ -274,13 +274,13 @@ export default function Services() {
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                                 </div>
                                 <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>1. Agendamento</h3>
-                                <p style={{ fontSize: '0.9rem', color: '#666' }}>Você contacta-nos via WhatsApp de forma simples.</p>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Você contacta-nos via WhatsApp de forma simples.</p>
                             </div>
                         </RevealOnScroll>
 
                         {/* Step 2 */}
                         <RevealOnScroll delay={200} className="process-step reveal-left">
-                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: '#f0f5fa', padding: '1rem' }}>
+                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: 'var(--bg-card)', padding: '1.5rem 1.2rem', borderRadius: '16px', boxShadow: '0 8px 30px var(--shadow-color)' }}>
                                 <div style={{
                                     width: '80px', height: '80px', borderRadius: '50%', overflow: 'hidden',
                                     margin: '0 auto 1.5rem', boxShadow: '0 8px 16px rgba(0,0,0,0.1)', border: '3px solid white',
@@ -289,13 +289,13 @@ export default function Services() {
                                     <Image src="/contact-model.jpg" alt="Visita Técnica" width={80} height={80} style={{ objectFit: 'cover' }} />
                                 </div>
                                 <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>2. Visita Técnica</h3>
-                                <p style={{ fontSize: '0.9rem', color: '#666' }}>A nossa equipa vai até si com frota própria.</p>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>A nossa equipa vai até si com frota própria.</p>
                             </div>
                         </RevealOnScroll>
 
                         {/* Step 3 */}
                         <RevealOnScroll delay={400} className="process-step">
-                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: '#f0f5fa', padding: '1rem' }}>
+                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: 'var(--bg-card)', padding: '1.5rem 1.2rem', borderRadius: '16px', boxShadow: '0 8px 30px var(--shadow-color)' }}>
                                 <div style={{
                                     width: '80px', height: '80px', borderRadius: '50%', backgroundColor: 'var(--primary-color)', color: 'white',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem',
@@ -305,13 +305,13 @@ export default function Services() {
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                                 </div>
                                 <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>3. Execução</h3>
-                                <p style={{ fontSize: '0.9rem', color: '#666' }}>Serviço limpo, rápido e profissional.</p>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Serviço limpo, rápido e profissional.</p>
                             </div>
                         </RevealOnScroll>
 
                         {/* Step 4 */}
                         <RevealOnScroll delay={400} className="process-step">
-                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: '#f0f5fa', padding: '1rem' }}>
+                            <div style={{ width: '220px', textAlign: 'center', position: 'relative', zIndex: 1, backgroundColor: 'var(--bg-card)', padding: '1.5rem 1.2rem', borderRadius: '16px', boxShadow: '0 8px 30px var(--shadow-color)' }}>
                                 <div style={{
                                     width: '80px', height: '80px', borderRadius: '50%', backgroundColor: '#FFD700', color: '#333',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem',
@@ -321,7 +321,7 @@ export default function Services() {
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
                                 </div>
                                 <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>4. Garantia</h3>
-                                <p style={{ fontSize: '0.9rem', color: '#666' }}>Acompanhamento pós-serviço garantido.</p>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Acompanhamento pós-serviço garantido.</p>
                             </div>
                         </RevealOnScroll>
 
@@ -331,13 +331,13 @@ export default function Services() {
                 {/* Tabela de Preços Inteligente */}
                 <div style={{
                     marginTop: '0',
-                    background: 'radial-gradient(circle, #e0e0e0 1.5px, transparent 1.5px), linear-gradient(180deg, #f9f9f9 0%, #fff 100%)',
+                    background: 'radial-gradient(circle, var(--border-light) 1.5px, transparent 1.5px), linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-color) 100%)',
                     backgroundSize: '30px 30px, 100% 100%',
                     margin: '0 -20px',
                     padding: '4rem 1rem',
                     position: 'relative',
-                    borderTop: '1px solid rgba(0,0,0,0.05)',
-                    borderBottom: '1px solid rgba(0,0,0,0.05)'
+                    borderTop: '1px solid var(--border-light)',
+                    borderBottom: '1px solid var(--border-light)'
                 }}>
                     <div className="container" style={{ maxWidth: '900px' }}>
                         <RevealOnScroll>
@@ -357,11 +357,11 @@ export default function Services() {
 
                             {/* Tabela 1: Serviços Técnicos */}
                             <RevealOnScroll delay={100}>
-                                <h3 className="animate-slide-in" style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '1.5rem', color: '#333', borderLeft: '5px solid var(--primary-color)', paddingLeft: '1rem' }}>
+                                <h3 className="animate-slide-in" style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '1.5rem', color: 'var(--text-primary)', borderLeft: '5px solid var(--primary-color)', paddingLeft: '1rem' }}>
                                     Serviços Técnicos
                                 </h3>
-                                <div style={{ overflowX: 'auto', borderRadius: '12px', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', border: '1px solid #eee' }}>
-                                    <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: 'white', minWidth: '600px' }}>
+                                <div style={{ overflowX: 'auto', borderRadius: '12px', boxShadow: '0 5px 20px var(--shadow-color)', border: '1px solid var(--border-light)' }}>
+                                    <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: 'var(--bg-card)', minWidth: '600px' }}>
                                         <thead>
                                             <tr style={{ backgroundColor: 'var(--primary-color)', color: 'white' }}>
                                                 <th style={{ padding: '1rem', textAlign: 'left', fontWeight: '700' }}>Serviço</th>
@@ -376,9 +376,9 @@ export default function Services() {
                                                 { name: 'Carga de Gás', detail: 'Gás incluído (Se for gás do cliente: 10.000 Kz)', price: '15.000 Kz' },
                                                 { name: 'Reparação Complexa', detail: 'Mão de obra especializada', price: '20.000 Kz' }
                                             ].map((item, index) => (
-                                                <tr key={index} style={{ backgroundColor: index % 2 === 0 ? 'white' : '#f8f9fa', borderBottom: '1px solid #eee' }}>
-                                                    <td style={{ padding: '1.2rem', fontWeight: '600', color: '#333' }}>{item.name}</td>
-                                                    <td style={{ padding: '1.2rem', color: '#666', fontSize: '0.95rem' }}>{item.detail}</td>
+                                                <tr key={index} style={{ backgroundColor: index % 2 === 0 ? 'var(--bg-card)' : 'var(--bg-secondary)', borderBottom: '1px solid var(--border-light)' }}>
+                                                    <td style={{ padding: '1.2rem', fontWeight: '600', color: 'var(--text-primary)' }}>{item.name}</td>
+                                                    <td style={{ padding: '1.2rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{item.detail}</td>
                                                     <td style={{ padding: '1.2rem', textAlign: 'right', fontWeight: '800', color: 'var(--primary-color)', fontSize: '1.1rem' }}>{item.price}</td>
                                                 </tr>
                                             ))}
@@ -389,14 +389,14 @@ export default function Services() {
 
                             {/* Tabela 2: Montagem */}
                             <RevealOnScroll delay={200}>
-                                <h3 className="animate-slide-in" style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '1.5rem', color: '#333', borderLeft: '5px solid var(--primary-color)', paddingLeft: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+                                <h3 className="animate-slide-in" style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '1.5rem', color: 'var(--text-primary)', borderLeft: '5px solid var(--primary-color)', paddingLeft: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
                                     <span>Montagem (Mão de Obra)</span>
                                     <span className="animate-pulse-btn" style={{ fontSize: '0.85rem', backgroundColor: '#d4edda', color: '#155724', padding: '0.4rem 0.8rem', borderRadius: '50px', fontWeight: '700' }}>
                                         🎁 Grátis na compra de equipamento NATLOU
                                     </span>
                                 </h3>
-                                <div style={{ overflowX: 'auto', borderRadius: '12px', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', border: '1px solid #eee' }}>
-                                    <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: 'white', minWidth: '400px' }}>
+                                <div style={{ overflowX: 'auto', borderRadius: '12px', boxShadow: '0 5px 20px var(--shadow-color)', border: '1px solid var(--border-light)' }}>
+                                    <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: 'var(--bg-card)', minWidth: '400px' }}>
                                         <thead>
                                             <tr style={{ backgroundColor: '#333', color: 'white' }}>
                                                 <th style={{ padding: '1rem', textAlign: 'left', fontWeight: '700' }}>Capacidade (BTU)</th>
@@ -409,8 +409,8 @@ export default function Services() {
                                                 { cap: '12.000 BTUs', price: '30.000 Kz' },
                                                 { cap: '18.000 BTUs', price: '35.000 Kz' }
                                             ].map((item, index) => (
-                                                <tr key={index} style={{ backgroundColor: index % 2 === 0 ? 'white' : '#f8f9fa', borderBottom: '1px solid #eee' }}>
-                                                    <td style={{ padding: '1.2rem', fontWeight: '600', color: '#333' }}>{item.cap}</td>
+                                                <tr key={index} style={{ backgroundColor: index % 2 === 0 ? 'var(--bg-card)' : 'var(--bg-secondary)', borderBottom: '1px solid var(--border-light)' }}>
+                                                    <td style={{ padding: '1.2rem', fontWeight: '600', color: 'var(--text-primary)' }}>{item.cap}</td>
                                                     <td style={{ padding: '1.2rem', textAlign: 'right', fontWeight: '800', color: 'var(--primary-color)', fontSize: '1.1rem' }}>{item.price}</td>
                                                 </tr>
                                             ))}

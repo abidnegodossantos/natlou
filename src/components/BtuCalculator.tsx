@@ -57,11 +57,11 @@ export default function BtuCalculator() {
 
     return (
         <div style={{
-            background: 'linear-gradient(135deg, #ffffff 0%, #f4faff 100%)',
-            border: '1px solid rgba(0, 74, 173, 0.15)',
+            background: 'linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%)',
+            border: '1px solid var(--border-medium)',
             borderRadius: '24px',
             padding: '2.5rem 2rem',
-            boxShadow: '0 15px 35px rgba(0, 40, 85, 0.06)',
+            boxShadow: '0 15px 35px var(--shadow-color)',
             maxWidth: '850px',
             margin: '0 auto'
         }}>
@@ -75,7 +75,7 @@ export default function BtuCalculator() {
                 ❄️ Calculadora de BTUs Inteligente
             </h3>
             <p style={{
-                color: '#666',
+                color: 'var(--text-secondary)',
                 textAlign: 'center',
                 marginBottom: '2rem',
                 fontSize: '0.95rem',
@@ -112,7 +112,7 @@ export default function BtuCalculator() {
                                 borderRadius: '3px'
                             }}
                         />
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#999', marginTop: '0.3rem' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.3rem' }}>
                             <span>5 m²</span>
                             <span>80 m²</span>
                         </div>
@@ -120,7 +120,7 @@ export default function BtuCalculator() {
 
                     {/* Sun Exposure */}
                     <div>
-                        <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.6rem', fontSize: '0.95rem' }}>
+                        <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.6rem', fontSize: '0.95rem', color: 'var(--text-primary)' }}>
                             Exposição Solar:
                         </label>
                         <div style={{ display: 'flex', gap: '0.8rem' }}>
@@ -132,9 +132,9 @@ export default function BtuCalculator() {
                                     padding: '0.8rem',
                                     borderRadius: '12px',
                                     border: '2px solid',
-                                    borderColor: sun === 'low' ? 'var(--primary-color)' : '#eee',
-                                    backgroundColor: sun === 'low' ? '#e6f4ff' : '#white',
-                                    color: sun === 'low' ? 'var(--primary-color)' : '#555',
+                                    borderColor: sun === 'low' ? 'var(--primary-color)' : 'var(--border-light)',
+                                    backgroundColor: sun === 'low' ? 'rgba(var(--primary-rgb), 0.15)' : 'var(--bg-card)',
+                                    color: sun === 'low' ? 'var(--primary-color)' : 'var(--text-secondary)',
                                     fontWeight: 'bold',
                                     cursor: 'pointer',
                                     fontSize: '0.9rem',
@@ -151,9 +151,9 @@ export default function BtuCalculator() {
                                     padding: '0.8rem',
                                     borderRadius: '12px',
                                     border: '2px solid',
-                                    borderColor: sun === 'high' ? 'var(--primary-color)' : '#eee',
-                                    backgroundColor: sun === 'high' ? '#e6f4ff' : '#white',
-                                    color: sun === 'high' ? 'var(--primary-color)' : '#555',
+                                    borderColor: sun === 'high' ? 'var(--primary-color)' : 'var(--border-light)',
+                                    backgroundColor: sun === 'high' ? 'rgba(var(--primary-rgb), 0.15)' : 'var(--bg-card)',
+                                    color: sun === 'high' ? 'var(--primary-color)' : 'var(--text-secondary)',
                                     fontWeight: 'bold',
                                     cursor: 'pointer',
                                     fontSize: '0.9rem',
@@ -169,22 +169,22 @@ export default function BtuCalculator() {
                     <div style={{ display: 'flex', gap: '1rem' }}>
                         {/* People */}
                         <div style={{ flex: 1 }}>
-                            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.4rem', fontSize: '0.9rem' }}>
+                            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.4rem', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
                                 Pessoas no Espaço:
                             </label>
-                            <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #ddd', borderRadius: '12px', overflow: 'hidden', backgroundColor: 'white' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-light)', borderRadius: '12px', overflow: 'hidden', backgroundColor: 'var(--bg-card)' }}>
                                 <button
                                     type="button"
                                     onClick={() => setPeople(Math.max(1, people - 1))}
-                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: '#f5f5f5', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
+                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
                                 >
                                     -
                                 </button>
-                                <span style={{ flex: 1, textAlign: 'center', fontWeight: 'bold' }}>{people}</span>
+                                <span style={{ flex: 1, textAlign: 'center', fontWeight: 'bold', color: 'var(--text-primary)' }}>{people}</span>
                                 <button
                                     type="button"
                                     onClick={() => setPeople(people + 1)}
-                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: '#f5f5f5', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
+                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
                                 >
                                     +
                                 </button>
@@ -193,22 +193,22 @@ export default function BtuCalculator() {
 
                         {/* Electronics */}
                         <div style={{ flex: 1 }}>
-                            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.4rem', fontSize: '0.9rem' }}>
+                            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.4rem', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
                                 Eletrónicos (TV/PC):
                             </label>
-                            <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #ddd', borderRadius: '12px', overflow: 'hidden', backgroundColor: 'white' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-light)', borderRadius: '12px', overflow: 'hidden', backgroundColor: 'var(--bg-card)' }}>
                                 <button
                                     type="button"
                                     onClick={() => setElectronics(Math.max(0, electronics - 1))}
-                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: '#f5f5f5', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
+                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
                                 >
                                     -
                                 </button>
-                                <span style={{ flex: 1, textAlign: 'center', fontWeight: 'bold' }}>{electronics}</span>
+                                <span style={{ flex: 1, textAlign: 'center', fontWeight: 'bold', color: 'var(--text-primary)' }}>{electronics}</span>
                                 <button
                                     type="button"
                                     onClick={() => setElectronics(electronics + 1)}
-                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: '#f5f5f5', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
+                                    style={{ width: '40px', height: '40px', border: 'none', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontSize: '1.2rem', cursor: 'pointer', fontWeight: 'bold' }}
                                 >
                                     +
                                 </button>
@@ -223,14 +223,14 @@ export default function BtuCalculator() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'white',
-                    border: '1px solid rgba(0, 74, 173, 0.08)',
+                    backgroundColor: 'var(--bg-card)',
+                    border: '1px solid var(--border-light)',
                     borderRadius: '16px',
                     padding: '2rem',
                     textAlign: 'center',
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)'
+                    boxShadow: '0 8px 25px var(--shadow-color)'
                 }}>
-                    <span style={{ fontSize: '0.85rem', color: '#888', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Carga Térmica Recomendada</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Carga Térmica Recomendada</span>
                     <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary-color)', margin: '0.5rem 0' }}>
                         {isClient ? totalBtu.toLocaleString() : totalBtu} <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>BTUs</span>
                     </span>
@@ -238,16 +238,16 @@ export default function BtuCalculator() {
                     <div style={{
                         marginTop: '1rem',
                         padding: '1.2rem 1rem',
-                        backgroundColor: '#f4faff',
+                        backgroundColor: 'var(--bg-secondary)',
                         borderRadius: '12px',
                         width: '100%',
-                        border: '1px dashed rgba(0, 74, 173, 0.2)'
+                        border: '1px dashed var(--border-medium)'
                     }}>
-                        <h4 style={{ fontSize: '1rem', color: '#333', fontWeight: 'bold', marginBottom: '0.3rem' }}>Equipamento Sugerido:</h4>
+                        <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', fontWeight: 'bold', marginBottom: '0.3rem' }}>Equipamento Sugerido:</h4>
                         <p style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '800', marginBottom: '0.5rem' }}>
                             {recommendedProduct.name}
                         </p>
-                        <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: '1.4' }}>
+                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
                             {recommendedProduct.desc}
                         </p>
                     </div>
@@ -294,7 +294,7 @@ export default function BtuCalculator() {
                 </div>
             </div>
 
-            <div style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', lineHeight: '1.4' }}>
+            <div style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--text-muted)', lineHeight: '1.4' }}>
                 * Nota: Este cálculo é uma estimativa aproximada baseada nas dimensões e carga térmica padrão. Fatores como pé-direito, quantidade de janelas e materiais de construção podem influenciar o dimensionamento ideal.
             </div>
         </div>

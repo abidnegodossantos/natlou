@@ -75,7 +75,7 @@ export default function Shop() {
                 position: 'sticky',
                 top: '90px', // Below navbar
                 zIndex: 99,
-                backgroundColor: 'rgba(248, 251, 255, 0.95)', // Match bg-color with transparency
+                backgroundColor: 'rgba(var(--bg-rgb), 0.95)', // Match bg-color with transparency using variable
                 padding: '1rem 0',
                 backdropFilter: 'blur(8px)'
             }}>
@@ -86,15 +86,15 @@ export default function Shop() {
                         style={{
                             padding: '0.8rem 1.5rem',
                             borderRadius: '50px',
-                            backgroundColor: activeCategory === category ? 'var(--primary-color)' : '#fff',
-                            color: activeCategory === category ? 'white' : '#555',
+                            backgroundColor: activeCategory === category ? 'var(--primary-color)' : 'var(--bg-card)',
+                            color: activeCategory === category ? 'white' : 'var(--text-secondary)',
                             fontWeight: '700',
                             cursor: 'pointer',
                             fontSize: '0.95rem',
                             transition: 'all 0.3s ease',
                             boxShadow: activeCategory === category ? '0 5px 15px rgba(0, 40, 85, 0.2)' : '0 2px 10px rgba(0,0,0,0.05)',
                             transform: activeCategory === category ? 'translateY(-2px)' : 'none',
-                            border: activeCategory === category ? 'none' : '1px solid #eee'
+                            border: activeCategory === category ? 'none' : '1px solid var(--border-light)'
                         }}
                     >
                         {category}
@@ -115,7 +115,7 @@ export default function Shop() {
                         {/* Image Area with Link to Details */}
                         <Link href={`/shop/${product.id}`} style={{
                             height: '280px',
-                            backgroundColor: '#f8f9fa',
+                            backgroundColor: 'var(--bg-secondary)',
                             position: 'relative',
                             display: 'block',
                             cursor: 'pointer',
@@ -223,7 +223,7 @@ export default function Shop() {
             {/* Social Proof & Guarantee Strip */}
             <div style={{
                 marginTop: '5rem',
-                backgroundColor: '#f6f9fc',
+                backgroundColor: 'var(--bg-secondary)',
                 borderRadius: '16px',
                 padding: '2rem',
                 display: 'grid',
@@ -234,14 +234,14 @@ export default function Shop() {
                 {/* 1. Pagamento Seguro */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                     <div style={{
-                        width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#e8f0fe',
+                        width: '60px', height: '60px', borderRadius: '50%', backgroundColor: 'rgba(var(--primary-rgb), 0.15)',
                         color: 'var(--primary-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
                     }}>
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
                     </div>
                     <div>
-                        <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#333', marginBottom: '0.4rem' }}>Pagamento Seguro</h3>
-                        <p style={{ color: '#666', lineHeight: '1.4' }}>Pague em prestações.<br /><strong>50% na encomenda</strong>, 50% na entrega.</p>
+                        <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '0.4rem' }}>Pagamento Seguro</h3>
+                        <p style={{ color: 'var(--text-secondary)', lineHeight: '1.4' }}>Pague em prestações.<br /><strong>50% na encomenda</strong>, 50% na entrega.</p>
                     </div>
                 </div>
 
@@ -249,20 +249,20 @@ export default function Shop() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                     <div style={{
                         width: '60px', height: '60px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0,
-                        border: '2px solid #fff', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
+                        border: '2px solid var(--border-light)', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
                     }}>
                         {/* Using contact-model.jpg as the "Modelo no Carro" / Team Representative */}
                         <Image src="/contact-model.jpg" alt="Equipa de Entrega" width={60} height={60} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                     </div>
                     <div>
-                        <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#333', marginBottom: '0.4rem' }}>Entrega Rápida</h3>
-                        <p style={{ color: '#666', lineHeight: '1.4' }}>Frota própria para entrega.<br />Receba com rapidez e segurança.</p>
+                        <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '0.4rem' }}>Entrega Rápida</h3>
+                        <p style={{ color: 'var(--text-secondary)', lineHeight: '1.4' }}>Frota própria para entrega.<br />Receba com rapidez e segurança.</p>
                     </div>
                 </div>
             </div>
 
             {/* Disclaimer */}
-            <div style={{ marginTop: '3rem', textAlign: 'center', fontSize: '0.9rem', color: '#999' }}>
+            <div style={{ marginTop: '3rem', textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
                 * Preços sujeitos a alteração sem aviso prévio. Confirme a disponibilidade.
             </div>
         </div>

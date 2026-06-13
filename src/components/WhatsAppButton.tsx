@@ -43,11 +43,11 @@ export default function WhatsAppButton() {
 
             {/* Status Text Bubble */}
             <div style={{
-                backgroundColor: 'white',
+                backgroundColor: 'var(--bg-card)',
                 padding: '0.5rem 1rem',
                 borderRadius: '20px',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-                color: '#333',
+                boxShadow: '0 4px 15px var(--shadow-color)',
+                color: 'var(--text-primary)',
                 fontSize: '0.9rem',
                 fontWeight: '600',
                 opacity: isVisible ? 0.9 : 0,

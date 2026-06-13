@@ -43,7 +43,7 @@ export default function Home() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: 'white'
+                backgroundColor: 'var(--bg-color)'
             }}>
               <Image
                 src="/ac-12000-btu.jpg"
@@ -82,14 +82,14 @@ export default function Home() {
               fontSize: 'clamp(1.5rem, 5vw, 1.8rem)',
               fontWeight: '700',
               marginBottom: '1rem',
-              color: '#333'
+              color: 'var(--text-primary)'
             }}>
               Mantenha a sua casa fresca.
             </h2>
 
             <p style={{
               fontSize: 'clamp(1rem, 3vw, 1.1rem)',
-              color: '#666',
+              color: 'var(--text-secondary)',
               marginBottom: '2rem',
               lineHeight: '1.5'
             }}>
@@ -202,7 +202,7 @@ export default function Home() {
 
         {/* Wave Divider at Bottom of Hero */}
         <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '100%', zIndex: 3 }} aria-hidden="true">
-          <WaveDivider fillColor="#ffffff" flip />
+          <WaveDivider fillColor="var(--bg-color)" flip />
         </div>
       </section>
 
@@ -282,7 +282,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>Montagem Gratuita</h4>
-                                        <p style={{ color: '#666' }}>Na compra de qualquer Ar Condicionado.</p>
+                                        <p style={{ color: 'var(--text-secondary)' }}>Na compra de qualquer Ar Condicionado.</p>
                                     </div>
                                 </div>
 
@@ -299,7 +299,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>Pagamento Facilitado</h4>
-                                        <p style={{ color: '#666' }}>Pague em até 2 prestações sem juros.</p>
+                                        <p style={{ color: 'var(--text-secondary)' }}>Pague em até 2 prestações sem juros.</p>
                                     </div>
                                 </div>
 
@@ -316,7 +316,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>Entrega Grátis</h4>
-                                        <p style={{ color: '#666' }}>Luanda, Benguela e Bengo.</p>
+                                        <p style={{ color: 'var(--text-secondary)' }}>Luanda, Benguela e Bengo.</p>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +330,7 @@ export default function Home() {
             </section>
 
             {/* BTU Calculator Section */}
-            <section className="section" style={{ backgroundColor: '#ffffff', padding: '3rem 0' }} aria-label="Calculadora de BTU">
+            <section className="section" style={{ backgroundColor: 'var(--bg-color)', padding: '3rem 0' }} aria-label="Calculadora de BTU">
                 <div className="container">
                     <RevealOnScroll>
                         <BtuCalculator />
@@ -422,7 +422,7 @@ export default function Home() {
                 </div>
                 {/* Wave Divider at Bottom (Transition from Image to Contact Light Blue) */}
                 <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '100%', zIndex: 3 }}>
-                    <WaveDivider fillColor="#f0f4f8" flip />
+                    <WaveDivider fillColor="var(--bg-secondary)" flip />
                 </div>
             </section>
 
@@ -442,7 +442,7 @@ export default function Home() {
             </section>
 
             {/* Contact / Face of Company Section */}
-            <section className="section" style={{ backgroundColor: '#f0f4f8', padding: '5rem 0' }} aria-labelledby="contact-title">
+            <section className="section" style={{ backgroundColor: 'var(--bg-secondary)', padding: '5rem 0' }} aria-labelledby="contact-title">
                 <div className="container">
                     <div style={{
                         display: 'flex',
@@ -458,7 +458,7 @@ export default function Home() {
                                 position: 'absolute',
                                 top: '-40px',
                                 right: '10%',
-                                backgroundColor: 'white',
+                                backgroundColor: 'var(--bg-card)',
                                 padding: '1.5rem',
                                 borderRadius: '20px',
                                 borderBottomLeftRadius: '0',
@@ -467,7 +467,7 @@ export default function Home() {
                                 zIndex: 10,
                                 animation: 'pulse-yellow 4s infinite ease-in-out' // Reuse pulse slightly
                             }}>
-                                <p style={{ fontSize: '0.95rem', color: '#333', fontWeight: '600', lineHeight: '1.5' }}>
+                                <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', fontWeight: '600', lineHeight: '1.5' }}>
                                     "Olá! Posso ajudar a escolher o melhor BTU para a sua sala?"
                                 </p>
                                 <div style={{
@@ -476,7 +476,7 @@ export default function Home() {
                                     left: '20px',
                                     width: '20px',
                                     height: '20px',
-                                    backgroundColor: 'white',
+                                    backgroundColor: 'var(--bg-card)',
                                     transform: 'rotate(45deg)'
                                 }}></div>
                             </div>
