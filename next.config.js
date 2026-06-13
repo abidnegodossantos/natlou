@@ -13,6 +13,8 @@ const nextConfig = {
     ignoreBuildErrors: false,
   },
 
+  allowedDevOrigins: ['192.168.1.53'],
+
   headers: async () => [
     {
       source: '/:path*',

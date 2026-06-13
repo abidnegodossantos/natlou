@@ -126,7 +126,7 @@ export default function Services() {
                             {/* Drill Icon */}
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
                         </div>
-                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '1rem' }}>
+                        <h3 className="service-title" style={{ fontSize: '1.6rem', fontWeight: '800', marginBottom: '1rem' }}>
                             Instalação & Montagem
                         </h3>
                         <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
@@ -151,7 +151,7 @@ export default function Services() {
                             {/* Shield/Snowflake Icon */}
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                         </div>
-                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '1rem' }}>
+                        <h3 className="service-title" style={{ fontSize: '1.6rem', fontWeight: '800', marginBottom: '1rem' }}>
                             Manutenção Preventiva
                         </h3>
                         <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
@@ -174,7 +174,7 @@ export default function Services() {
                             {/* Wrench Icon */}
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /><circle cx="12" cy="12" r="3" /></svg>
                         </div>
-                        <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '1rem' }}>
+                        <h3 className="service-title" style={{ fontSize: '1.6rem', fontWeight: '800', marginBottom: '1rem' }}>
                             Assistência Técnica
                         </h3>
                         <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>
