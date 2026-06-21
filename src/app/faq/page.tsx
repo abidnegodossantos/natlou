@@ -47,14 +47,13 @@ export default function FAQ() {
             {/* Header Hero */}
             <div style={{
                 background: 'linear-gradient(135deg, var(--primary-color) 0%, #003366 100%)',
-                color: 'white',
                 padding: '6rem 1rem',
                 textAlign: 'center'
             }}>
-                <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '1rem' }}>
+                <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '1rem', color: '#ffffff' }}>
                     Perguntas Frequentes
                 </h1>
-                <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto', opacity: 0.9 }}>
+                <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto', opacity: 0.9, color: '#ffffff' }}>
                     Tire as suas dúvidas sobre os nossos equipamentos, entregas e serviços de instalação.
                 </p>
             </div>
