@@ -363,9 +363,24 @@ export default function Home() {
                 }}></div>
 
                 <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '4rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ 
+                            backgroundColor: 'var(--action-color)', 
+                            color: '#002855', 
+                            padding: '0.5rem 1.5rem', 
+                            borderRadius: '50px', 
+                            fontWeight: '800', 
+                            fontSize: '1.2rem',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '0.5rem',
+                            marginBottom: '1rem',
+                            boxShadow: '0 4px 15px rgba(255, 170, 0, 0.4)'
+                        }}>
+                            🇦🇴 Empresa 100% Angolana
+                        </div>
                         <h2 id="stats-title" style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1rem' }}>Sólida Infraestrutura</h2>
-                        <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>Somos 100% Angolana com stock garantido.</p>
+                        <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>Stock garantido para servir o país com qualidade.</p>
                     </div>
 
                     <div style={{

@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { products } from './products';
-import { Tag, Truck } from 'lucide-react';
+import { Tag, Truck, Package, Clock } from 'lucide-react';
+import DownloadCatalog from '@/components/DownloadCatalog';
 
 const categories = ['Todos', 'Quartos (9-12k BTUs)', 'Salas (18-24k BTUs)', 'Acessórios & Gás'];
 
@@ -124,6 +125,23 @@ export default function Shop() {
                         }}>
                             {/* BADGES SECTION (Top of Photo) */}
                             <div style={{ position: 'absolute', top: '1rem', left: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', zIndex: 10 }}>
+                                {/* Indicador de Stock */}
+                                <span style={{
+                                    backgroundColor: product.stockStatus === 'disponivel' ? '#d4edda' : '#fff3cd',
+                                    color: product.stockStatus === 'disponivel' ? '#155724' : '#856404',
+                                    padding: '0.4rem 0.8rem',
+                                    borderRadius: '4px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: '800',
+                                    boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.3rem'
+                                }}>
+                                    {product.stockStatus === 'disponivel' ? <Package size={13} /> : <Clock size={13} />}
+                                    {product.stockStatus === 'disponivel' ? 'Disponível - Entrega Rápida' : 'Sob Encomenda - Consulte Prazo'}
+                                </span>
+                                
                                 {/* Hardcoded visual logic for specific badges as requested */}
                                 {product.badges.map((badge, i) => (
                                     <span key={i} className={badge.text.includes('Montagem') ? 'shine-wrapper shine-effect' : ''} style={{
@@ -220,6 +238,8 @@ export default function Shop() {
                     </div>
                 ))}
             </div>
+
+            <DownloadCatalog />
 
             {/* Social Proof & Guarantee Strip */}
             <div style={{

@@ -18,6 +18,7 @@ export interface Product {
         area: string;
     };
     included: string[];
+    stockStatus: 'disponivel' | 'sob-encomenda';
 }
 
 export const products: Product[] = [
@@ -39,6 +40,7 @@ export const products: Product[] = [
         image: '/ac-9000-btu.png',
         hoverImage: '/services-concept.jpg',
         featured: false,
+        stockStatus: 'disponivel',
         technicalSpecs: {
             btuRange: '9.000 BTU',
             idealFor: 'Quartos Pequenos',
@@ -71,6 +73,7 @@ export const products: Product[] = [
         image: '/ac-12000-btu-v2.jpg',
         hoverImage: '/installation-team-v2.jpg',
         featured: true,
+        stockStatus: 'disponivel',
         technicalSpecs: {
             btuRange: '12.000 BTU',
             idealFor: 'Quartos / Escritórios',
@@ -102,6 +105,7 @@ export const products: Product[] = [
         image: '/ac-18000-btu-v2.jpg',
         hoverImage: '/services-concept.jpg',
         featured: false,
+        stockStatus: 'disponivel',
         technicalSpecs: {
             btuRange: '18.000 BTU',
             idealFor: 'Salas Amplas',
@@ -134,6 +138,7 @@ export const products: Product[] = [
         image: '/ac-18000-btu-v2.jpg',
         hoverImage: '/stock-infrastructure.jpg',
         featured: false,
+        stockStatus: 'disponivel',
         technicalSpecs: {
             btuRange: '24.000 BTU',
             idealFor: 'Salas Grandes / Escritórios',
@@ -165,6 +170,7 @@ export const products: Product[] = [
         image: '/ac-cassette-v2.jpg',
         hoverImage: '/stock-infrastructure.jpg',
         featured: false,
+        stockStatus: 'disponivel',
         technicalSpecs: {
             btuRange: '24.000 BTU',
             idealFor: 'Lojas e Escritórios',

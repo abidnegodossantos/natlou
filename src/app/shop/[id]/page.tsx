@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products } from '../products';
 import { HomeIcon, SofaIcon, BuildingIcon } from '@/components/icons/Icons';
+import { Package, Clock } from 'lucide-react';
+import ProductQRCode from '@/components/ProductQRCode';
 
 export function generateStaticParams() {
     return products.map((product) => ({
@@ -60,12 +62,30 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
 
                 {/* Right Side: Details */}
                 <div>
-                    <span style={{
-                        backgroundColor: 'rgba(var(--primary-rgb), 0.15)', color: 'var(--primary-color)',
-                        padding: '0.5rem 1rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: '700'
-                    }}>
-                        {product.category}
-                    </span>
+                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                        <span style={{
+                            backgroundColor: 'rgba(var(--primary-rgb), 0.15)', color: 'var(--primary-color)',
+                            padding: '0.5rem 1rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: '700'
+                        }}>
+                            {product.category}
+                        </span>
+                        
+                        {/* Indicador de Stock */}
+                        <span style={{
+                            backgroundColor: product.stockStatus === 'disponivel' ? '#d4edda' : '#fff3cd',
+                            color: product.stockStatus === 'disponivel' ? '#155724' : '#856404',
+                            padding: '0.5rem 1rem',
+                            borderRadius: '50px',
+                            fontSize: '0.85rem',
+                            fontWeight: '800',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.4rem'
+                        }}>
+                            {product.stockStatus === 'disponivel' ? <Package size={16} /> : <Clock size={16} />}
+                            {product.stockStatus === 'disponivel' ? 'Disponível - Entrega Rápida' : 'Sob Encomenda - Consulte Prazo'}
+                        </span>
+                    </div>
                     <h1 style={{
                         fontSize: '2.5rem', fontWeight: '800', margin: '1rem 0',
                         color: 'var(--text-color)', lineHeight: '1.2'
@@ -149,6 +169,11 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
                     </a>
                     <div style={{ textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
                         * Resposta imediata. Stock Garantido.
+                    </div>
+
+                    {/* QR Code Section */}
+                    <div style={{ marginTop: '3rem' }}>
+                        <ProductQRCode slug={product.slug} />
                     </div>
                 </div>
             </div>

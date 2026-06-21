@@ -13,7 +13,10 @@ export default function Footer() {
                 }}>
                     {/* Column 1: Company Info */}
                     <div>
-                        <h2 className="logo-text" style={{ fontSize: '2rem', marginBottom: '1rem', color: 'white' }}>NATLOU</h2>
+                        <h2 className="logo-text" style={{ fontSize: '2rem', marginBottom: '0.2rem', color: 'white' }}>NATLOU</h2>
+                        <div style={{ color: 'var(--action-color)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem' }}>
+                            🇦🇴 Empresa 100% Angolana
+                        </div>
                         <p style={{ color: '#ccc', lineHeight: '1.6', marginBottom: '1.5rem' }}>
                             A sua parceira de confiança em climatização e frio. Soluções completas de venda, instalação e manutenção para o seu conforto.
                         </p>
@@ -166,6 +169,7 @@ export default function Footer() {
                         &copy; {new Date().getFullYear()} Natlou Prestação de Serviços. Todos os direitos reservados.
                     </p>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', fontSize: '0.9rem', color: '#aaa' }}>
+                        <Link href="/faq">Perguntas Frequentes (FAQ)</Link>
                         <Link href="/privacy">Política de Privacidade</Link>
                         <Link href="/terms">Termos de Uso</Link>
                     </div>
