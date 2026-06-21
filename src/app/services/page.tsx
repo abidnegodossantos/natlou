@@ -11,22 +11,23 @@ export default function Services() {
             <div style={{ position: 'absolute', top: '40%', right: '-15%', width: '500px', height: '500px', backgroundColor: 'rgba(0, 74, 173, 0.08)', borderRadius: '50%', filter: 'blur(120px)', zIndex: 0, pointerEvents: 'none' }}></div>
             <div style={{ position: 'absolute', bottom: '10%', left: '10%', width: '400px', height: '400px', backgroundColor: 'rgba(255, 215, 0, 0.05)', borderRadius: '50%', filter: 'blur(90px)', zIndex: 0, pointerEvents: 'none' }}></div>
             {/* Hero Section: Ação Imediata */}
-            <div style={{
-                position: 'relative',
-                minHeight: '60vh',
-                width: '100vw',
-                maxWidth: '100vw',
-                marginLeft: 'calc(-50vw + 50%)', // Break out of container
-                marginBottom: '4rem',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                textAlign: 'center',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                paddingBottom: '120px' // Space for wave divider + button breathing room
-            }}>
+            <div 
+                className="services-hero-breakout"
+                style={{
+                    position: 'relative',
+                    minHeight: '60vh',
+                    width: '100%',
+                    marginBottom: '4rem',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    textAlign: 'center',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                    paddingBottom: '120px' // Space for wave divider + button breathing room
+                }}
+            >
                 {/* Background Image */}
                 <Image
                     src="/installation-team.jpg"
@@ -71,7 +72,6 @@ export default function Services() {
                             Atendimento técnico em <span style={{ color: '#FFD700', fontWeight: '700' }}>Luanda, Benguela e Bengo</span> com <span style={{ borderBottom: '2px solid var(--secondary-color)', paddingBottom: '2px' }}>técnicos certificados</span>.
                         </p>
 
-                        {/* CTA Button */}
                         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
                             <a
                                 href="https://wa.me/244946776397?text=Olá, preciso de um Diagnóstico Técnico (3.000 Kz)."
@@ -85,7 +85,7 @@ export default function Services() {
                                     gap: '0.75rem',
                                     backgroundColor: '#25D366',
                                     color: 'white',
-                                    padding: '0.9rem 2rem',
+                                    padding: '0.9rem clamp(1rem, 4vw, 2rem)',
                                     fontSize: 'clamp(0.95rem, 3.5vw, 1.2rem)',
                                     borderRadius: '50px',
                                     fontWeight: '700',
@@ -94,7 +94,8 @@ export default function Services() {
                                     border: '2px solid rgba(255,255,255,0.2)',
                                     width: '100%',
                                     maxWidth: '360px',
-                                    whiteSpace: 'nowrap'
+                                    whiteSpace: 'normal',
+                                    textAlign: 'center'
                                 }}
                             >
                                 Pedir Diagnóstico (3.000 Kz)

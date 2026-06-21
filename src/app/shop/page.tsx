@@ -68,19 +68,7 @@ export default function Shop() {
             </div>
 
             {/* Smart Filters (Sticky) */}
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexWrap: 'wrap',
-                gap: '1rem',
-                marginBottom: '4rem',
-                position: 'sticky',
-                top: '90px', // Below navbar
-                zIndex: 99,
-                backgroundColor: 'rgba(var(--bg-rgb), 0.95)', // Match bg-color with transparency using variable
-                padding: '1rem 0',
-                backdropFilter: 'blur(8px)'
-            }}>
+            <div className="shop-filters-container">
                 {categories.map((category) => (
                     <button
                         key={category}

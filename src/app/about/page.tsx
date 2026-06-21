@@ -163,7 +163,7 @@ export default function About() {
                                 overflow: 'hidden',
                                 boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
                                 cursor: 'pointer',
-                                height: '550px'
+                                height: 'clamp(300px, 50vh, 550px)'
                             }}>
                                 <Image
                                     src="/installation-team-v2.jpg"

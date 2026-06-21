@@ -30,7 +30,7 @@ export default function Contact() {
                 {/* Hero Content */}
                 <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 2rem', marginTop: '-4rem' }}>
                     <h1 style={{
-                        fontSize: '3.5rem',
+                        fontSize: 'clamp(2rem, 8vw, 3.5rem)',
                         fontWeight: '800',
                         marginBottom: '1.5rem',
                         letterSpacing: '-1px',
@@ -39,7 +39,7 @@ export default function Contact() {
                         Contactos
                     </h1>
                     <p style={{
-                        fontSize: '1.4rem',
+                        fontSize: 'clamp(1.1rem, 3vw, 1.3rem)',
                         maxWidth: '700px',
                         margin: '0 auto',
                         lineHeight: '1.6',

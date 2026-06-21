@@ -31,7 +31,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
 
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                 gap: '4rem',
                 marginBottom: '4rem'
             }}>
@@ -322,7 +322,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
             {/* Sticky Mobile CTA */}
             <div className="mobile-only" style={{
                 position: 'fixed',
-                bottom: '1rem',
+                bottom: 'calc(70px + 1rem + env(safe-area-inset-bottom, 0px))',
                 left: '1rem',
                 right: '1rem',
                 padding: '1rem',
