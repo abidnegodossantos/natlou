@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { products } from '../products';
 import { notFound } from 'next/navigation';
+import { products } from '../products';
+import { HomeIcon, SofaIcon, BuildingIcon } from '@/components/icons/Icons';
 
 export function generateStaticParams() {
     return products.map((product) => ({
@@ -86,17 +87,23 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
                         </h4>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', textAlign: 'center' }}>
                             <div style={{ opacity: product.category.includes('9') || product.category.includes('12') ? 1 : 0.4 }}>
-                                <div style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>🏠</div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.2rem' }}>
+                                    <HomeIcon size={24} style={{ color: 'var(--primary-color)' }} />
+                                </div>
                                 <div style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--primary-color)' }}>Pequeno</div>
                                 <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>9-12k BTUs<br />(Quartos)</div>
                             </div>
                             <div style={{ opacity: product.category.includes('18') ? 1 : 0.4 }}>
-                                <div style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>🛋️</div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.2rem' }}>
+                                    <SofaIcon size={24} style={{ color: 'var(--primary-color)' }} />
+                                </div>
                                 <div style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--primary-color)' }}>Médio</div>
                                 <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>18k BTUs<br />(Salas)</div>
                             </div>
                             <div style={{ opacity: product.category.includes('24') || product.category.includes('Comercial') ? 1 : 0.4 }}>
-                                <div style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>🏢</div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.2rem' }}>
+                                    <BuildingIcon size={24} style={{ color: 'var(--primary-color)' }} />
+                                </div>
                                 <div style={{ fontWeight: '700', fontSize: '0.9rem', color: 'var(--primary-color)' }}>Grande</div>
                                 <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>24k+ BTUs<br />(Lojas)</div>
                             </div>
