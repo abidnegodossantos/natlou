@@ -1,7 +1,7 @@
 'use client';
 
 import { jsPDF } from 'jspdf';
-import 'jspdf-autotable';
+import autoTable from 'jspdf-autotable';
 import { products } from '@/app/shop/products';
 import { Download } from 'lucide-react';
 import { useState } from 'react';
@@ -45,8 +45,7 @@ export default function DownloadCatalog() {
                     product.installment
                 ]);
                 
-                // @ts-ignore - jspdf-autotable adds autoTable to doc
-                doc.autoTable({
+                autoTable(doc, {
                     head: [tableColumn],
                     body: tableRows,
                     startY: 70,
