@@ -87,9 +87,9 @@ export default function FAQ() {
                                     border: 'none',
                                     cursor: 'pointer',
                                     textAlign: 'left',
-                                    color: 'var(--text-primary)',
-                                    fontSize: '1.1rem',
-                                    fontWeight: '700'
+                                    color: 'var(--primary-color)',
+                                    fontSize: '1.25rem',
+                                    fontWeight: '800'
                                 }}
                             >
                                 {faq.question}
@@ -111,7 +111,13 @@ export default function FAQ() {
                                 padding: openIndex === index ? '0 1.5rem 1.5rem' : '0 1.5rem',
                             }}>
                                 <p 
-                                    style={{ color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem' }}
+                                    style={{ 
+                                        color: 'var(--text-primary)', 
+                                        fontSize: '1.05rem',
+                                        lineHeight: '1.7', 
+                                        marginBottom: '1.5rem',
+                                        fontWeight: '500'
+                                    }}
                                     dangerouslySetInnerHTML={{ __html: faq.answer }}
                                 />
                                 
