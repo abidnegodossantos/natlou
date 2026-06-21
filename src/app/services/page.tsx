@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import RevealOnScroll from '@/components/RevealOnScroll';
+import { Gift, Zap, Briefcase } from 'lucide-react';
 
 export default function Services() {
     return (
@@ -67,7 +68,7 @@ export default function Services() {
                             marginLeft: 'auto',
                             marginRight: 'auto'
                         }}>
-                            Atendimento rápido em <span style={{ color: '#FFD700', fontWeight: '700' }}>Luanda, Benguela e Bengo</span> com <span style={{ borderBottom: '2px solid var(--secondary-color)', paddingBottom: '2px' }}>técnicos certificados</span>.
+                            Atendimento técnico em <span style={{ color: '#FFD700', fontWeight: '700' }}>Luanda, Benguela e Bengo</span> com <span style={{ borderBottom: '2px solid var(--secondary-color)', paddingBottom: '2px' }}>técnicos certificados</span>.
                         </p>
 
                         {/* CTA Button */}
@@ -134,9 +135,10 @@ export default function Services() {
                         </p>
                         <div style={{
                             backgroundColor: '#d4edda', color: '#155724', padding: '0.8rem 1.2rem', borderRadius: '12px',
-                            fontSize: '0.9rem', fontWeight: '700', width: '100%'
+                            fontSize: '0.9rem', fontWeight: '700', width: '100%',
+                            display: 'flex', alignItems: 'center', gap: '0.5rem'
                         }}>
-                            🎁 Na compra do AC connosco, a montagem é GRÁTIS.
+                            <Gift size={16} /> Na compra do AC connosco, a montagem é GRÁTIS.
                         </div>
                     </div>
                 </RevealOnScroll>
@@ -182,9 +184,10 @@ export default function Services() {
                         </p>
                         <div style={{
                             backgroundColor: '#fff3cd', color: '#856404', padding: '0.8rem 1.2rem', borderRadius: '12px',
-                            fontSize: '0.9rem', fontWeight: '700', width: '100%'
+                            fontSize: '0.9rem', fontWeight: '700', width: '100%',
+                            display: 'flex', alignItems: 'center', gap: '0.5rem'
                         }}>
-                            ⚡ Diagnóstico rápido e preciso.
+                            <Zap size={16} /> Diagnóstico rápido e preciso.
                         </div>
                     </div>
                 </RevealOnScroll>
@@ -391,8 +394,8 @@ export default function Services() {
                             <RevealOnScroll delay={200}>
                                 <h3 className="animate-slide-in" style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '1.5rem', color: 'var(--text-primary)', borderLeft: '5px solid var(--primary-color)', paddingLeft: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
                                     <span>Montagem (Mão de Obra)</span>
-                                    <span className="animate-pulse-btn" style={{ fontSize: '0.85rem', backgroundColor: '#d4edda', color: '#155724', padding: '0.4rem 0.8rem', borderRadius: '50px', fontWeight: '700' }}>
-                                        🎁 Grátis na compra de equipamento NATLOU
+                                    <span className="animate-pulse-btn" style={{ fontSize: '0.85rem', backgroundColor: '#d4edda', color: '#155724', padding: '0.4rem 0.8rem', borderRadius: '50px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                        <Gift size={14} /> Grátis na compra de equipamento NATLOU
                                     </span>
                                 </h3>
                                 <div style={{ overflowX: 'auto', borderRadius: '12px', boxShadow: '0 5px 20px var(--shadow-color)', border: '1px solid var(--border-light)' }}>
@@ -446,8 +449,8 @@ export default function Services() {
                 }}>
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent)', backgroundSize: '40px 40px', opacity: 0.1 }}></div>
 
-                    <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1.5rem', position: 'relative' }}>
-                        Soluções para Escritórios e Empresas 💼
+                    <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1.5rem', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem' }}>
+                        <Briefcase size={32} /> Soluções para Escritórios e Empresas
                     </h2>
                     <p style={{ maxWidth: '700px', margin: '0 auto 2.5rem', fontSize: '1.1rem', lineHeight: '1.6', opacity: 0.9, position: 'relative' }}>
                         Precisa de manutenção para múltiplos aparelhos? Oferecemos <span style={{ fontWeight: 'bold', color: '#FFD700' }}>contratos mensais com descontos exclusivos</span> e atendimento prioritário.

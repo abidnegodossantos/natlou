@@ -173,7 +173,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
                         <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(40, 167, 69, 0.15)', color: '#28a745', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                         </div>
-                        <span style={{ fontWeight: '500', color: 'var(--text-primary)' }}>Transporte para Luanda e Benguela</span>
+                        <span style={{ fontWeight: '500', color: 'var(--text-primary)' }}>Transporte Grátis (Luanda e Bengo)</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', backgroundColor: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px' }}>
                         <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(40, 167, 69, 0.15)', color: '#28a745', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>

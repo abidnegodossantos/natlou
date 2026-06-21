@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Snowflake, CloudSun, Sun } from 'lucide-react';
 
 export default function BtuCalculator() {
     const [area, setArea] = useState(15);
@@ -26,8 +27,8 @@ export default function BtuCalculator() {
 
     // Determine recommendation
     let recommendedProduct = {
-        name: 'Split Mural 9.000 BTUs',
-        slug: 'split-mural-9000-btus',
+        name: 'Split Haier 9.000 BTUs',
+        slug: 'split-haier-9000-btus',
         id: 1,
         desc: 'Ideal para o seu espaço compacto. Económico e muito silencioso.'
     };
@@ -48,10 +49,10 @@ export default function BtuCalculator() {
         };
     } else if (totalBtu > 18000) {
         recommendedProduct = {
-            name: 'Cassete 24.000 BTUs',
-            slug: 'cassete-24000-btus',
+            name: 'Split TCL 24.000 BTU',
+            slug: 'split-tcl-24000-btus',
             id: 4,
-            desc: 'Para grandes espaços comerciais ou escritórios corporativos. Discreto e de alta performance.'
+            desc: 'Alta potência para grandes espaços residenciais. Tecnologia Inverter de última geração.'
         };
     }
 
@@ -70,9 +71,13 @@ export default function BtuCalculator() {
                 color: 'var(--primary-color)',
                 textAlign: 'center',
                 marginBottom: '0.5rem',
-                fontWeight: 800
+                fontWeight: 800,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem'
             }}>
-                ❄️ Calculadora de BTUs Inteligente
+                <Snowflake size={26} style={{ verticalAlign: 'middle' }} /> Calculadora de BTUs Inteligente
             </h3>
             <p style={{
                 color: 'var(--text-secondary)',
@@ -133,10 +138,14 @@ export default function BtuCalculator() {
                                     fontWeight: 'bold',
                                     cursor: 'pointer',
                                     fontSize: '0.9rem',
-                                    transition: 'all 0.3s ease'
+                                    transition: 'all 0.3s ease',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '0.4rem'
                                 }}
                             >
-                                🌤️ Pouco Sol
+                                <CloudSun size={18} style={{ verticalAlign: 'middle' }} /> Pouco Sol
                             </button>
                             <button
                                 type="button"
@@ -152,10 +161,14 @@ export default function BtuCalculator() {
                                     fontWeight: 'bold',
                                     cursor: 'pointer',
                                     fontSize: '0.9rem',
-                                    transition: 'all 0.3s ease'
+                                    transition: 'all 0.3s ease',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '0.4rem'
                                 }}
                             >
-                                ☀️ Muito Sol
+                                <Sun size={18} style={{ verticalAlign: 'middle' }} /> Muito Sol
                             </button>
                         </div>
                     </div>

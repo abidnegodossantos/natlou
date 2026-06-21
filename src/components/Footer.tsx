@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Phone } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -87,7 +88,7 @@ export default function Footer() {
                                     gap: '0.5rem',
                                     marginBottom: '0.2rem'
                                 }}>
-                                    <span style={{ color: '#25D366' }}>✆</span> +244 946 776 397
+                                    <span style={{ color: '#25D366', display: 'flex', alignItems: 'center' }}><Phone size={16} /></span> +244 946 776 397
                                 </a>
                                 <p style={{ color: '#aaa', fontSize: '0.85rem' }}>Vendas e Orçamentos</p>
                             </div>
@@ -104,7 +105,7 @@ export default function Footer() {
                                     gap: '0.5rem',
                                     marginBottom: '0.2rem'
                                 }}>
-                                    <span style={{ color: '#aaa' }}>✆</span> +244 955 475 575
+                                    <span style={{ color: '#aaa', display: 'flex', alignItems: 'center' }}><Phone size={16} /></span> +244 955 475 575
                                 </a>
                                 <p style={{ color: '#aaa', fontSize: '0.85rem' }}>Suporte e Parcerias</p>
                             </div>

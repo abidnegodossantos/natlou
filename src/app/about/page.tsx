@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef, FC } from 'react';
 import Image from 'next/image';
+import { BadgeCheck } from 'lucide-react';
 
 interface CounterProps {
   end: number;
@@ -190,9 +191,12 @@ export default function About() {
                                         fontWeight: '700',
                                         boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
                                         transform: 'translateY(20px)',
-                                        transition: 'transform 0.4s ease'
+                                        transition: 'transform 0.4s ease',
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '0.4rem'
                                     }} className="story-tag">
-                                        ✓ Técnicos Certificados
+                                        <BadgeCheck size={16} /> Técnicos Certificados
                                     </span>
                                 </div>
                             </div>

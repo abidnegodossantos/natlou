@@ -23,14 +23,14 @@ export interface Product {
 export const products: Product[] = [
     {
         id: 1,
-        name: 'Split Mural 9.000 BTUs',
-        slug: 'split-mural-9000-btus',
+        name: 'Split Haier 9.000 BTUs',
+        slug: 'split-haier-9000-btus',
         category: '9.000 BTUs',
-        price: '260.000',
-        rawPrice: 260000,
-        installment: '2x de 130.000 Kz',
+        price: '290.000',
+        rawPrice: 290000,
+        installment: '2x de 145.000 Kz',
         shortDescription: 'Ideal para quartos pequenos. Silencioso.',
-        description: 'Ideal para quartos pequenos e escritórios individuais. O Split Mural de 9.000 BTUs oferece conforto térmico com baixo consumo de energia.',
+        description: 'Ideal para quartos pequenos e escritórios individuais. O Split Haier de 9.000 BTUs oferece conforto térmico com baixo consumo de energia.',
         badges: [
             { text: 'Montagem Grátis', color: '#155724', bg: '#d4edda' },
             { text: 'Entrega Grátis', color: '#004085', bg: '#cce5ff' },
@@ -48,7 +48,7 @@ export const products: Product[] = [
             'Aparelho de Ar Condicionado (Novo na Caixa)',
             'Kit de Instalação Profissional',
             'Mão de Obra de Montagem (Grátis)',
-            'Transporte (Grátis para Luanda/Benguela/Bengo)',
+            'Transporte Grátis (Luanda e Bengo)',
             '1ª Manutenção Preventiva (Oferta)'
         ]
     },
@@ -57,9 +57,9 @@ export const products: Product[] = [
         name: 'Split Haier/TCL 12.000 BTU',
         slug: 'split-mural-12000-btus',
         category: '12.000 BTUs',
-        price: '310.000',
-        rawPrice: 310000,
-        installment: '2x de 155.000 Kz',
+        price: '350.000',
+        rawPrice: 350000,
+        installment: '2x de 175.000 Kz',
         shortDescription: 'O Campeão de Vendas. Ideal para Quartos e Escritórios.',
         description: 'O equilíbrio perfeito para o seu conforto. Ideal para quartos de casal e escritórios, garantindo climatização rápida e eficiente. Inclui montagem e entrega.',
         badges: [
@@ -80,18 +80,18 @@ export const products: Product[] = [
             'Aparelho de Ar Condicionado (Novo na Caixa)',
             'Kit de Instalação Profissional',
             'Mão de Obra de Montagem (Grátis)',
-            'Transporte (Grátis para Luanda/Benguela/Bengo)',
+            'Transporte Grátis (Luanda e Bengo)',
             '1ª Manutenção Preventiva (Oferta)'
         ]
     },
     {
         id: 3,
-        name: 'Split Haier/TCL 18.000 BTU',
+        name: 'Split Haier 18.000 BTU',
         slug: 'split-mural-18000-btus',
         category: '18.000 BTUs',
-        price: '360.000',
-        rawPrice: 360000,
-        installment: '2x de 180.000 Kz',
+        price: '440.000',
+        rawPrice: 440000,
+        installment: '2x de 220.000 Kz',
         shortDescription: 'Potência Máxima. Ideal para Salas de Estar.',
         description: 'Potência superior para ambientes amplos. Garante refrigeração rápida mesmo nos dias mais quentes. Perfeito para salas de estar e espaços abertos.',
         badges: [
@@ -111,12 +111,44 @@ export const products: Product[] = [
             'Aparelho de Ar Condicionado (Novo na Caixa)',
             'Kit de Instalação Profissional',
             'Mão de Obra de Montagem (Grátis)',
-            'Transporte (Grátis para Luanda/Benguela/Bengo)',
+            'Transporte Grátis (Luanda e Bengo)',
             '1ª Manutenção Preventiva (Oferta)'
         ]
     },
     {
         id: 4,
+        name: 'Split TCL 24.000 BTU',
+        slug: 'split-tcl-24000-btus',
+        category: '24.000 BTUs',
+        price: '580.000',
+        rawPrice: 580000,
+        installment: '2x de 290.000 Kz',
+        shortDescription: 'Alta potência para grandes espaços residenciais.',
+        description: 'O Split TCL 24.000 BTU é a escolha certa para salas grandes e espaços de escritório de porte médio. Tecnologia Inverter de última geração para máxima eficiência energética.',
+        badges: [
+            { text: 'Montagem Grátis', color: '#155724', bg: '#d4edda' },
+            { text: 'Entrega Grátis', color: '#004085', bg: '#cce5ff' },
+            { text: 'Novo', color: '#721c24', bg: '#f8d7da' },
+            { text: 'Inverter Smart', color: '#0d47a1', bg: '#e3f2fd' }
+        ],
+        image: '/ac-18000-btu-v2.jpg',
+        hoverImage: '/stock-infrastructure.jpg',
+        featured: false,
+        technicalSpecs: {
+            btuRange: '24.000 BTU',
+            idealFor: 'Salas Grandes / Escritórios',
+            area: '35-50m²'
+        },
+        included: [
+            'Aparelho de Ar Condicionado (Novo na Caixa)',
+            'Kit de Instalação Profissional',
+            'Mão de Obra de Montagem (Grátis)',
+            'Transporte Grátis (Luanda e Bengo)',
+            '1ª Manutenção Preventiva (Oferta)'
+        ]
+    },
+    {
+        id: 5,
         name: 'Cassete 24.000 BTUs',
         slug: 'cassete-24000-btus',
         category: 'Comercial',

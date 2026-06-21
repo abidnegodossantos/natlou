@@ -298,8 +298,8 @@ export default function Home() {
                                         />
                                     </div>
                                     <div>
-                                        <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>Pagamento Facilitado</h4>
-                                        <p style={{ color: 'var(--text-secondary)' }}>Pague em até 2 prestações sem juros.</p>
+                                        <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>1ª Manutenção Grátis</h4>
+                                        <p style={{ color: 'var(--text-secondary)' }}>Pagamento facilitado em prestações.</p>
                                     </div>
                                 </div>
 
@@ -316,7 +316,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>Entrega Grátis</h4>
-                                        <p style={{ color: 'var(--text-secondary)' }}>Luanda, Benguela e Bengo.</p>
+                                        <p style={{ color: 'var(--text-secondary)' }}>Luanda e Bengo. Entrega em Benguela com custo adicional.</p>
                                     </div>
                                 </div>
                             </div>

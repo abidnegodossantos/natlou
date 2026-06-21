@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { products } from './products';
+import { Tag, Truck } from 'lucide-react';
 
 const categories = ['Todos', 'Quartos (9-12k BTUs)', 'Salas (18-24k BTUs)', 'Acessórios & Gás'];
 
@@ -139,8 +140,8 @@ export default function Shop() {
                                         position: 'relative',
                                         overflow: 'hidden'
                                     }}>
-                                        {badge.text.includes('Montagem') && '🏷️'}
-                                        {badge.text.includes('Entrega') && '❄️'}
+                                        {badge.text.includes('Montagem') && <Tag size={13} />}
+                                        {badge.text.includes('Entrega') && <Truck size={13} />}
                                         {' ' + badge.text}
                                     </span>
                                 ))}
