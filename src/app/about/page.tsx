@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, FC } from 'react';
 import Image from 'next/image';
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck, Target, Eye, Heart, Pointer } from 'lucide-react';
 
 interface CounterProps {
   end: number;
@@ -81,6 +81,11 @@ const Counter: FC<CounterProps> = ({ end, duration = 2000, prefix = '', suffix =
 };
 
 export default function About() {
+    const [flipped, setFlipped] = useState({
+        missao: false,
+        visao: false,
+        valores: false
+    });
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -315,7 +320,10 @@ export default function About() {
                     marginBottom: '4rem'
                 }}>
                     {/* Mission FLIP Card */}
-                    <div className="flip-card">
+                    <div 
+                        className={`flip-card ${flipped.missao ? 'is-flipped' : ''}`}
+                        onClick={() => setFlipped(prev => ({...prev, missao: !prev.missao}))}
+                    >
                         <div className="flip-card-inner">
                             {/* FRONT: Icon + Title */}
                             <div className="flip-card-front">
@@ -323,18 +331,18 @@ export default function About() {
                                     width: '120px', height: '120px', margin: '0 auto 1.5rem',
                                     position: 'relative',
                                     borderRadius: '50%',
-                                    overflow: 'hidden',
+                                    backgroundColor: 'var(--bg-secondary)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
                                     boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
                                 }}>
-                                    <Image
-                                        src="/mission-rocket.jpg"
-                                        alt="Missão Natlou"
-                                        fill
-                                        style={{ objectFit: 'cover' }}
-                                    />
+                                    <Target size={64} color="var(--primary-color)" strokeWidth={1.5} />
                                 </div>
                                 <h3 style={{ fontSize: '1.8rem', color: 'var(--primary-color)', fontWeight: '800' }}>Missão</h3>
-                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem' }}>(Passe o rato para ver)</p>
+                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                                    <Pointer size={16} /> (Toque para ver)
+                                </p>
                             </div>
 
                             {/* BACK: Detailed Text */}
@@ -351,7 +359,10 @@ export default function About() {
                     </div>
 
                     {/* Vision FLIP Card */}
-                    <div className="flip-card">
+                    <div 
+                        className={`flip-card ${flipped.visao ? 'is-flipped' : ''}`}
+                        onClick={() => setFlipped(prev => ({...prev, visao: !prev.visao}))}
+                    >
                         <div className="flip-card-inner">
                             {/* FRONT */}
                             <div className="flip-card-front">
@@ -359,18 +370,18 @@ export default function About() {
                                     width: '120px', height: '120px', margin: '0 auto 1.5rem',
                                     position: 'relative',
                                     borderRadius: '50%',
-                                    overflow: 'hidden',
+                                    backgroundColor: 'var(--bg-secondary)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
                                     boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
                                 }}>
-                                    <Image
-                                        src="/vision-eye.jpg"
-                                        alt="Visão Natlou"
-                                        fill
-                                        style={{ objectFit: 'cover' }}
-                                    />
+                                    <Eye size={64} color="var(--primary-color)" strokeWidth={1.5} />
                                 </div>
                                 <h3 style={{ fontSize: '1.8rem', color: 'var(--primary-color)', fontWeight: '800' }}>Visão</h3>
-                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem' }}>(Passe o rato para ver)</p>
+                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                                    <Pointer size={16} /> (Toque para ver)
+                                </p>
                             </div>
 
                             {/* BACK */}
@@ -386,7 +397,10 @@ export default function About() {
                     </div>
 
                     {/* Values FLIP Card */}
-                    <div className="flip-card">
+                    <div 
+                        className={`flip-card ${flipped.valores ? 'is-flipped' : ''}`}
+                        onClick={() => setFlipped(prev => ({...prev, valores: !prev.valores}))}
+                    >
                         <div className="flip-card-inner">
                             {/* FRONT */}
                             <div className="flip-card-front">
@@ -394,18 +408,18 @@ export default function About() {
                                     width: '120px', height: '120px', margin: '0 auto 1.5rem',
                                     position: 'relative',
                                     borderRadius: '50%',
-                                    overflow: 'hidden',
+                                    backgroundColor: 'var(--bg-secondary)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
                                     boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
                                 }}>
-                                    <Image
-                                        src="/values-chart.png"
-                                        alt="Valores Natlou"
-                                        fill
-                                        style={{ objectFit: 'cover' }}
-                                    />
+                                    <Heart size={64} color="var(--primary-color)" strokeWidth={1.5} />
                                 </div>
                                 <h3 style={{ fontSize: '1.8rem', color: 'var(--primary-color)', fontWeight: '800' }}>Valores</h3>
-                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem' }}>(Passe o rato para ver)</p>
+                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                                    <Pointer size={16} /> (Toque para ver)
+                                </p>
                             </div>
 
                             {/* BACK */}
