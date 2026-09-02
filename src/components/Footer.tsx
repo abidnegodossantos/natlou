@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone } from 'lucide-react';
 
 export default function Footer() {
@@ -13,7 +14,21 @@ export default function Footer() {
                 }}>
                     {/* Column 1: Company Info */}
                     <div>
-                        <h2 className="logo-text" style={{ fontSize: '2rem', marginBottom: '0.2rem', color: 'white' }}>NATLOU</h2>
+                    <div style={{ marginBottom: '1rem' }}>
+                        <Image
+                            src="/logo-natlou.png"
+                            alt="Natlou - Ar Condicionado"
+                            width={160}
+                            height={60}
+                            style={{
+                                objectFit: 'contain',
+                                height: 'auto',
+                                maxHeight: '55px',
+                                width: 'auto',
+                                filter: 'brightness(0) invert(1)',
+                            }}
+                        />
+                    </div>
                         <div style={{ color: 'var(--action-color)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem' }}>
                             🇦🇴 Empresa 100% Angolana
                         </div>

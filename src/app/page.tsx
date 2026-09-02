@@ -385,9 +385,9 @@ export default function Home() {
 
                     <div style={{
                         display: 'flex',
-                        justifyContent: 'space-around',
+                        justifyContent: 'center',
                         flexWrap: 'wrap',
-                        gap: '3rem'
+                        gap: '4rem'
                     }}>
                         {/* Counter 1 */}
                         <RevealOnScroll delay={0}>
@@ -416,21 +416,6 @@ export default function Home() {
                                     <AnimatedCounter end={30} prefix="+" />
                                 </div>
                                 <div style={{ fontSize: '1.2rem', fontWeight: '500', marginTop: '0.5rem' }}>Empresas Parceiras</div>
-                            </div>
-                        </RevealOnScroll>
-
-                        {/* Counter 3 */}
-                        <RevealOnScroll delay={400}>
-                            <div style={{ textAlign: 'center' }}>
-                                <div style={{
-                                    fontSize: '4rem',
-                                    fontWeight: '800',
-                                    color: 'var(--action-color)',
-                                    lineHeight: '1'
-                                }}>
-                                    100%
-                                </div>
-                                <div style={{ fontSize: '1.2rem', fontWeight: '500', marginTop: '0.5rem' }}>Angolana</div>
                             </div>
                         </RevealOnScroll>
                     </div>

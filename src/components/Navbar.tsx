@@ -2,14 +2,35 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <nav className="navbar">
+    <nav
+      className="navbar"
+      style={{
+        background: scrolled
+          ? 'rgba(15, 23, 42, 0.96)'
+          : 'rgba(15, 23, 42, 0.55)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        boxShadow: scrolled ? '0 2px 24px rgba(0,0,0,0.35)' : 'none',
+        borderBottom: scrolled
+          ? '1px solid rgba(56, 189, 248, 0.18)'
+          : '1px solid rgba(255,255,255,0.08)',
+        transition: 'background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease',
+      }}
+    >
       <div className="logo">
         <Link href="/">
           <Image
@@ -17,12 +38,13 @@ export default function Navbar() {
             alt="Natlou - Ar Condicionado"
             width={200}
             height={75}
-            style={{ 
-              objectFit: 'contain', 
-              height: 'auto', 
-              maxHeight: '60px', 
+            style={{
+              objectFit: 'contain',
+              height: 'auto',
+              maxHeight: '60px',
               width: 'auto',
-              maxWidth: '150px'
+              maxWidth: '150px',
+              filter: 'brightness(0) invert(1)',
             }}
             priority
           />
@@ -40,10 +62,11 @@ export default function Navbar() {
 
       <div className="navbar-actions">
         <ThemeToggle />
-        <button 
+        <button
           className="mobile-menu-btn"
           onClick={() => setMenuOpen(!menuOpen)}
-          style={{ zIndex: 9999 }}
+          style={{ zIndex: 9999, color: 'rgba(255,255,255,0.9)' }}
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
         >
           {menuOpen ? (
             <svg width="32" height="32" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3" fill="none">
