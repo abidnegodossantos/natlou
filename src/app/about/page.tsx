@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, FC } from 'react';
 import Image from 'next/image';
-import { BadgeCheck, Target, Eye, Heart, Pointer } from 'lucide-react';
+import { BadgeCheck, Target, Eye, Heart, Pointer, RotateCcw } from 'lucide-react';
 
 interface CounterProps {
   end: number;
@@ -318,8 +318,9 @@ export default function About() {
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                     gap: '2.5rem',
+                    alignItems: 'flex-start',
                     marginBottom: '4rem'
                 }}>
                     {/* Mission FLIP Card */}
@@ -330,8 +331,6 @@ export default function About() {
                         <div className="flip-card-inner">
                             {/* FRONT: Icon + Title */}
                             <div className="flip-card-front" style={{
-                                position: 'relative',
-                                overflow: 'hidden',
                                 border: '1px solid #e2e8f0',
                                 boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
                             }}>
@@ -350,7 +349,7 @@ export default function About() {
                                     PROPÓSITO
                                 </span>
                                 <div style={{
-                                    width: '100px', height: '100px', margin: '0 auto 1.2rem',
+                                    width: '90px', height: '90px', margin: '0 auto 1rem',
                                     position: 'relative',
                                     borderRadius: '50%',
                                     background: 'linear-gradient(135deg, #e0f2fe, #bae6fd)',
@@ -360,11 +359,10 @@ export default function About() {
                                     boxShadow: '0 8px 20px rgba(56, 189, 248, 0.25)',
                                     border: '3px solid #ffffff'
                                 }}>
-                                    <Target size={52} color="#0284c7" strokeWidth={1.8} />
+                                    <Target size={46} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800' }}>Missão</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800', marginBottom: '0.8rem' }}>Missão</h3>
                                 <div style={{
-                                    marginTop: '1.2rem',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.4rem',
@@ -382,12 +380,39 @@ export default function About() {
                             {/* BACK: Detailed Text */}
                             <div className="flip-card-back" style={{
                                 background: 'linear-gradient(135deg, #0f172a, #1e3a5f)',
-                                border: '2px solid #fbbf24'
+                                border: '2px solid #fbbf24',
+                                transform: 'rotateY(180deg)',
+                                padding: '2rem 1.5rem'
                             }}>
-                                <h3 style={{ fontSize: '1.6rem', marginBottom: '1.2rem', color: '#fbbf24', fontWeight: '800' }}>Nossa Missão</h3>
-                                <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#f8fafc' }}>
+                                <span style={{
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: '800',
+                                    color: '#fbbf24',
+                                    backgroundColor: 'rgba(251, 191, 36, 0.15)',
+                                    padding: '0.3rem 0.8rem',
+                                    borderRadius: '50px',
+                                    marginBottom: '1rem'
+                                }}>
+                                    MISSÃO
+                                </span>
+                                <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#f8fafc', fontWeight: '500', marginBottom: '1.5rem', textAlign: 'center' }}>
                                     "Oferecer excelência em climatização e superar expectativas com soluções modernas, seguras e sustentáveis para cada cliente."
                                 </p>
+                                <div style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.4rem',
+                                    padding: '0.4rem 1rem',
+                                    borderRadius: '50px',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                    color: '#fbbf24',
+                                    fontSize: '0.85rem',
+                                    fontWeight: '600'
+                                }}>
+                                    <RotateCcw size={14} /> Toque para voltar
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -400,8 +425,6 @@ export default function About() {
                         <div className="flip-card-inner">
                             {/* FRONT */}
                             <div className="flip-card-front" style={{
-                                position: 'relative',
-                                overflow: 'hidden',
                                 border: '1px solid #e2e8f0',
                                 boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
                             }}>
@@ -420,7 +443,7 @@ export default function About() {
                                     FUTURO
                                 </span>
                                 <div style={{
-                                    width: '100px', height: '100px', margin: '0 auto 1.2rem',
+                                    width: '90px', height: '90px', margin: '0 auto 1rem',
                                     position: 'relative',
                                     borderRadius: '50%',
                                     background: 'linear-gradient(135deg, #e0f2fe, #bae6fd)',
@@ -430,11 +453,10 @@ export default function About() {
                                     boxShadow: '0 8px 20px rgba(56, 189, 248, 0.25)',
                                     border: '3px solid #ffffff'
                                 }}>
-                                    <Eye size={52} color="#0284c7" strokeWidth={1.8} />
+                                    <Eye size={46} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800' }}>Visão</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800', marginBottom: '0.8rem' }}>Visão</h3>
                                 <div style={{
-                                    marginTop: '1.2rem',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.4rem',
@@ -451,12 +473,40 @@ export default function About() {
 
                             {/* BACK */}
                             <div className="flip-card-back" style={{
-                                background: 'linear-gradient(135deg, #0284c7, #0f172a)'
+                                background: 'linear-gradient(135deg, #0284c7, #0f172a)',
+                                border: '2px solid #38bdf8',
+                                transform: 'rotateY(180deg)',
+                                padding: '2rem 1.5rem'
                             }}>
-                                <h3 style={{ fontSize: '1.6rem', marginBottom: '1.2rem', color: '#ffffff', fontWeight: '800' }}>Nossa Visão</h3>
-                                <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#f8fafc' }}>
+                                <span style={{
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: '800',
+                                    color: '#38bdf8',
+                                    backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                                    padding: '0.3rem 0.8rem',
+                                    borderRadius: '50px',
+                                    marginBottom: '1rem'
+                                }}>
+                                    VISÃO
+                                </span>
+                                <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#f8fafc', fontWeight: '500', marginBottom: '1.5rem', textAlign: 'center' }}>
                                     "Ser a referência nº 1 no setor de climatização em Angola, reconhecida pela qualidade total, inovação e absoluta confiança."
                                 </p>
+                                <div style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.4rem',
+                                    padding: '0.4rem 1rem',
+                                    borderRadius: '50px',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                    color: '#38bdf8',
+                                    fontSize: '0.85rem',
+                                    fontWeight: '600'
+                                }}>
+                                    <RotateCcw size={14} /> Toque para voltar
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -469,8 +519,6 @@ export default function About() {
                         <div className="flip-card-inner">
                             {/* FRONT */}
                             <div className="flip-card-front" style={{
-                                position: 'relative',
-                                overflow: 'hidden',
                                 border: '1px solid #e2e8f0',
                                 boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
                             }}>
@@ -489,7 +537,7 @@ export default function About() {
                                     PRINCÍPIOS
                                 </span>
                                 <div style={{
-                                    width: '100px', height: '100px', margin: '0 auto 1.2rem',
+                                    width: '90px', height: '90px', margin: '0 auto 1rem',
                                     position: 'relative',
                                     borderRadius: '50%',
                                     background: 'linear-gradient(135deg, #fef3c7, #fde68a)',
@@ -499,11 +547,10 @@ export default function About() {
                                     boxShadow: '0 8px 20px rgba(251, 191, 36, 0.3)',
                                     border: '3px solid #ffffff'
                                 }}>
-                                    <Heart size={52} color="#d97706" strokeWidth={1.8} />
+                                    <Heart size={46} color="#d97706" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800' }}>Valores</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800', marginBottom: '0.8rem' }}>Valores</h3>
                                 <div style={{
-                                    marginTop: '1.2rem',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.4rem',
@@ -521,12 +568,39 @@ export default function About() {
                             {/* BACK */}
                             <div className="flip-card-back" style={{
                                 background: 'linear-gradient(135deg, #1e293b, #0f172a)',
-                                border: '2px solid #38bdf8'
+                                border: '2px solid #fbbf24',
+                                transform: 'rotateY(180deg)',
+                                padding: '2rem 1.5rem'
                             }}>
-                                <h3 style={{ fontSize: '1.6rem', marginBottom: '1.2rem', color: '#38bdf8', fontWeight: '800' }}>Nossos Valores</h3>
-                                <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#f8fafc' }}>
+                                <span style={{
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: '800',
+                                    color: '#fbbf24',
+                                    backgroundColor: 'rgba(251, 191, 36, 0.15)',
+                                    padding: '0.3rem 0.8rem',
+                                    borderRadius: '50px',
+                                    marginBottom: '1rem'
+                                }}>
+                                    VALORES
+                                </span>
+                                <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#f8fafc', fontWeight: '500', marginBottom: '1.5rem', textAlign: 'center' }}>
                                     "Ética, Integridade, Transparência, Pontualidade e Foco absoluto no bem-estar e satisfação do cliente."
                                 </p>
+                                <div style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.4rem',
+                                    padding: '0.4rem 1rem',
+                                    borderRadius: '50px',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                    color: '#fbbf24',
+                                    fontSize: '0.85rem',
+                                    fontWeight: '600'
+                                }}>
+                                    <RotateCcw size={14} /> Toque para voltar
+                                </div>
                             </div>
                         </div>
                     </div>
