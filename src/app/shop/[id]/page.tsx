@@ -7,14 +7,15 @@ import { Package, Clock } from 'lucide-react';
 import ProductQRCode from '@/components/ProductQRCode';
 
 export function generateStaticParams() {
-    return products.map((product) => ({
-        id: product.id.toString(),
-    }));
+    return products.flatMap((product) => [
+        { id: product.id.toString() },
+        { id: product.slug },
+    ]);
 }
 
 export default async function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
-    const product = products.find((p) => p.id.toString() === id);
+    const product = products.find((p) => p.id.toString() === id || p.slug === id);
 
     if (!product) {
         notFound();

@@ -190,10 +190,10 @@ export default function Footer() {
                     <p style={{ color: '#777', fontSize: '0.9rem' }}>
                         &copy; {new Date().getFullYear()} Natlou Prestação de Serviços. Todos os direitos reservados.
                     </p>
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', fontSize: '0.9rem', color: '#aaa' }}>
-                        <Link href="/faq">Perguntas Frequentes (FAQ)</Link>
-                        <Link href="/privacy">Política de Privacidade</Link>
-                        <Link href="/terms">Termos de Uso</Link>
+                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.5rem', fontSize: '0.9rem', color: '#aaa' }}>
+                        <Link href="/faq" style={{ color: '#ccc', textDecoration: 'none' }}>Perguntas Frequentes (FAQ)</Link>
+                        <Link href="/politica-de-privacidade" style={{ color: '#ccc', textDecoration: 'none' }}>Política de Privacidade</Link>
+                        <Link href="/termos-de-uso" style={{ color: '#ccc', textDecoration: 'none' }}>Termos de Uso</Link>
                     </div>
                 </div>
             </div>
