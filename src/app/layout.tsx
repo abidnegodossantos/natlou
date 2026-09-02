@@ -4,8 +4,19 @@ import { Inter, Montserrat } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-open-sans', display: 'swap' });
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
+const inter = Inter({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700', '800'],
+    variable: '--font-inter',
+    display: 'swap',
+});
+
+const montserrat = Montserrat({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700', '800'],
+    variable: '--font-montserrat',
+    display: 'swap',
+});
 
 export const viewport: Viewport = {
     width: 'device-width',

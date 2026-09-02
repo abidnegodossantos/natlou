@@ -361,7 +361,7 @@ export default function About() {
                                 }}>
                                     <Target size={46} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '800', marginBottom: '0.8rem' }}>Missão</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '700', lineHeight: '1.25', marginBottom: '0.8rem' }}>Missão</h3>
                                 <div style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -455,7 +455,7 @@ export default function About() {
                                 }}>
                                     <Eye size={46} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '800', marginBottom: '0.8rem' }}>Visão</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '700', lineHeight: '1.25', marginBottom: '0.8rem' }}>Visão</h3>
                                 <div style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -549,7 +549,7 @@ export default function About() {
                                 }}>
                                     <Heart size={46} color="#d97706" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '800', marginBottom: '0.8rem' }}>Valores</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '700', lineHeight: '1.25', marginBottom: '0.8rem' }}>Valores</h3>
                                 <div style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',

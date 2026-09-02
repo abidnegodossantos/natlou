@@ -316,7 +316,7 @@ body {
   scroll-behavior: smooth;
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-open-sans), sans-serif;
+  font-family: var(--font-inter), var(--font-open-sans), system-ui, -apple-system, sans-serif;
   background-color: var(--bg-color);
   background-image: none;
   background-attachment: scroll;
@@ -324,8 +324,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.65;
   font-size: var(--base-font-size);
+  font-weight: 400;
   position: relative;
 }
 
@@ -357,27 +358,54 @@ textarea:focus-visible,
   border-radius: 4px;
 }
 
-/* ===== TYPOGRAPHY ===== */
+/* ===== TYPOGRAPHY HIERARCHY ===== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-montserrat), sans-serif;
-  font-weight: 700;
-  color: var(--primary-color);
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
-h1 { font-size: var(--h1-size); }
-h2 { font-size: var(--h2-size); }
-h3 { font-size: var(--h3-size); }
-h4 { font-size: var(--h4-size); }
+h1 {
+  font-size: var(--h1-size);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+h4 {
+  font-size: var(--h4-size);
+  font-weight: 600;
+  line-height: 1.35;
+}
 
 p {
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.subtitle,
+.lead {
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 /* ===== LINKS ===== */

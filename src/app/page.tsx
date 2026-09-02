@@ -66,9 +66,9 @@ export default function Home() {
             <div className="typewriter-text" style={{ marginBottom: '1rem', justifyContent: 'center', display: 'flex' }}>
               <h1 style={{
                 fontSize: 'clamp(2rem, 8vw, 3rem)',
-                fontWeight: '900',
+                fontWeight: '800',
                 color: 'var(--primary-color)',
-                lineHeight: '1.2',
+                lineHeight: '1.18',
                 display: 'flex',
                 gap: '0.2rem'
               }}>
@@ -158,9 +158,9 @@ export default function Home() {
         }}>
           <div className="typewriter-text" style={{ marginBottom: '1rem' }}>
             <h1 style={{
-              fontSize: 'clamp(3rem, 6vw, 6rem)',
-              fontWeight: '900',
-              lineHeight: '1',
+              fontSize: 'clamp(3rem, 5.5vw, 5rem)',
+              fontWeight: '800',
+              lineHeight: '1.15',
               color: 'white',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
               display: 'flex',

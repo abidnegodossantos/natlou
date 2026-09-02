@@ -105,7 +105,7 @@ export default function Footer() {
                             <div style={{ marginBottom: '1.2rem' }}>
                                 <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Natlou." target="_blank" rel="noopener noreferrer" style={{
                                     fontSize: '1.3rem',
-                                    fontWeight: '800',
+                                    fontWeight: '700',
                                     color: 'white',
                                     textDecoration: 'none',
                                     display: 'flex',
