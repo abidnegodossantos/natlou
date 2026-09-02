@@ -43,7 +43,7 @@ export default function Services() {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 18, 40, 0.6)', // Deep blue tint for professional look
+                    backgroundColor: 'rgba(15, 23, 42, 0.75)', // Deep navy dark overlay for clean contrast
                     zIndex: -1
                 }}></div>
 
@@ -56,7 +56,7 @@ export default function Services() {
                             lineHeight: '1.2',
                             marginBottom: '1.25rem',
                             color: '#ffffff',
-                            textShadow: '0 4px 20px rgba(0,0,0,0.7)'
+                            textShadow: '0 2px 10px rgba(0,0,0,0.5)'
                         }}>
                             Especialistas em Climatização: Instalação, Manutenção e Reparação.
                         </h1>
@@ -64,13 +64,13 @@ export default function Services() {
                             fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
                             marginBottom: '2.5rem',
                             fontWeight: '500',
-                            color: '#f1f5f9',
-                            textShadow: '0 2px 10px rgba(0,0,0,0.8)',
+                            color: '#f8fafc',
+                            textShadow: '0 1px 6px rgba(0,0,0,0.5)',
                             maxWidth: '800px',
                             marginLeft: 'auto',
                             marginRight: 'auto'
                         }}>
-                            Atendimento técnico em <span style={{ color: '#FFD700', fontWeight: '800', textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>Luanda, Benguela e Bengo</span> com <span style={{ fontWeight: '700', color: '#ffffff' }}>técnicos certificados</span>.
+                            Atendimento técnico em <span style={{ color: '#FFC107', fontWeight: '800', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>Luanda, Benguela e Bengo</span> com <span style={{ fontWeight: '700', color: '#ffffff', textDecoration: 'none', borderBottom: 'none' }}>técnicos certificados</span>.
                         </p>
 
                         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
