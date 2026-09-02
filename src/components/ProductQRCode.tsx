@@ -59,23 +59,26 @@ export default function ProductQRCode({ slug }: ProductQRCodeProps) {
             flexDirection: 'column',
             alignItems: 'center',
             gap: '1rem',
-            backgroundColor: 'white',
+            backgroundColor: 'var(--bg-card)',
             padding: '1.5rem',
             borderRadius: '16px',
             border: '1px solid var(--border-light)',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.05)'
+            boxShadow: '0 4px 15px var(--shadow-color)'
         }}>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '600', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: '600', textAlign: 'center' }}>
                 QR Code do Produto
             </p>
-            <QRCodeSVG 
-                value={url} 
-                size={120} 
-                fgColor="#004d99" 
-                level="H" 
-                ref={svgRef}
-                includeMargin={false}
-            />
+            <div style={{ padding: '0.75rem', backgroundColor: '#ffffff', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+                <QRCodeSVG 
+                    value={url} 
+                    size={120} 
+                    fgColor="#004d99" 
+                    bgColor="#ffffff"
+                    level="H" 
+                    ref={svgRef}
+                    includeMargin={false}
+                />
+            </div>
             <button 
                 onClick={handleDownload}
                 style={{
