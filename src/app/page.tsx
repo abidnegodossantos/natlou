@@ -128,14 +128,14 @@ export default function Home() {
           backgroundSize: 'cover',
           zIndex: 0
         }} aria-hidden="true"></div>
-        {/* Blue Overlay Filter */}
+        {/* Professional Directional Gradient Overlay - Clear Image Visibility & Text Contrast */}
         <div style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 40, 85, 0.6)', // Blue overlay
+          background: 'linear-gradient(90deg, rgba(15, 23, 42, 0.84) 0%, rgba(15, 23, 42, 0.48) 45%, rgba(15, 23, 42, 0.10) 100%)',
           zIndex: 1
         }} aria-hidden="true"></div>
 
@@ -359,7 +359,7 @@ export default function Home() {
                 {/* Dark Overlay */}
                 <div style={{
                     position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-                    backgroundColor: 'rgba(0, 40, 85, 0.85)', zIndex: 1
+                    backgroundColor: 'rgba(15, 23, 42, 0.65)', zIndex: 1
                 }}></div>
 
                 <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white' }}>

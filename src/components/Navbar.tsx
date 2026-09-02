@@ -32,18 +32,19 @@ export default function Navbar() {
       }}
     >
       <div className="logo">
-        <Link href="/">
+        <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
           <Image
-            src="/logo-natlou-3d.png"
+            src="/logo-natlou-official.png"
             alt="Natlou - Ar Condicionado"
-            width={200}
-            height={75}
+            width={150}
+            height={74}
             style={{
               objectFit: 'contain',
               height: 'auto',
-              maxHeight: '64px',
+              maxHeight: '52px',
               width: 'auto',
-              maxWidth: '160px',
+              maxWidth: '145px',
+              aspectRatio: '532 / 261',
             }}
             priority
           />

@@ -16,15 +16,17 @@ export default function Footer() {
                     <div>
                     <div style={{ marginBottom: '1rem' }}>
                         <Image
-                            src="/logo-natlou-3d.png"
+                            src="/logo-natlou-official.png"
                             alt="Natlou - Ar Condicionado"
-                            width={180}
-                            height={65}
+                            width={160}
+                            height={78}
                             style={{
                                 objectFit: 'contain',
                                 height: 'auto',
-                                maxHeight: '60px',
+                                maxHeight: '56px',
                                 width: 'auto',
+                                maxWidth: '150px',
+                                aspectRatio: '532 / 261',
                             }}
                         />
                     </div>
