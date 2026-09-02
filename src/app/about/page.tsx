@@ -111,7 +111,7 @@ export default function About() {
                     <span style={{
                         display: 'inline-block',
                         padding: '0.5rem 1.5rem',
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.15)',
                         backdropFilter: 'blur(5px)',
                         borderRadius: '50px',
                         fontSize: '0.9rem',
@@ -120,7 +120,7 @@ export default function About() {
                         textTransform: 'uppercase',
                         color: 'var(--action-color)',
                         marginBottom: '1.5rem',
-                        border: '1px solid rgba(255, 255, 255, 0.2)'
+                        border: '1px solid rgba(255, 255, 255, 0.25)'
                     }}>
                         Sobre a Natlou
                     </span>
@@ -129,7 +129,8 @@ export default function About() {
                         fontWeight: '800',
                         marginBottom: '1.5rem',
                         lineHeight: '1.2',
-                        textShadow: '0 4px 6px rgba(0,0,0,0.3)',
+                        color: '#ffffff',
+                        textShadow: '0 4px 12px rgba(0,0,0,0.6)',
                         animation: 'slideInLeft 1s ease-out forwards'
                     }}>
                         Conheça a história e os valores que movem a Natlou.
@@ -137,7 +138,7 @@ export default function About() {
                     <p style={{
                         fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
                         fontWeight: '300',
-                        color: '#f0f0f0',
+                        color: 'rgba(255, 255, 255, 0.95)',
                         maxWidth: '800px',
                         margin: '0 auto',
                         lineHeight: '1.6',
@@ -161,19 +162,21 @@ export default function About() {
                                 position: 'relative',
                                 borderRadius: '24px',
                                 overflow: 'hidden',
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                boxShadow: '0 20px 40px rgba(15, 23, 42, 0.15)',
                                 cursor: 'pointer',
-                                height: 'clamp(300px, 50vh, 550px)'
+                                height: 'clamp(460px, 62vh, 660px)'
                             }}>
                                 <Image
                                     src="/team-natlou.jpg"
-                                    alt="Equipa Técnica Natlou"
+                                    alt="Equipa Natlou - especialistas em climatização"
                                     fill
                                     style={{
                                         objectFit: 'cover',
+                                        objectPosition: 'center 15%',
                                         transition: 'transform 0.8s cubic-bezier(0.2, 1, 0.3, 1)',
                                     }}
                                     className="story-img"
+                                    priority
                                 />
                                 {/* Overlay Gradient for better text vis if needed, or just hover effect */}
                                 <div className="story-overlay" style={{
@@ -182,26 +185,26 @@ export default function About() {
                                     left: '0',
                                     width: '100%',
                                     padding: '2rem',
-                                    background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
+                                    background: 'linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent)',
                                     opacity: 0,
                                     transition: 'opacity 0.4s ease',
                                     display: 'flex',
                                     alignItems: 'flex-end'
                                 }}>
                                     <span style={{
-                                        color: 'white',
-                                        backgroundColor: 'var(--primary-color)',
-                                        padding: '0.5rem 1.5rem',
+                                        color: '#0f172a',
+                                        backgroundColor: '#fbbf24',
+                                        padding: '0.6rem 1.5rem',
                                         borderRadius: '50px',
-                                        fontWeight: '700',
-                                        boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+                                        fontWeight: '800',
+                                        boxShadow: '0 4px 15px rgba(251, 191, 36, 0.4)',
                                         transform: 'translateY(20px)',
                                         transition: 'transform 0.4s ease',
                                         display: 'inline-flex',
                                         alignItems: 'center',
-                                        gap: '0.4rem'
+                                        gap: '0.5rem'
                                     }} className="story-tag">
-                                        <BadgeCheck size={16} /> Técnicos Certificados
+                                        <BadgeCheck size={18} /> Equipa Natlou Certificada
                                     </span>
                                 </div>
                             </div>
@@ -279,7 +282,7 @@ export default function About() {
                 </div>
                 <style jsx>{`
                     .story-img-container:hover .story-img {
-                        transform: scale(1.1);
+                        transform: scale(1.05);
                     }
                     .story-img-container:hover .story-overlay {
                         opacity: 1;
@@ -316,7 +319,7 @@ export default function About() {
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '4rem',
+                    gap: '2.5rem',
                     marginBottom: '4rem'
                 }}>
                     {/* Mission FLIP Card */}
@@ -326,33 +329,64 @@ export default function About() {
                     >
                         <div className="flip-card-inner">
                             {/* FRONT: Icon + Title */}
-                            <div className="flip-card-front">
+                            <div className="flip-card-front" style={{
+                                position: 'relative',
+                                overflow: 'hidden',
+                                border: '1px solid #e2e8f0',
+                                boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
+                            }}>
+                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '6px', background: 'linear-gradient(90deg, #38bdf8, #fbbf24)' }} />
+                                <span style={{
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: '800',
+                                    color: '#0284c7',
+                                    backgroundColor: '#e0f2fe',
+                                    padding: '0.3rem 0.8rem',
+                                    borderRadius: '50px',
+                                    marginBottom: '1rem'
+                                }}>
+                                    PROPÓSITO
+                                </span>
                                 <div style={{
-                                    width: '120px', height: '120px', margin: '0 auto 1.5rem',
+                                    width: '100px', height: '100px', margin: '0 auto 1.2rem',
                                     position: 'relative',
                                     borderRadius: '50%',
-                                    backgroundColor: 'var(--bg-secondary)',
+                                    background: 'linear-gradient(135deg, #e0f2fe, #bae6fd)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+                                    boxShadow: '0 8px 20px rgba(56, 189, 248, 0.25)',
+                                    border: '3px solid #ffffff'
                                 }}>
-                                    <Target size={64} color="var(--primary-color)" strokeWidth={1.5} />
+                                    <Target size={52} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: 'var(--primary-color)', fontWeight: '800' }}>Missão</h3>
-                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                                    <Pointer size={16} /> (Toque para ver)
-                                </p>
+                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800' }}>Missão</h3>
+                                <div style={{
+                                    marginTop: '1.2rem',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.4rem',
+                                    padding: '0.4rem 1rem',
+                                    borderRadius: '50px',
+                                    backgroundColor: '#f1f5f9',
+                                    color: '#475569',
+                                    fontSize: '0.85rem',
+                                    fontWeight: '600'
+                                }}>
+                                    <Pointer size={14} color="#0284c7" /> Toque para ler
+                                </div>
                             </div>
 
                             {/* BACK: Detailed Text */}
                             <div className="flip-card-back" style={{
-                                background: 'linear-gradient(135deg, var(--primary-color), #003366)',
-                                border: '2px solid var(--action-color)'
+                                background: 'linear-gradient(135deg, #0f172a, #1e3a5f)',
+                                border: '2px solid #fbbf24'
                             }}>
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--action-color)' }}>Nossa Missão</h3>
-                                <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>
-                                    "Oferecer excelência em climatização e superar expectativas com soluções modernas e sustentáveis."
+                                <h3 style={{ fontSize: '1.6rem', marginBottom: '1.2rem', color: '#fbbf24', fontWeight: '800' }}>Nossa Missão</h3>
+                                <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#f8fafc' }}>
+                                    "Oferecer excelência em climatização e superar expectativas com soluções modernas, seguras e sustentáveis para cada cliente."
                                 </p>
                             </div>
                         </div>
@@ -365,32 +399,63 @@ export default function About() {
                     >
                         <div className="flip-card-inner">
                             {/* FRONT */}
-                            <div className="flip-card-front">
+                            <div className="flip-card-front" style={{
+                                position: 'relative',
+                                overflow: 'hidden',
+                                border: '1px solid #e2e8f0',
+                                boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
+                            }}>
+                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '6px', background: 'linear-gradient(90deg, #38bdf8, #0ea5e9)' }} />
+                                <span style={{
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: '800',
+                                    color: '#0284c7',
+                                    backgroundColor: '#e0f2fe',
+                                    padding: '0.3rem 0.8rem',
+                                    borderRadius: '50px',
+                                    marginBottom: '1rem'
+                                }}>
+                                    FUTURO
+                                </span>
                                 <div style={{
-                                    width: '120px', height: '120px', margin: '0 auto 1.5rem',
+                                    width: '100px', height: '100px', margin: '0 auto 1.2rem',
                                     position: 'relative',
                                     borderRadius: '50%',
-                                    backgroundColor: 'var(--bg-secondary)',
+                                    background: 'linear-gradient(135deg, #e0f2fe, #bae6fd)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+                                    boxShadow: '0 8px 20px rgba(56, 189, 248, 0.25)',
+                                    border: '3px solid #ffffff'
                                 }}>
-                                    <Eye size={64} color="var(--primary-color)" strokeWidth={1.5} />
+                                    <Eye size={52} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: 'var(--primary-color)', fontWeight: '800' }}>Visão</h3>
-                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                                    <Pointer size={16} /> (Toque para ver)
-                                </p>
+                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800' }}>Visão</h3>
+                                <div style={{
+                                    marginTop: '1.2rem',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.4rem',
+                                    padding: '0.4rem 1rem',
+                                    borderRadius: '50px',
+                                    backgroundColor: '#f1f5f9',
+                                    color: '#475569',
+                                    fontSize: '0.85rem',
+                                    fontWeight: '600'
+                                }}>
+                                    <Pointer size={14} color="#0284c7" /> Toque para ler
+                                </div>
                             </div>
 
                             {/* BACK */}
                             <div className="flip-card-back" style={{
-                                background: 'linear-gradient(135deg, var(--secondary-color), var(--primary-color))'
+                                background: 'linear-gradient(135deg, #0284c7, #0f172a)'
                             }}>
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'white' }}>Nossa Visão</h3>
-                                <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>
-                                    "Ser a referência nº 1 no setor de climatização em Angola, reconhecida pela qualidade total e confiança."
+                                <h3 style={{ fontSize: '1.6rem', marginBottom: '1.2rem', color: '#ffffff', fontWeight: '800' }}>Nossa Visão</h3>
+                                <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#f8fafc' }}>
+                                    "Ser a referência nº 1 no setor de climatização em Angola, reconhecida pela qualidade total, inovação e absoluta confiança."
                                 </p>
                             </div>
                         </div>
@@ -403,33 +468,64 @@ export default function About() {
                     >
                         <div className="flip-card-inner">
                             {/* FRONT */}
-                            <div className="flip-card-front">
+                            <div className="flip-card-front" style={{
+                                position: 'relative',
+                                overflow: 'hidden',
+                                border: '1px solid #e2e8f0',
+                                boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
+                            }}>
+                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '6px', background: 'linear-gradient(90deg, #fbbf24, #f59e0b)' }} />
+                                <span style={{
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: '800',
+                                    color: '#d97706',
+                                    backgroundColor: '#fef3c7',
+                                    padding: '0.3rem 0.8rem',
+                                    borderRadius: '50px',
+                                    marginBottom: '1rem'
+                                }}>
+                                    PRINCÍPIOS
+                                </span>
                                 <div style={{
-                                    width: '120px', height: '120px', margin: '0 auto 1.5rem',
+                                    width: '100px', height: '100px', margin: '0 auto 1.2rem',
                                     position: 'relative',
                                     borderRadius: '50%',
-                                    backgroundColor: 'var(--bg-secondary)',
+                                    background: 'linear-gradient(135deg, #fef3c7, #fde68a)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+                                    boxShadow: '0 8px 20px rgba(251, 191, 36, 0.3)',
+                                    border: '3px solid #ffffff'
                                 }}>
-                                    <Heart size={64} color="var(--primary-color)" strokeWidth={1.5} />
+                                    <Heart size={52} color="#d97706" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: 'var(--primary-color)', fontWeight: '800' }}>Valores</h3>
-                                <p style={{ marginTop: '1rem', color: '#888', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                                    <Pointer size={16} /> (Toque para ver)
-                                </p>
+                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800' }}>Valores</h3>
+                                <div style={{
+                                    marginTop: '1.2rem',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.4rem',
+                                    padding: '0.4rem 1rem',
+                                    borderRadius: '50px',
+                                    backgroundColor: '#f1f5f9',
+                                    color: '#475569',
+                                    fontSize: '0.85rem',
+                                    fontWeight: '600'
+                                }}>
+                                    <Pointer size={14} color="#d97706" /> Toque para ler
+                                </div>
                             </div>
 
                             {/* BACK */}
                             <div className="flip-card-back" style={{
-                                background: 'linear-gradient(135deg, #333, #000)',
-                                border: '2px solid var(--secondary-color)'
+                                background: 'linear-gradient(135deg, #1e293b, #0f172a)',
+                                border: '2px solid #38bdf8'
                             }}>
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--secondary-color)' }}>Nossos Valores</h3>
-                                <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>
-                                    "Ética, Integridade, Transparência e Foco absoluto na satisfação do cliente."
+                                <h3 style={{ fontSize: '1.6rem', marginBottom: '1.2rem', color: '#38bdf8', fontWeight: '800' }}>Nossos Valores</h3>
+                                <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#f8fafc' }}>
+                                    "Ética, Integridade, Transparência, Pontualidade e Foco absoluto no bem-estar e satisfação do cliente."
                                 </p>
                             </div>
                         </div>

@@ -491,10 +491,10 @@ export default function Home() {
                                 position: 'relative'
                             }}>
                                 <Image
-                                    src="/ceo-natlou.jpg"
-                                    alt="CEO Natlou - Atendimento Personalizado"
+                                    src="/atendimento-natlou.jpg"
+                                    alt="Atendimento Personalizado Natlou"
                                     fill
-                                    style={{ objectFit: 'cover', objectPosition: 'top' }}
+                                    style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
                                 />
                             </div>
                         </div>
