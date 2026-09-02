@@ -900,7 +900,7 @@ html.dark .service-card p {
 
 /* Navbar Responsive Toggle Button */
 .mobile-menu-btn {
-  display: none;
+  display: none !important;
   background: none;
   border: none;
   font-size: 2rem;

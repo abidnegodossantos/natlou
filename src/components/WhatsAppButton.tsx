@@ -25,9 +25,9 @@ export default function WhatsAppButton() {
             rel="noopener noreferrer"
             style={{
                 position: 'fixed',
-                bottom: '2rem',
-                right: '2rem',
-                zIndex: 9999,
+                bottom: '5.5rem',
+                right: '2.5rem',
+                zIndex: 9990,
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.8rem',

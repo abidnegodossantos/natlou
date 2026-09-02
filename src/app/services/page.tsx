@@ -55,8 +55,8 @@ export default function Services() {
                             fontWeight: '800',
                             lineHeight: '1.2',
                             marginBottom: '1.25rem',
-                            color: '#0f172a',
-                            textShadow: 'none'
+                            color: '#ffffff',
+                            textShadow: '0 4px 20px rgba(0,0,0,0.7)'
                         }}>
                             Especialistas em Climatização: Instalação, Manutenção e Reparação.
                         </h1>
@@ -64,12 +64,13 @@ export default function Services() {
                             fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
                             marginBottom: '2.5rem',
                             fontWeight: '500',
-                            color: '#334155',
+                            color: '#f1f5f9',
+                            textShadow: '0 2px 10px rgba(0,0,0,0.8)',
                             maxWidth: '800px',
                             marginLeft: 'auto',
                             marginRight: 'auto'
                         }}>
-                            Atendimento técnico em <span style={{ color: '#d97706', fontWeight: '800' }}>Luanda, Benguela e Bengo</span> com <span style={{ fontWeight: '700', color: '#0f172a' }}>técnicos certificados</span>.
+                            Atendimento técnico em <span style={{ color: '#FFD700', fontWeight: '800', textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>Luanda, Benguela e Bengo</span> com <span style={{ fontWeight: '700', color: '#ffffff' }}>técnicos certificados</span>.
                         </p>
 
                         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
