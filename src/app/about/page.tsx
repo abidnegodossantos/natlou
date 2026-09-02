@@ -168,7 +168,7 @@ export default function About() {
                             }}>
                                 <Image
                                     src="/team-natlou.jpg"
-                                    alt="Equipa Natlou - especialistas em climatização"
+                                    alt="Equipa Natlou - especialistas em ar condicionado"
                                     fill
                                     style={{
                                         objectFit: 'cover',
