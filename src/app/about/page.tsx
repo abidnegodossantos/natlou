@@ -166,7 +166,7 @@ export default function About() {
                                 height: 'clamp(300px, 50vh, 550px)'
                             }}>
                                 <Image
-                                    src="/installation-team-v2.jpg"
+                                    src="/team-natlou.jpg"
                                     alt="Equipa Técnica Natlou"
                                     fill
                                     style={{

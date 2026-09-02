@@ -229,8 +229,8 @@ export default function Home() {
                                 width: '100%',
                             }}>
                                 <Image
-                                    src="/services-banner.jpg"
-                                    alt="Nossos Serviços - Instalação, Manutenção e Reparação"
+                                    src="/instalacao-ac.jpg"
+                                    alt="Instalação de Ar Condicionado - Equipa Técnica Natlou"
                                     width={600}
                                     height={450}
                                     style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -342,7 +342,7 @@ export default function Home() {
             <section
                 className="section hero-parallax"
                 style={{
-                    backgroundImage: "url('/stock-infrastructure-v2.jpg')",
+                    backgroundImage: "url('/warehouse-natlou.jpg')",
                     backgroundAttachment: 'fixed', // Parallax
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -491,10 +491,10 @@ export default function Home() {
                                 position: 'relative'
                             }}>
                                 <Image
-                                    src="/contact-model.jpg"
-                                    alt="Atendimento Natlou"
+                                    src="/ceo-natlou.jpg"
+                                    alt="CEO Natlou - Atendimento Personalizado"
                                     fill
-                                    style={{ objectFit: 'cover' }}
+                                    style={{ objectFit: 'cover', objectPosition: 'top' }}
                                 />
                             </div>
                         </div>

@@ -30,8 +30,8 @@ export default function Services() {
             >
                 {/* Background Image */}
                 <Image
-                    src="/installation-team.jpg"
-                    alt="Técnicos especialistas em climatização"
+                    src="/instalacao-ac.jpg"
+                    alt="Técnicos Natlou a instalar ar condicionado"
                     fill
                     style={{ objectFit: 'cover', zIndex: -2 }}
                     priority

@@ -34,17 +34,16 @@ export default function Navbar() {
       <div className="logo">
         <Link href="/">
           <Image
-            src="/logo-natlou.png"
+            src="/logo-natlou-3d.png"
             alt="Natlou - Ar Condicionado"
             width={200}
             height={75}
             style={{
               objectFit: 'contain',
               height: 'auto',
-              maxHeight: '60px',
+              maxHeight: '64px',
               width: 'auto',
-              maxWidth: '150px',
-              filter: 'brightness(0) invert(1)',
+              maxWidth: '160px',
             }}
             priority
           />

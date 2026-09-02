@@ -16,16 +16,15 @@ export default function Footer() {
                     <div>
                     <div style={{ marginBottom: '1rem' }}>
                         <Image
-                            src="/logo-natlou.png"
+                            src="/logo-natlou-3d.png"
                             alt="Natlou - Ar Condicionado"
-                            width={160}
-                            height={60}
+                            width={180}
+                            height={65}
                             style={{
                                 objectFit: 'contain',
                                 height: 'auto',
-                                maxHeight: '55px',
+                                maxHeight: '60px',
                                 width: 'auto',
-                                filter: 'brightness(0) invert(1)',
                             }}
                         />
                     </div>
