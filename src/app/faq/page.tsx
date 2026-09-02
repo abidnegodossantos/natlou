@@ -121,7 +121,7 @@ export default function FAQ() {
                                 />
                                 
                                 <a 
-                                    href={`https://wa.me/244946776397?text=Olá+NATLOU,+li+a+FAQ+sobre+"${encodeURIComponent(faq.question)}"+mas+ainda+tenho+uma+dúvida.`}
+                                    href={`https://wa.me/244955475575?text=Olá!%20Li%20a%20FAQ%20sobre%20"${encodeURIComponent(faq.question)}"%20mas%20ainda%20tenho%20uma%20dúvida.`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{

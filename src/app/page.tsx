@@ -96,7 +96,7 @@ export default function Home() {
               Montagem Gratuita e Pagamento em Prestações.
             </p>
 
-            <a href="https://wa.me/244946776397" className="btn animate-pulse-btn" style={{ width: '100%', maxWidth: '300px' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
+            <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento%20para%20ar%20condicionado." className="btn animate-pulse-btn" style={{ width: '100%', maxWidth: '300px' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
               Quero o meu AC Agora
             </a>
           </div>
@@ -195,7 +195,7 @@ export default function Home() {
             Montagem Gratuita e Pagamento em Prestações.
           </p>
 
-          <a href="https://wa.me/244946776397" target="_blank" rel="noopener noreferrer" className="btn animate-pulse-btn" style={{ fontSize: '1.2rem' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
+          <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento%20para%20ar%20condicionado." target="_blank" rel="noopener noreferrer" className="btn animate-pulse-btn" style={{ fontSize: '1.2rem' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
             Quero o meu AC Agora
           </a>
         </div>
@@ -435,7 +435,7 @@ export default function Home() {
                     <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: '1.5rem' }}>
                         Atendimento personalizado onde você estiver.
                     </p>
-                    <a href="https://wa.me/244946776397" className="btn" style={{ width: '100%', background: 'white', color: 'var(--primary-color)' }}>
+                    <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20falar%20com%20um%20consultor%20da%20Natlou." className="btn" style={{ width: '100%', background: 'white', color: 'var(--primary-color)' }}>
                         Falar com Consultor
                     </a>
                 </div>
@@ -526,7 +526,7 @@ export default function Home() {
                             </p>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                <a href="https://wa.me/244946776397" target="_blank" rel="noopener noreferrer" className="btn" style={{
+                                <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20esclarecer%20algumas%20dúvidas%20sobre%20os%20vossos%20serviços." target="_blank" rel="noopener noreferrer" className="btn" style={{
                                     backgroundColor: '#25D366',
                                     boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)'
                                 }}>

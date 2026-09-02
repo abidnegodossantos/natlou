@@ -4,7 +4,7 @@ export default function MobileBottomBar() {
   return (
     <div className="mobile-bottom-bar" role="navigation" aria-label="Contactos rápidos">
       <a
-        href="https://wa.me/244946776397"
+        href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Natlou."
         target="_blank"
         rel="noopener noreferrer"
         className="mobile-bottom-btn btn-whatsapp"

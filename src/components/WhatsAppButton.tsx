@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
 
     return (
         <a
-            href="https://wa.me/244946776397?text=Olá+NATLOU,+preciso+de+ajuda+com+climatização."
+            href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Natlou."
             target="_blank"
             rel="noopener noreferrer"
             style={{

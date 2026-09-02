@@ -280,7 +280,7 @@ export default function BtuCalculator() {
                         }}>
                             Ver Detalhes
                         </Link>
-                        <a href={`https://wa.me/244946776397?text=Olá+NATLOU,+usei+a+Calculadora+de+BTUs+do+site+e+obtive+um+resultado+de+${totalBtu}+BTUs.+Gostaria+de+solicitar+um+orçamento+para+o+${encodeURIComponent(recommendedProduct.name)}.`}
+                        <a href={`https://wa.me/244955475575?text=Olá!%20Usei%20a%20Calculadora%20de%20BTUs%20e%20obtive%20um%20resultado%20de%20${totalBtu}%20BTUs.%20Gostaria%20de%20pedir%20um%20orçamento%20para%20o%20${encodeURIComponent(recommendedProduct.name)}.`}
                            target="_blank"
                            rel="noopener noreferrer"
                            style={{

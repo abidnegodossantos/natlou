@@ -74,7 +74,7 @@ export default function Services() {
 
                         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
                             <a
-                                href="https://wa.me/244946776397?text=Olá, preciso de um Diagnóstico Técnico (3.000 Kz)."
+                                href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20solicitar%20um%20Diagnóstico%20Técnico%20(3.000%20Kz)."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn animate-ripple"
@@ -425,12 +425,36 @@ export default function Services() {
 
                         </div>
 
-                        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-                            <a href="https://wa.me/244946776397?text=Olá,+preciso+de+agendar+uma+manutenção+para+o+meu+ar+condicionado." target="_blank" rel="noopener noreferrer" className="btn animate-ripple" style={{ display: 'inline-block', padding: '1rem 3rem', backgroundColor: '#25D366', color: 'white', fontWeight: 'bold', borderRadius: '50px', boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)' }}>
-                                Falar com um Técnico Agora
+                        <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
+                            <a
+                                href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20solicitar%20um%20Diagnóstico%20Técnico%20(3.000%20Kz)."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn animate-ripple"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '0.75rem',
+                                    backgroundColor: '#25D366',
+                                    color: 'white',
+                                    padding: '0.9rem clamp(1rem, 4vw, 2rem)',
+                                    fontSize: 'clamp(0.95rem, 3.5vw, 1.2rem)',
+                                    borderRadius: '50px',
+                                    fontWeight: '700',
+                                    textDecoration: 'none',
+                                    boxShadow: '0 4px 25px rgba(37, 211, 102, 0.4)',
+                                    border: '2px solid rgba(255,255,255,0.2)',
+                                    width: '100%',
+                                    maxWidth: '360px',
+                                    whiteSpace: 'normal',
+                                    textAlign: 'center'
+                                }}
+                            >
+                                Pedir Diagnóstico (3.000 Kz)
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -457,9 +481,7 @@ export default function Services() {
                         Precisa de manutenção para múltiplos aparelhos? Oferecemos <span style={{ fontWeight: 'bold', color: '#FFD700' }}>contratos mensais com descontos exclusivos</span> e atendimento prioritário.
                     </p>
 
-                    <a href="https://wa.me/244955475575?text=Olá,+sou+uma+empresa+e+gostaria+de+uma+proposta+de+contrato."
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <a href="mailto:natlou.limitada@gmail.com?subject=Solicitação%20de%20Proposta%20Corporativa%20-%20NATLOU%20B2B&body=Olá!%20Gostaria%20de%20solicitar%20uma%20proposta%20corporativa%20para%20a%20nossa%20empresa."
                         className="btn animate-ripple"
                         style={{
                             display: 'inline-block',

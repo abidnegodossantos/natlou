@@ -25,7 +25,7 @@ export default function Shop() {
             {/* B2B Banner (Top of Shop) */}
             <div style={{ marginBottom: '3rem' }}>
                 <a
-                    href="https://wa.me/244946776397?text=Olá, represento uma empresa e gostaria de um orçamento para frota/manutenção."
+                    href="https://wa.me/244955475575?text=Olá!%20Represento%20uma%20empresa%20e%20gostaria%20de%20um%20orçamento%20para%20frota/manutenção."
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -200,7 +200,7 @@ export default function Shop() {
                                 </div>
 
                                 <a
-                                    href={`https://wa.me/244946776397?text=Olá+NATLOU,+vi+no+site+o+${encodeURIComponent(product.name)}+e+gostaria+de+encomendar.`}
+                                    href={`https://wa.me/244955475575?text=Olá!%20Tenho%20interesse%20no%20produto%20${encodeURIComponent(product.name)}.`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn animate-ripple"

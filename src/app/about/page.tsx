@@ -625,7 +625,7 @@ export default function About() {
                                 </div>
 
                                 <a
-                                    href="https://wa.me/244946776397"
+                                    href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20falar%20com%20a%20equipa%20da%20Natlou."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn"

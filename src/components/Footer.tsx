@@ -30,9 +30,15 @@ export default function Footer() {
                             }}
                         />
                     </div>
-                        <div style={{ color: 'var(--action-color)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem' }}>
+                        <div style={{ color: 'var(--action-color)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
                             🇦🇴 Empresa 100% Angolana
                         </div>
+                        <p style={{ color: '#ffffff', fontWeight: '700', fontSize: '0.95rem', marginBottom: '0.3rem' }}>
+                            NATLOU - Comércio & Prestação de Serviços, (SU), Lda
+                        </p>
+                        <p style={{ color: 'var(--action-color)', fontSize: '0.85rem', fontWeight: '600', marginBottom: '1rem' }}>
+                            NIF: 5001650564
+                        </p>
                         <p style={{ color: '#ccc', lineHeight: '1.6', marginBottom: '1.5rem' }}>
                             A sua parceira de confiança em climatização e frio. Soluções completas de venda, instalação e manutenção para o seu conforto.
                         </p>
@@ -95,10 +101,10 @@ export default function Footer() {
                         <div style={{ marginBottom: '2rem' }}>
                             <p style={{ color: '#aaa', fontSize: '0.9rem', marginBottom: '0.8rem' }}>Contactos Oficiais:</p>
 
-                            {/* Vendas */}
+                            {/* WhatsApp Direct */}
                             <div style={{ marginBottom: '1.2rem' }}>
-                                <a href="https://wa.me/244946776397?text=Olá, gostaria de solicitar um orçamento ou comprar um equipamento." target="_blank" rel="noopener noreferrer" style={{
-                                    fontSize: '1.4rem',
+                                <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Natlou." target="_blank" rel="noopener noreferrer" style={{
+                                    fontSize: '1.3rem',
                                     fontWeight: '800',
                                     color: 'white',
                                     textDecoration: 'none',
@@ -107,14 +113,14 @@ export default function Footer() {
                                     gap: '0.5rem',
                                     marginBottom: '0.2rem'
                                 }}>
-                                    <span style={{ color: '#25D366', display: 'flex', alignItems: 'center' }}><Phone size={16} /></span> +244 946 776 397
+                                    <span style={{ color: '#25D366', display: 'flex', alignItems: 'center' }}><Phone size={16} /></span> +244 955 475 575
                                 </a>
-                                <p style={{ color: '#aaa', fontSize: '0.85rem' }}>Vendas e Orçamentos</p>
+                                <p style={{ color: '#aaa', fontSize: '0.85rem' }}>WhatsApp Principal</p>
                             </div>
 
-                            {/* Suporte */}
+                            {/* Telefones Chamadas */}
                             <div style={{ marginBottom: '1.2rem' }}>
-                                <a href="https://wa.me/244955475575?text=Olá,+sou+uma+empresa+e+gostaria+de+uma+proposta+de+contrato." target="_blank" rel="noopener noreferrer" style={{
+                                <a href="tel:+244946776397" style={{
                                     fontSize: '1.1rem',
                                     fontWeight: '600',
                                     color: '#ccc',
@@ -124,9 +130,9 @@ export default function Footer() {
                                     gap: '0.5rem',
                                     marginBottom: '0.2rem'
                                 }}>
-                                    <span style={{ color: '#aaa', display: 'flex', alignItems: 'center' }}><Phone size={16} /></span> +244 955 475 575
+                                    <span style={{ color: '#aaa', display: 'flex', alignItems: 'center' }}><Phone size={16} /></span> +244 946 776 397 | +244 922 643 541
                                 </a>
-                                <p style={{ color: '#aaa', fontSize: '0.85rem' }}>Suporte e Parcerias</p>
+                                <p style={{ color: '#aaa', fontSize: '0.85rem' }}>Linhas de Chamada Direta</p>
                             </div>
 
                             <a href="mailto:natlou.limitada@gmail.com" style={{ color: 'var(--secondary-color)', textDecoration: 'none', display: 'block', marginTop: '1rem' }}>
@@ -135,12 +141,12 @@ export default function Footer() {
                         </div>
 
                         <div>
-                            <p style={{ color: '#aaa', fontSize: '0.9rem', marginBottom: '0.5rem' }}>Localização:</p>
-                            <p style={{ color: 'white', fontWeight: '500' }}>
-                                Zango II, Luanda, Angola
+                            <p style={{ color: '#aaa', fontSize: '0.9rem', marginBottom: '0.5rem', fontWeight: '700' }}>Horário de Funcionamento:</p>
+                            <p style={{ color: 'white', fontWeight: '500', fontSize: '0.9rem' }}>
+                                Segunda a Sexta: 8h00 - 17h00
                             </p>
-                            <p style={{ color: '#ccc', fontSize: '0.9rem', marginTop: '0.5rem' }}>
-                                Aberto de Segunda a Sexta: 8h - 17h
+                            <p style={{ color: '#ccc', fontSize: '0.9rem', marginTop: '0.2rem' }}>
+                                Sábado: 8h00 - 13h00
                             </p>
                         </div>
                     </div>
@@ -149,7 +155,7 @@ export default function Footer() {
                     <div>
                         <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', fontWeight: '700', color: 'var(--action-color)' }}>Onde Estamos</h3>
                         <p style={{ color: '#ccc', marginBottom: '1rem', lineHeight: '1.6' }}>
-                            <strong>Sede:</strong> Zango II (junto ao IMAG),<br />
+                            <strong>Sede:</strong> Zango II - Junto ao IMAG,<br />
                             Viana, Luanda - Angola
                         </p>
                         <div style={{
