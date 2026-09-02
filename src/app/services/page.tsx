@@ -55,7 +55,8 @@ export default function Services() {
                             fontWeight: '800',
                             lineHeight: '1.2',
                             marginBottom: '1.25rem',
-                            textShadow: '0 4px 15px rgba(0,0,0,0.5)'
+                            color: '#0f172a',
+                            textShadow: 'none'
                         }}>
                             Especialistas em Climatização: Instalação, Manutenção e Reparação.
                         </h1>
@@ -63,13 +64,12 @@ export default function Services() {
                             fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
                             marginBottom: '2.5rem',
                             fontWeight: '500',
-                            color: '#f0f0f0',
-                            textShadow: '0 2px 8px rgba(0,0,0,0.6)',
+                            color: '#334155',
                             maxWidth: '800px',
                             marginLeft: 'auto',
                             marginRight: 'auto'
                         }}>
-                            Atendimento técnico em <span style={{ color: '#FFD700', fontWeight: '700' }}>Luanda, Benguela e Bengo</span> com <span style={{ borderBottom: '2px solid var(--secondary-color)', paddingBottom: '2px' }}>técnicos certificados</span>.
+                            Atendimento técnico em <span style={{ color: '#d97706', fontWeight: '800' }}>Luanda, Benguela e Bengo</span> com <span style={{ fontWeight: '700', color: '#0f172a' }}>técnicos certificados</span>.
                         </p>
 
                         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
@@ -474,10 +474,10 @@ export default function Services() {
                 }}>
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent)', backgroundSize: '40px 40px', opacity: 0.1 }}></div>
 
-                    <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1.5rem', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem' }}>
-                        <Briefcase size={32} /> Soluções para Escritórios e Empresas
+                    <h2 style={{ color: '#ffffff', fontSize: '2rem', fontWeight: '800', marginBottom: '1.5rem', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem' }}>
+                        <Briefcase size={32} color="#FFC107" /> Soluções para Escritórios e Empresas
                     </h2>
-                    <p style={{ maxWidth: '700px', margin: '0 auto 2.5rem', fontSize: '1.1rem', lineHeight: '1.6', opacity: 0.9, position: 'relative' }}>
+                    <p style={{ color: '#F5F5F5', maxWidth: '700px', margin: '0 auto 2.5rem', fontSize: '1.1rem', lineHeight: '1.6', position: 'relative' }}>
                         Precisa de manutenção para múltiplos aparelhos? Oferecemos <span style={{ fontWeight: 'bold', color: '#FFD700' }}>contratos mensais com descontos exclusivos</span> e atendimento prioritário.
                     </p>
 
@@ -486,16 +486,16 @@ export default function Services() {
                         style={{
                             display: 'inline-block',
                             padding: '1rem 3rem',
-                            backgroundColor: 'white',
-                            color: '#003366',
+                            backgroundColor: '#FFC107',
+                            color: '#002855',
                             fontWeight: '800',
                             borderRadius: '50px',
-                            boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+                            boxShadow: '0 4px 15px rgba(255, 193, 7, 0.4)',
                             textDecoration: 'none',
                             position: 'relative'
                         }}
                     >
-                        Pedir Proposta Corporativa
+                        PEDIR PROPOSTA CORPORATIVA
                     </a>
                 </div>
             </RevealOnScroll>

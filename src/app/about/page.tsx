@@ -331,8 +331,8 @@ export default function About() {
                         <div className="flip-card-inner">
                             {/* FRONT: Icon + Title */}
                             <div className="flip-card-front" style={{
-                                border: '1px solid #e2e8f0',
-                                boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
+                                border: '1px solid var(--border-light)',
+                                boxShadow: '0 12px 32px var(--shadow-color)'
                             }}>
                                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '6px', background: 'linear-gradient(90deg, #38bdf8, #fbbf24)' }} />
                                 <span style={{
@@ -357,19 +357,19 @@ export default function About() {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     boxShadow: '0 8px 20px rgba(56, 189, 248, 0.25)',
-                                    border: '3px solid #ffffff'
+                                    border: '3px solid var(--bg-card)'
                                 }}>
                                     <Target size={46} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800', marginBottom: '0.8rem' }}>Missão</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '800', marginBottom: '0.8rem' }}>Missão</h3>
                                 <div style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.4rem',
                                     padding: '0.4rem 1rem',
                                     borderRadius: '50px',
-                                    backgroundColor: '#f1f5f9',
-                                    color: '#475569',
+                                    backgroundColor: 'var(--bg-secondary)',
+                                    color: 'var(--text-secondary)',
                                     fontSize: '0.85rem',
                                     fontWeight: '600'
                                 }}>
@@ -425,8 +425,8 @@ export default function About() {
                         <div className="flip-card-inner">
                             {/* FRONT */}
                             <div className="flip-card-front" style={{
-                                border: '1px solid #e2e8f0',
-                                boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
+                                border: '1px solid var(--border-light)',
+                                boxShadow: '0 12px 32px var(--shadow-color)'
                             }}>
                                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '6px', background: 'linear-gradient(90deg, #38bdf8, #0ea5e9)' }} />
                                 <span style={{
@@ -451,19 +451,19 @@ export default function About() {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     boxShadow: '0 8px 20px rgba(56, 189, 248, 0.25)',
-                                    border: '3px solid #ffffff'
+                                    border: '3px solid var(--bg-card)'
                                 }}>
                                     <Eye size={46} color="#0284c7" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800', marginBottom: '0.8rem' }}>Visão</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '800', marginBottom: '0.8rem' }}>Visão</h3>
                                 <div style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.4rem',
                                     padding: '0.4rem 1rem',
                                     borderRadius: '50px',
-                                    backgroundColor: '#f1f5f9',
-                                    color: '#475569',
+                                    backgroundColor: 'var(--bg-secondary)',
+                                    color: 'var(--text-secondary)',
                                     fontSize: '0.85rem',
                                     fontWeight: '600'
                                 }}>
@@ -519,8 +519,8 @@ export default function About() {
                         <div className="flip-card-inner">
                             {/* FRONT */}
                             <div className="flip-card-front" style={{
-                                border: '1px solid #e2e8f0',
-                                boxShadow: '0 12px 32px rgba(15, 23, 42, 0.08)'
+                                border: '1px solid var(--border-light)',
+                                boxShadow: '0 12px 32px var(--shadow-color)'
                             }}>
                                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '6px', background: 'linear-gradient(90deg, #fbbf24, #f59e0b)' }} />
                                 <span style={{
@@ -545,19 +545,19 @@ export default function About() {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     boxShadow: '0 8px 20px rgba(251, 191, 36, 0.3)',
-                                    border: '3px solid #ffffff'
+                                    border: '3px solid var(--bg-card)'
                                 }}>
                                     <Heart size={46} color="#d97706" strokeWidth={1.8} />
                                 </div>
-                                <h3 style={{ fontSize: '1.8rem', color: '#1e293b', fontWeight: '800', marginBottom: '0.8rem' }}>Valores</h3>
+                                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', fontWeight: '800', marginBottom: '0.8rem' }}>Valores</h3>
                                 <div style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.4rem',
                                     padding: '0.4rem 1rem',
                                     borderRadius: '50px',
-                                    backgroundColor: '#f1f5f9',
-                                    color: '#475569',
+                                    backgroundColor: 'var(--bg-secondary)',
+                                    color: 'var(--text-secondary)',
                                     fontSize: '0.85rem',
                                     fontWeight: '600'
                                 }}>
