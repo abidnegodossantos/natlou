@@ -1,11 +1,11 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Open_Sans, Montserrat } from 'next/font/google';
+import { Inter, Montserrat } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans' });
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-open-sans', display: 'swap' });
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -50,7 +50,7 @@ export default function RootLayout({
                     }}
                 />
             </head>
-            <body className={`${openSans.variable} ${montserrat.variable}`} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <body className={`${inter.variable} ${montserrat.variable}`} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
                 <Navbar />
                 <main style={{ flex: 1 }}>{children}</main>
                 <Footer />
