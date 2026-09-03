@@ -15,7 +15,7 @@ export default function Services() {
                 className="services-hero-breakout"
                 style={{
                     position: 'relative',
-                    minHeight: '60vh',
+                    minHeight: '75vh',
                     width: '100%',
                     marginBottom: '4rem',
                     overflow: 'hidden',
@@ -24,53 +24,73 @@ export default function Services() {
                     justifyContent: 'center',
                     color: 'white',
                     textAlign: 'center',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                    paddingBottom: '120px' // Space for wave divider + button breathing room
+                    backgroundImage: "url('/hero-tecnico-natlou.png')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center 30%',
+                    backgroundRepeat: 'no-repeat',
                 }}
             >
-                {/* Background Image */}
-                <Image
-                    src="/instalacao-ac.jpg"
-                    alt="Técnicos Natlou a instalar ar condicionado"
-                    fill
-                    style={{ objectFit: 'cover', zIndex: -2 }}
-                    priority
-                />
-                {/* Dark Overlay Filter */}
-                <div style={{
+                {/* Overlay for Light Mode — slightly darker to ensure white text contrast */}
+                <div className="hero-overlay-light" style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(15, 23, 42, 0.75)', // Deep navy dark overlay for clean contrast
-                    zIndex: -1
+                    background: 'linear-gradient(180deg, rgba(10, 15, 30, 0.55) 0%, rgba(10, 15, 30, 0.45) 50%, rgba(10, 15, 30, 0.60) 100%)',
+                    zIndex: 1,
+                    pointerEvents: 'none'
+                }}></div>
+
+                {/* Overlay for Dark Mode — lighter overlay, image stays vibrant */}
+                <div className="hero-overlay-dark" style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(180deg, rgba(10, 15, 30, 0.30) 0%, rgba(10, 15, 30, 0.20) 50%, rgba(10, 15, 30, 0.40) 100%)',
+                    zIndex: 1,
+                    pointerEvents: 'none',
+                    display: 'none'
                 }}></div>
 
                 {/* Hero Content */}
                 <RevealOnScroll>
-                    <div style={{ padding: '0 1.25rem', maxWidth: '900px', width: '100%', boxSizing: 'border-box' }}>
+                    <div style={{ 
+                        position: 'relative', 
+                        zIndex: 2, 
+                        padding: '4rem 1.25rem 0', 
+                        maxWidth: '900px', 
+                        width: '100%', 
+                        boxSizing: 'border-box',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
                         <h1 style={{
-                            fontSize: 'clamp(1.6rem, 5vw, 4rem)',
-                            fontWeight: '800',
-                            lineHeight: '1.2',
+                            fontSize: 'clamp(1.6rem, 5vw, 3.5rem)',
+                            fontWeight: '700',
+                            lineHeight: '1.18',
                             marginBottom: '1.25rem',
                             color: '#ffffff',
-                            textShadow: '0 2px 10px rgba(0,0,0,0.5)'
+                            textShadow: '0 2px 16px rgba(0,0,0,0.6), 0 4px 32px rgba(0,0,0,0.3)',
+                            textAlign: 'center',
                         }}>
                             Especialistas em Climatização: Instalação, Manutenção e Reparação.
                         </h1>
                         <p className="animate-slide-in delay-200" style={{
-                            fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
+                            fontSize: 'clamp(1rem, 2vw, 1.35rem)',
                             marginBottom: '2.5rem',
                             fontWeight: '500',
-                            color: '#f8fafc',
-                            textShadow: '0 1px 6px rgba(0,0,0,0.5)',
-                            maxWidth: '800px',
-                            marginLeft: 'auto',
-                            marginRight: 'auto'
+                            color: '#e2e8f0',
+                            textShadow: '0 1px 8px rgba(0,0,0,0.5)',
+                            maxWidth: '700px',
+                            lineHeight: '1.6',
+                            textAlign: 'center',
                         }}>
-                            Atendimento técnico em <span style={{ color: '#FFC107', fontWeight: '800', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>Luanda, Benguela e Bengo</span> com <span style={{ fontWeight: '700', color: '#ffffff', textDecoration: 'none', borderBottom: 'none' }}>técnicos certificados</span>.
+                            Atendimento técnico em <span style={{ color: '#FFC107', fontWeight: '700', textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>Luanda, Benguela e Bengo</span> com <span style={{ fontWeight: '600', color: '#ffffff', textDecoration: 'none' }}>técnicos certificados</span>.
                         </p>
 
                         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '0 1rem', boxSizing: 'border-box' }}>
@@ -87,9 +107,9 @@ export default function Services() {
                                     backgroundColor: '#25D366',
                                     color: 'white',
                                     padding: '0.9rem clamp(1rem, 4vw, 2rem)',
-                                    fontSize: 'clamp(0.95rem, 3.5vw, 1.2rem)',
+                                    fontSize: 'clamp(0.95rem, 3.5vw, 1.15rem)',
                                     borderRadius: '50px',
-                                    fontWeight: '700',
+                                    fontWeight: '600',
                                     textDecoration: 'none',
                                     boxShadow: '0 4px 25px rgba(37, 211, 102, 0.4)',
                                     border: '2px solid rgba(255,255,255,0.2)',
@@ -107,7 +127,7 @@ export default function Services() {
                 </RevealOnScroll>
 
                 {/* Organic Wave Divider (Air Flow Effect) */}
-                <div style={{ position: 'absolute', bottom: -1, left: 0, width: '100%', overflow: 'hidden', lineHeight: 0, zIndex: 1 }}>
+                <div style={{ position: 'absolute', bottom: -1, left: 0, width: '100%', overflow: 'hidden', lineHeight: 0, zIndex: 3 }}>
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{ position: 'relative', display: 'block', width: 'calc(100% + 1.3px)', height: '100px', transform: 'rotate(180deg)' }}>
                         <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="var(--bg-color)"></path>
                     </svg>

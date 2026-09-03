@@ -1003,6 +1003,63 @@ html.dark .service-card p {
   }
 }
 
+/* ===== HERO OVERLAY — LIGHT / DARK MODE TOGGLE ===== */
+/* Light mode (default): show light overlay, hide dark overlay */
+.hero-overlay-light {
+  display: block !important;
+}
+.hero-overlay-dark {
+  display: none !important;
+}
+
+/* Dark mode (manual toggle): swap overlays */
+html.dark .hero-overlay-light {
+  display: none !important;
+}
+html.dark .hero-overlay-dark {
+  display: block !important;
+}
+
+/* Dark mode (system preference): swap overlays */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .hero-overlay-light {
+    display: none !important;
+  }
+  html:not(.light) .hero-overlay-dark {
+    display: block !important;
+  }
+}
+
+/* ===== HERO BACKGROUND RESPONSIVENESS ===== */
+/* Mobile: position image to keep technician & AC visible */
+@media (max-width: 480px) {
+  .services-hero-breakout {
+    background-position: center 20% !important;
+    min-height: 70vh !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .services-hero-breakout {
+    background-position: center 25% !important;
+    min-height: 72vh !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-hero-breakout {
+    background-position: center 30% !important;
+    min-height: 75vh !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .services-hero-breakout {
+    background-position: center center !important;
+    min-height: 80vh !important;
+  }
+}
+
 /* 
   Comprehensive Responsive Breakpoints 
   Mobile-first approach
