@@ -538,6 +538,13 @@ a:focus-visible {
   z-index: 1000;
   width: 100%;
   max-width: 100vw;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-light);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 2px 16px var(--shadow-color);
 }
 
 .logo {
@@ -555,7 +562,7 @@ a:focus-visible {
 .theme-toggle-btn {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-primary);
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 9999px;
@@ -587,15 +594,15 @@ a:focus-visible {
 
 .nav-link {
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-primary);
   transition: color 0.3s ease;
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-poppins), var(--font-inter), sans-serif;
   font-size: clamp(0.875rem, 1.5vw, 1rem);
   padding: 0.5rem 0;
 }
 
 .nav-link:hover {
-  color: #38bdf8;
+  color: var(--secondary-color);
 }
 
 .logo-text {
@@ -1121,15 +1128,13 @@ html.dark .hero-overlay-dark {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(15, 23, 42, 0.98);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: var(--bg-color);
     flex-direction: column;
     padding: 1.5rem 1rem;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    box-shadow: 0 12px 32px var(--shadow-color);
     gap: 1rem;
     align-items: center;
-    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    border-top: 1px solid var(--border-light);
     z-index: 9998;
   }
 
