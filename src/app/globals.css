@@ -554,16 +554,16 @@ a:focus-visible {
 .theme-toggle-btn {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  min-width: 56px;
-  min-height: 56px;
+  min-width: 44px;
+  min-height: 44px;
   z-index: 1000;
 }
 
@@ -928,25 +928,26 @@ html.dark .service-card p {
 
 /* Navbar Responsive Toggle Button */
 .mobile-menu-btn {
-  display: none !important;
+  display: none;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
-  color: var(--primary-color);
-  transition: background-color 0.2s ease;
+  color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.2s ease, transform 0.2s ease;
   flex-shrink: 0;
   z-index: 10001;
-  min-width: 60px;
-  min-height: 60px;
+  min-width: 44px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
 }
 
 .mobile-menu-btn:hover {
-  background-color: var(--bg-secondary);
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
 }
 
 .mobile-menu-btn:active {
@@ -1053,7 +1054,7 @@ html.dark .service-card p {
 
   /* Navbar Responsive */
   .navbar {
-    padding: 0.75rem 1rem;
+    padding: 0.6rem 1rem;
   }
 
   .nav-links {
@@ -1062,19 +1063,20 @@ html.dark .service-card p {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(15, 23, 42, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
-    padding: 1.5rem;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    gap: 1rem;
     align-items: center;
     border-top: 1px solid rgba(56, 189, 248, 0.2);
+    z-index: 9998;
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex !important;
     animation: slideDown 0.3s ease-out;
   }
 
@@ -1090,8 +1092,9 @@ html.dark .service-card p {
   }
 
   .mobile-menu-btn {
-    display: flex;
-    padding: 1rem;
+    display: flex !important;
+    padding: 0.4rem;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .nav-link {
