@@ -25,42 +25,43 @@ export default function WhatsAppButton() {
             rel="noopener noreferrer"
             style={{
                 position: 'fixed',
-                bottom: '5.5rem',
-                right: '2.5rem',
+                bottom: '2rem',
+                right: '2rem',
                 zIndex: 9990,
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.8rem',
+                gap: '0.75rem',
                 textDecoration: 'none',
                 cursor: 'pointer'
             }}
             className="whatsapp-float-container"
         >
             <div className="animate-ripple" style={{
-                position: 'absolute', top: '50%', left: 'auto', right: '0', width: '60px', height: '60px', borderRadius: '50%', zIndex: -1,
+                position: 'absolute', top: '50%', left: 'auto', right: '0', width: '52px', height: '52px', borderRadius: '50%', zIndex: -1,
                 transform: 'translateY(-50%)'
             }}></div>
 
             {/* Status Text Bubble */}
             <div style={{
                 backgroundColor: 'var(--bg-card)',
-                padding: '0.5rem 1rem',
+                padding: '0.4rem 0.85rem',
                 borderRadius: '20px',
                 boxShadow: '0 4px 15px var(--shadow-color)',
                 color: 'var(--text-primary)',
-                fontSize: '0.9rem',
+                fontSize: '0.85rem',
                 fontWeight: '600',
-                opacity: isVisible ? 0.9 : 0,
-                transform: isVisible ? 'translateX(0)' : 'translateX(20px)',
-                transition: 'all 0.5s ease',
+                opacity: isVisible ? 0.95 : 0,
+                transform: isVisible ? 'translateX(0)' : 'translateX(15px)',
+                transition: 'all 0.4s ease',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                maxWidth: message.length > 15 ? '200px' : 'auto' // Allow wider for CTA
+                maxWidth: message.length > 15 ? '190px' : 'auto',
+                border: '1px solid var(--border-light)'
             }}>
                 <span style={{
-                    width: '8px',
-                    height: '8px',
+                    width: '7px',
+                    height: '7px',
                     backgroundColor: '#25D366',
                     borderRadius: '50%',
                     display: 'inline-block'
@@ -72,20 +73,20 @@ export default function WhatsAppButton() {
             <div style={{
                 backgroundColor: '#25D366',
                 color: 'white',
-                width: '60px',
-                height: '60px',
+                width: '52px',
+                height: '52px',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 4px 20px rgba(37, 211, 102, 0.4)',
+                boxShadow: '0 4px 18px rgba(37, 211, 102, 0.45)',
                 transition: 'transform 0.3s ease',
             }}
                 className="whatsapp-icon-btn"
             >
                 <svg
-                    width="32"
-                    height="32"
+                    width="28"
+                    height="28"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
