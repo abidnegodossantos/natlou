@@ -943,8 +943,8 @@ html.dark .service-card p {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.9);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
   flex-shrink: 0;
   z-index: 10001;
   min-width: 44px;
@@ -1157,7 +1157,7 @@ html.dark .hero-overlay-dark {
   .mobile-menu-btn {
     display: flex !important;
     padding: 0.4rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
   }
 
   .nav-link {
@@ -1166,12 +1166,12 @@ html.dark .hero-overlay-dark {
     width: 100%;
     text-align: center;
     border-radius: 8px;
-    color: rgba(255,255,255,0.9);
+    color: var(--text-primary);
   }
 
   .nav-link:hover {
     background-color: rgba(56, 189, 248, 0.12);
-    color: #38bdf8;
+    color: var(--secondary-color);
   }
 
   /* Hero Section Stacking - Image Top, Text Bottom */
