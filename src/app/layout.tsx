@@ -1,20 +1,20 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Inter, Montserrat } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const inter = Inter({
     subsets: ['latin'],
-    weight: ['400', '500', '600', '700', '800'],
+    weight: ['400', '500', '600', '700'],
     variable: '--font-inter',
     display: 'swap',
 });
 
-const montserrat = Montserrat({
+const poppins = Poppins({
     subsets: ['latin'],
-    weight: ['400', '500', '600', '700', '800'],
-    variable: '--font-montserrat',
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-poppins',
     display: 'swap',
 });
 
@@ -61,7 +61,7 @@ export default function RootLayout({
                     }}
                 />
             </head>
-            <body className={`${inter.variable} ${montserrat.variable}`} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <body className={`${inter.variable} ${poppins.variable}`} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
                 <Navbar />
                 <main style={{ flex: 1 }}>{children}</main>
                 <Footer />
