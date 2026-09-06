@@ -131,7 +131,7 @@ export default function Home() {
             </div>
 
             <h1 className="home-hero-title">
-              Climatização que <br />
+              Climatização que <br className="hero-title-break" />
               transforma espaços.
             </h1>
 
