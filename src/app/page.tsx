@@ -2,547 +2,404 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import AnimatedCounter from '@/components/AnimatedCounter';
-import WaveDivider from '@/components/WaveDivider';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import BtuCalculator from '@/components/BtuCalculator';
+import ContactSection from '@/components/ContactSection';
+import {
+  Wrench,
+  ShieldCheck,
+  Thermometer,
+  Sparkles,
+  Headphones,
+  ChevronRight,
+  Award,
+  Users,
+  Clock,
+  Phone,
+  ShoppingBag,
+  Wind,
+} from 'lucide-react';
+
+/* ── dados estáticos ─────────────────────────────────── */
+
+const WHATSAPP_NUMBER = '244955475575';
+const WHATSAPP_BASE = `https://wa.me/${WHATSAPP_NUMBER}`;
+const PHONE_PRIMARY = '+244946776397';
+const DELAYS = [0, 100, 200, 300, 400, 500] as const;
+
+const services = [
+  {
+    icon: ShoppingBag,
+    title: 'Venda de Equipamentos',
+    desc: 'Ar-condicionados das melhores marcas com garantia de fábrica e montagem gratuita.',
+  },
+  {
+    icon: Wrench,
+    title: 'Instalação Profissional',
+    desc: 'Montagem técnica padronizada, segura e realizada por equipa especializada.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Manutenção Preventiva',
+    desc: 'Inspeção periódica para evitar avarias, economizar energia e aumentar a vida útil.',
+  },
+  {
+    icon: Thermometer,
+    title: 'Reparação & Diagnóstico',
+    desc: 'Identificação rápida de problemas e conserto eficiente de compressores e circuitos.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Higienização Completa',
+    desc: 'Limpeza profunda de serpentinas e turbinas para um ar puro e livre de bactérias.',
+  },
+  {
+    icon: Headphones,
+    title: 'Assistência Técnica',
+    desc: 'Atendimento dedicado com resposta ágil para clientes residenciais e corporativos.',
+  },
+];
+
+const products = [
+  {
+    name: 'Split Haier 9.000 BTU',
+    desc: 'Ideal para quartos pequenos e escritórios individuais (até 15 m²). Silencioso e económico.',
+    image: '/ac-9000-btu.png',
+  },
+  {
+    name: 'Split Mural 12.000 BTU',
+    desc: 'O mais procurado. Conforto térmico perfeito para quartos de casal e salas até 20 m².',
+    image: '/ac-12000-btu-v2.jpg',
+  },
+  {
+    name: 'Split Inverter 18.000 BTU',
+    desc: 'Alta eficiência e refrigeração veloz para salas de estar e ambientes amplos até 35 m².',
+    image: '/ac-18000-btu-v2.jpg',
+  },
+  {
+    name: 'Split Potência 24.000 BTU',
+    desc: 'Potência máxima para grandes salas residenciais, consultórios e escritórios até 50 m².',
+    image: '/ac-18000-btu.jpg',
+  },
+  {
+    name: 'Cassete Comercial',
+    desc: 'Design embutido para tecto falso com fluxo de ar 360°. Excelente para lojas e escritórios.',
+    image: '/ac-cassette-v2.jpg',
+  },
+  {
+    name: 'Sistemas Industriais & Peças',
+    desc: 'Soluções de grande porte para empresas, carga de gás refrigerante e peças originais.',
+    image: '/stock-infrastructure.jpg',
+  },
+];
+
+const gallery = [
+  { src: '/installation-team.jpg', alt: 'Instalação técnica de ar condicionado pela equipa Natlou' },
+  { src: '/installation-team-v2.jpg', alt: 'Equipa de montagem técnica Natlou' },
+  { src: '/stock-infrastructure-v2.jpg', alt: 'Infraestrutura de equipamentos e peças Natlou' },
+  { src: '/warehouse-natlou.jpg', alt: 'Stock e armazém oficial da Natlou' },
+  { src: '/maintenance-team.jpg', alt: 'Manutenção preventiva e higienização em campo' },
+  { src: '/team-natlou.jpg', alt: 'Equipa técnica profissional Natlou' },
+];
+
+/* ── componente principal (Landing Page One-Page) ────── */
 
 export default function Home() {
-    const images = [
-        '/hero-banner-new.png',
-        '/hero-slide-2.jpg',
-        '/hero-slide-3.jpg'
-    ];
-
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % images.length);
-        }, 5000); // Change slide every 5 seconds
-
-        return () => clearInterval(interval);
-    }, [images.length]);
-
-    return (
+  return (
     <div>
-      {/* Mobile Hero Section (Stacked) */}
-      <section className="mobile-only section" style={{ padding: '0 0 2rem 0' }} aria-label="Natlou - Ar Condicionado e Climatização">
-        <div style={{ position: 'relative' }}>
-          <div style={{
-            width: '100%',
-            height: '50vh',
-            position: 'relative',
-            marginBottom: '2rem'
-          }}>
-            <div style={{ 
-                position: 'relative', 
-                width: '100%', 
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'var(--bg-color)'
-            }}>
-              <Image
-                src="/ac-12000-btu.jpg"
-                alt="Ar Condicionado Natlou - Mantenha sua casa fresca"
-                width={800}
-                height={600}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  maxWidth: '100%',
-                  objectFit: 'contain'
-                }}
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-          </div>
+      {/* ═══════ 1. HERO (Âncora #inicio) ═══════ */}
+      <section id="inicio" className="home-hero" aria-label="Natlou — Climatização que transforma espaços">
+        <div className="home-hero-bg-layer" aria-hidden="true">
+          <Image
+            src="/hero-slide-2.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="home-hero-bg-image"
+          />
+          <div className="home-hero-overlay home-hero-overlay-dark" />
+          <div className="home-hero-overlay home-hero-overlay-light" />
+        </div>
 
-          <div className="container" style={{ textAlign: 'center', padding: '0 1.5rem' }}>
-            <div className="typewriter-text" style={{ marginBottom: '1rem', justifyContent: 'center', display: 'flex' }}>
-              <h1 style={{
-                fontSize: 'clamp(2rem, 8vw, 3rem)',
-                fontWeight: '800',
-                color: 'var(--primary-color)',
-                lineHeight: '1.18',
-                display: 'flex',
-                gap: '0.2rem'
-              }}>
-                {['N', 'A', 'T', 'L', 'O', 'U'].map((letter, i) => (
-                  <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>{letter}</span>
-                ))}
-              </h1>
+        <div className="container home-hero-inner">
+          <div className="home-hero-content">
+            <div className="home-hero-badge">
+              <span className="home-hero-badge-dot" />
+              Soluções completas em climatização
             </div>
 
-            <h2 className="hero-mobile-title" style={{
-              fontSize: 'clamp(1.5rem, 5vw, 1.8rem)',
-              fontWeight: '700',
-              marginBottom: '1rem',
-              color: 'var(--text-primary)'
-            }}>
-              Mantenha a sua casa fresca.
-            </h2>
+            <h1 className="home-hero-title">
+              Climatização que <br />
+              transforma espaços.
+            </h1>
 
-            <p style={{
-              fontSize: 'clamp(1rem, 3vw, 1.1rem)',
-              color: 'var(--text-secondary)',
-              marginBottom: '2rem',
-              lineHeight: '1.5'
-            }}>
-              Montagem Gratuita e Pagamento em Prestações.
+            <p className="home-hero-desc">
+              Venda, instalação e manutenção de ar-condicionados com qualidade,
+              eficiência e garantia.
             </p>
 
-            <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento%20para%20ar%20condicionado." className="btn animate-pulse-btn" style={{ width: '100%', maxWidth: '300px' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
-              Quero o meu AC Agora
-            </a>
+            <div className="home-hero-cta-group">
+              <a
+                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Olá, NATLOU. Gostaria de solicitar informações sobre os serviços de climatização.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-hero-primary"
+                aria-label="Falar no WhatsApp"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Falar no WhatsApp
+              </a>
+
+              <a href="#servicos" className="btn-hero-secondary">
+                Ver soluções
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-            {/* Desktop Hero Section (Parallax) */}
+      {/* ═══════ 2. DIFERENCIAIS / FAIXA DE CONFIANÇA ═══════ */}
+      <section className="home-trust-strip" aria-label="Diferenciais da Natlou">
+        <div className="container">
+          <div className="home-trust-grid">
+            <div className="home-trust-item">
+              <div className="home-trust-icon"><ShieldCheck size={20} strokeWidth={2} /></div>
+              <span className="home-trust-text">Equipamentos de qualidade</span>
+            </div>
+            <div className="home-trust-item">
+              <div className="home-trust-icon"><Wrench size={20} strokeWidth={2} /></div>
+              <span className="home-trust-text">Instalação profissional</span>
+            </div>
+            <div className="home-trust-item">
+              <div className="home-trust-icon"><Clock size={20} strokeWidth={2} /></div>
+              <span className="home-trust-text">Assistência rápida e garantida</span>
+            </div>
+            <div className="home-trust-item">
+              <div className="home-trust-icon"><Award size={20} strokeWidth={2} /></div>
+              <span className="home-trust-text">+300 lares climatizados</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ 3. SERVIÇOS (Âncora #servicos) ═══════ */}
+      <section id="servicos" className="section" aria-labelledby="home-services-title" style={{ paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
+        <div className="container">
+          <RevealOnScroll>
+            <span className="home-eyebrow">O que fazemos</span>
+            <h2 id="home-services-title" className="home-section-title">
+              Soluções completas para o seu conforto
+            </h2>
+          </RevealOnScroll>
+
+          <div className="home-services-grid">
+            {services.map((svc, i) => (
+              <RevealOnScroll key={svc.title} delay={DELAYS[i % DELAYS.length]}>
+                <div className="home-service-card">
+                  <div className="home-service-icon">
+                    <svc.icon size={24} />
+                  </div>
+                  <h3>{svc.title}</h3>
+                  <p>{svc.desc}</p>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ 4. PRODUTOS (Âncora #produtos) ═══════ */}
       <section
-        className="section hero-parallax desktop-only"
-        style={{
-          padding: '0',
-          height: '85vh',
-          minHeight: '600px',
-          width: '100%',
-          position: 'relative',
-          overflow: 'hidden'
-        }}
-        aria-label="Natlou - Ar Condicionado e Climatização"
+        id="produtos"
+        className="section"
+        aria-labelledby="home-products-title"
+        style={{ backgroundColor: 'var(--bg-secondary)', paddingTop: '4.5rem', paddingBottom: '4.5rem' }}
       >
-        {/* Ken Burns Background */}
-        <div className="animate-ken-burns" style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: "url('/ac-12000-btu.jpg')",
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          zIndex: 0
-        }} aria-hidden="true"></div>
-        {/* Professional Directional Gradient Overlay - Clear Image Visibility & Text Contrast */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(90deg, rgba(15, 23, 42, 0.84) 0%, rgba(15, 23, 42, 0.48) 45%, rgba(15, 23, 42, 0.10) 100%)',
-          zIndex: 1
-        }} aria-hidden="true"></div>
+        <div className="container">
+          <RevealOnScroll>
+            <span className="home-eyebrow">Catálogo visual</span>
+            <h2 id="home-products-title" className="home-section-title">
+              Equipamentos para todas as necessidades
+            </h2>
+          </RevealOnScroll>
 
-        {/* Airflow Breeze Effects */}
-        <div className="airflow-wind-line" style={{ top: '20%', animationDelay: '0s' }} aria-hidden="true"></div>
-        <div className="airflow-wind-line-2" style={{ top: '40%', animationDelay: '3s' }} aria-hidden="true"></div>
-        <div className="airflow-wind-line" style={{ top: '65%', animationDelay: '6s', height: '3px' }} aria-hidden="true"></div>
-        <div className="airflow-wind-line-2" style={{ top: '80%', animationDelay: '1.5s' }} aria-hidden="true"></div>
-
-        {/* Content */}
-        <div className="container" style={{
-          position: 'relative',
-          zIndex: 2,
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'flex-start', // Left aligned
-          color: 'white'
-        }}>
-          <div className="typewriter-text" style={{ marginBottom: '1rem' }}>
-            <h1 style={{
-              fontSize: 'clamp(3rem, 5.5vw, 5rem)',
-              fontWeight: '800',
-              lineHeight: '1.15',
-              color: 'white',
-              textShadow: '0 4px 20px rgba(0,0,0,0.3)',
-              display: 'flex',
-              gap: '0.5rem'
-            }}>
-              {['N', 'A', 'T', 'L', 'O', 'U'].map((letter, i) => (
-                <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>{letter}</span>
-              ))}
-            </h1>
+          <div className="home-products-grid">
+            {products.map((prod, i) => (
+              <RevealOnScroll key={prod.name} delay={DELAYS[i % DELAYS.length]}>
+                <div className="home-product-card">
+                  <div className="home-product-image">
+                    <Image
+                      src={prod.image}
+                      alt={prod.name}
+                      fill
+                      style={{ objectFit: 'contain', padding: '0.85rem' }}
+                      sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="home-product-info">
+                    <h3>{prod.name}</h3>
+                    <p>{prod.desc}</p>
+                    <a
+                      href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Olá, NATLOU. Gostaria de solicitar um orçamento para o equipamento: ' + prod.name)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="home-product-order-btn"
+                      aria-label={`Pedir orçamento para ${prod.name}`}
+                    >
+                      Pedir orçamento
+                    </a>
+                  </div>
+                </div>
+              </RevealOnScroll>
+            ))}
           </div>
-          <h2 className="animate-slide-in" style={{
-            fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-            fontWeight: '600',
-            marginBottom: '1.5rem',
-            maxWidth: '800px',
-            textShadow: '0 2px 10px rgba(0,0,0,0.3)',
-            animationDelay: '0.8s',
-            opacity: 0 // Start hidden for animation
-          }}>
-            Mantenha a sua casa fresca.
-          </h2>
-
-          <p className="subtitle" style={{
-            fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
-            color: 'rgba(255,255,255,0.9)',
-            marginBottom: '3rem',
-            fontWeight: '400',
-            maxWidth: '600px',
-            borderLeft: '4px solid var(--action-color)',
-            paddingLeft: '1rem'
-          }}>
-            Montagem Gratuita e Pagamento em Prestações.
-          </p>
-
-          <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento%20para%20ar%20condicionado." target="_blank" rel="noopener noreferrer" className="btn animate-pulse-btn" style={{ fontSize: '1.2rem' }} aria-label="Contactar Natlou no WhatsApp para pedir orçamento">
-            Quero o meu AC Agora
-          </a>
-        </div>
-
-        {/* Wave Divider at Bottom of Hero */}
-        <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '100%', zIndex: 3 }} aria-hidden="true">
-          <WaveDivider fillColor="var(--bg-color)" flip />
         </div>
       </section>
 
-            {/* Services Preview */}
-            <section className="section" style={{ paddingTop: '2rem' }} aria-labelledby="services-title">
-                <div className="container">
-                    <RevealOnScroll>
-                        <h2 id="services-title" className="title" style={{ textAlign: 'center' }}>Nossos Serviços</h2>
-                    </RevealOnScroll>
-                    <div style={{
-                        marginTop: '3rem',
-                        display: 'flex',
-                        flexDirection: 'row',
-                        gap: '3rem',
-                        alignItems: 'center',
-                        flexWrap: 'wrap'
-                    }}>
-                        {/* Left Column: Image (Desktop) */}
-                        <RevealOnScroll className="flex-1 min-w-[300px] desktop-only" style={{ flex: '1', minWidth: '300px' }}>
-                            <div className="img-hover-zoom" style={{
-                                borderRadius: '16px',
-                                overflow: 'hidden',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                                width: '100%',
-                            }}>
-                                <Image
-                                    src="/instalacao-ac.jpg"
-                                    alt="Instalação de Ar Condicionado - Equipa Técnica Natlou"
-                                    width={600}
-                                    height={450}
-                                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                                    sizes="(min-width: 769px) 50vw, 100vw"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </RevealOnScroll>
+      {/* ═══════ 5. MÉTRICAS E NÚMEROS DA EMPRESA ═══════ */}
+      <section className="home-stats-section" aria-label="Números da Natlou">
+        <div className="container">
+          <div className="home-stats-grid">
+            <RevealOnScroll>
+              <div className="home-stat-item">
+                <span className="home-stat-number">
+                  <AnimatedCounter end={300} prefix="+" />
+                </span>
+                <span className="home-stat-label">Lares climatizados</span>
+              </div>
+            </RevealOnScroll>
 
-                        {/* Mobile Swipe Gallery (Installation Photos) */}
-                        <div className="mobile-only" style={{ width: '100%', marginBottom: '1rem' }}>
-                            <div className="horizontal-carousel">
-                                {/* Slide 1 */}
-                                <div className="carousel-item">
-                                    <Image src="/installation-team.jpg" alt="Instalação Técnica 1" fill style={{ objectFit: 'cover' }} />
-                                    <div style={{ position: 'absolute', bottom: 10, left: 10, background: 'rgba(0,0,0,0.6)', color: 'white', padding: '5px 10px', borderRadius: '4px', fontSize: '0.8rem', zIndex: 10 }}>Instalação Profissional</div>
-                                </div>
-                                {/* Slide 2 */}
-                                <div className="carousel-item">
-                                    <Image src="/services-banner.jpg" alt="Equipa Técnica" fill style={{ objectFit: 'cover' }} />
-                                    <div style={{ position: 'absolute', bottom: 10, left: 10, background: 'rgba(0,0,0,0.6)', color: 'white', padding: '5px 10px', borderRadius: '4px', fontSize: '0.8rem', zIndex: 10 }}>Equipa Certificada</div>
-                                </div>
-                                {/* Slide 3 */}
-                                <div className="carousel-item">
-                                    <Image src="/maintenance-team.jpg" alt="Manutenção" fill style={{ objectFit: 'cover' }} />
-                                    <div style={{ position: 'absolute', bottom: 10, left: 10, background: 'rgba(0,0,0,0.6)', color: 'white', padding: '5px 10px', borderRadius: '4px', fontSize: '0.8rem', zIndex: 10 }}>Manutenção Completa</div>
-                                </div>
-                            </div>
-                            <p style={{ textAlign: 'center', fontSize: '0.8rem', color: '#888', marginTop: '0.5rem' }}>Deslize para ver mais &rarr;</p>
-                        </div>
+            <div className="home-stat-divider" aria-hidden="true" />
 
-                        {/* Right Column: Destaques */}
-                        <div style={{ flex: '1', minWidth: '300px' }}>
-                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: 'var(--primary-color)' }}>
-                                Por que escolher a Natlou?
-                            </h3>
+            <RevealOnScroll delay={200}>
+              <div className="home-stat-item">
+                <span className="home-stat-number">
+                  <AnimatedCounter end={30} prefix="+" />
+                </span>
+                <span className="home-stat-label">Empresas parceiras</span>
+              </div>
+            </RevealOnScroll>
 
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                                {/* Destaque 1 */}
-                                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                    <div style={{ width: '50px', height: '50px', flexShrink: 0 }}>
-                                        <Image
-                                            src="/installation-icon.jpg"
-                                            alt="Ícone de Montagem"
-                                            width={50}
-                                            height={50}
-                                            style={{ borderRadius: '50%', objectFit: 'cover' }}
-                                        />
-                                    </div>
-                                    <div>
-                                        <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>Montagem Gratuita</h4>
-                                        <p style={{ color: 'var(--text-secondary)' }}>Na compra de qualquer Ar Condicionado.</p>
-                                    </div>
-                                </div>
+            <div className="home-stat-divider" aria-hidden="true" />
 
-                                {/* Destaque 2 */}
-                                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                    <div style={{ width: '50px', height: '50px', flexShrink: 0 }}>
-                                        <Image
-                                            src="/payment-icon.jpg"
-                                            alt="Ícone de Pagamento"
-                                            width={50}
-                                            height={50}
-                                            style={{ borderRadius: '50%', objectFit: 'cover' }}
-                                        />
-                                    </div>
-                                    <div>
-                                        <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>1ª Manutenção Grátis</h4>
-                                        <p style={{ color: 'var(--text-secondary)' }}>Pagamento facilitado em prestações.</p>
-                                    </div>
-                                </div>
-
-                                {/* Destaque 3 */}
-                                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                    <div style={{ width: '50px', height: '50px', flexShrink: 0 }}>
-                                        <Image
-                                            src="/delivery-icon.jpg"
-                                            alt="Ícone de Entrega"
-                                            width={50}
-                                            height={50}
-                                            style={{ borderRadius: '50%', objectFit: 'cover' }}
-                                        />
-                                    </div>
-                                    <div>
-                                        <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '0.2rem' }}>Entrega Grátis</h4>
-                                        <p style={{ color: 'var(--text-secondary)' }}>Luanda e Bengo. Entrega em Benguela com custo adicional.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div style={{ marginTop: '2.5rem' }}>
-                                <Link href="/services" className="btn">Ver Todos os Serviços</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* BTU Calculator Section */}
-            <section className="section" style={{ backgroundColor: 'var(--bg-color)', padding: '3rem 0' }} aria-label="Calculadora de BTU">
-                <div className="container">
-                    <RevealOnScroll>
-                        <BtuCalculator />
-                    </RevealOnScroll>
-                </div>
-            </section>
-
-            {/* Social Proof / Stats Section */}
-            <section
-                className="section hero-parallax"
-                style={{
-                    backgroundImage: "url('/warehouse-natlou.jpg')",
-                    backgroundAttachment: 'fixed', // Parallax
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                    position: 'relative',
-                    padding: '8rem 0'
-                }}
-                aria-labelledby="stats-title"
-            >
-                {/* Wave Divider at Top (Transition from White to Image) */}
-                <div style={{ position: 'absolute', top: '-1px', left: 0, width: '100%', zIndex: 3 }}>
-                    <WaveDivider fillColor="var(--bg-color)" />
-                </div>
-                {/* Dark Overlay */}
-                <div style={{
-                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-                    backgroundColor: 'rgba(15, 23, 42, 0.65)', zIndex: 1
-                }}></div>
-
-                <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '4rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <div style={{ 
-                            backgroundColor: 'var(--action-color)', 
-                            color: '#002855', 
-                            padding: '0.5rem 1.5rem', 
-                            borderRadius: '50px', 
-                            fontWeight: '800', 
-                            fontSize: '1.2rem',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '0.5rem',
-                            marginBottom: '1rem',
-                            boxShadow: '0 4px 15px rgba(255, 170, 0, 0.4)'
-                        }}>
-                            🇦🇴 Empresa 100% Angolana
-                        </div>
-                        <h2 id="stats-title" style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1rem' }}>Sólida Infraestrutura</h2>
-                        <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>Stock garantido para servir o país com qualidade.</p>
-                    </div>
-
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        flexWrap: 'wrap',
-                        gap: '4rem'
-                    }}>
-                        {/* Counter 1 */}
-                        <RevealOnScroll delay={0}>
-                            <div style={{ textAlign: 'center' }}>
-                                <div style={{
-                                    fontSize: '4rem',
-                                    fontWeight: '800',
-                                    color: 'var(--action-color)',
-                                    lineHeight: '1'
-                                }}>
-                                    <AnimatedCounter end={300} prefix="+" />
-                                </div>
-                                <div style={{ fontSize: '1.2rem', fontWeight: '500', marginTop: '0.5rem' }}>Clientes Particulares</div>
-                            </div>
-                        </RevealOnScroll>
-
-                        {/* Counter 2 */}
-                        <RevealOnScroll delay={200}>
-                            <div style={{ textAlign: 'center' }}>
-                                <div style={{
-                                    fontSize: '4rem',
-                                    fontWeight: '800',
-                                    color: 'var(--action-color)',
-                                    lineHeight: '1'
-                                }}>
-                                    <AnimatedCounter end={30} prefix="+" />
-                                </div>
-                                <div style={{ fontSize: '1.2rem', fontWeight: '500', marginTop: '0.5rem' }}>Empresas Parceiras</div>
-                            </div>
-                        </RevealOnScroll>
-                    </div>
-                </div>
-                {/* Wave Divider at Bottom (Transition from Image to Contact Light Blue) */}
-                <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '100%', zIndex: 3 }}>
-                    <WaveDivider fillColor="var(--bg-secondary)" flip />
-                </div>
-            </section>
-
-            {/* New Mobile Fullscreen Section "Vamos até si" */}
-            <section className="mobile-only mobile-fullscreen-hero" style={{ backgroundImage: "url('/contact-model.jpg')" }}>
-                <div className="mobile-hero-overlay">
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '0.5rem', lineHeight: '1.1' }}>
-                        Vamos<br />até Si.
-                    </h2>
-                    <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: '1.5rem' }}>
-                        Atendimento personalizado onde você estiver.
-                    </p>
-                    <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20falar%20com%20um%20consultor%20da%20Natlou." className="btn" style={{ width: '100%', background: 'white', color: 'var(--primary-color)' }}>
-                        Falar com Consultor
-                    </a>
-                </div>
-            </section>
-
-            {/* Contact / Face of Company Section */}
-            <section className="section" style={{ backgroundColor: 'var(--bg-secondary)', padding: '5rem 0' }} aria-labelledby="contact-title">
-                <div className="container">
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        gap: '4rem',
-                        flexWrap: 'wrap-reverse' // Image last on mobile, but let's check
-                    }}>
-                        {/* Image Side with Speech Bubble */}
-                        <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center', position: 'relative' }}>
-                            {/* Speech Bubble */}
-                            <div style={{
-                                position: 'absolute',
-                                top: '-40px',
-                                right: '10%',
-                                backgroundColor: 'var(--bg-card)',
-                                padding: '1.5rem',
-                                borderRadius: '20px',
-                                borderBottomLeftRadius: '0',
-                                boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-                                maxWidth: '250px',
-                                zIndex: 10,
-                                animation: 'pulse-yellow 4s infinite ease-in-out' // Reuse pulse slightly
-                            }}>
-                                <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', fontWeight: '600', lineHeight: '1.5' }}>
-                                    "Olá! Posso ajudar a escolher o melhor BTU para a sua sala?"
-                                </p>
-                                <div style={{
-                                    position: 'absolute',
-                                    bottom: '-10px',
-                                    left: '20px',
-                                    width: '20px',
-                                    height: '20px',
-                                    backgroundColor: 'var(--bg-card)',
-                                    transform: 'rotate(45deg)'
-                                }}></div>
-                            </div>
-
-                            <div className="img-hover-zoom" style={{
-                                width: '350px',
-                                height: '350px',
-                                borderRadius: '50%',
-                                overflow: 'hidden',
-                                border: '6px solid white',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
-                                position: 'relative'
-                            }}>
-                                <Image
-                                    src="/atendimento-natlou.jpg"
-                                    alt="Atendimento Personalizado Natlou"
-                                    fill
-                                    style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
-                                />
-                            </div>
-                        </div>
-
-                        {/* Right Side: Text & CTA */}
-                        <div style={{ flex: '1', minWidth: '300px' }}>
-                            <div style={{ marginBottom: '1rem' }}>
-                                <span style={{ textTransform: 'uppercase', color: 'var(--secondary-color)', fontWeight: 'bold', fontSize: '0.9rem' }}>Atendimento Humanizado</span>
-                                <h2 id="contact-title" style={{
-                                    fontSize: '2.5rem',
-                                    fontWeight: '800',
-                                    color: '#002855',
-                                    marginTop: '0.5rem',
-                                    marginBottom: '1.5rem',
-                                    lineHeight: '1.2'
-                                }}>
-                                    Ainda tem <br />
-                                    <span style={{ color: 'var(--secondary-color)' }}>Dúvidas?</span>
-                                </h2>
-                            </div>
-
-                            <p style={{
-                                fontSize: '1.15rem',
-                                color: '#555',
-                                marginBottom: '2.5rem',
-                                lineHeight: '1.6'
-                            }}>
-                                Não fale com robôs. A nossa equipa está pronta para entender a sua necessidade e recomendar a solução perfeita para si.
-                            </p>
-
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20esclarecer%20algumas%20dúvidas%20sobre%20os%20vossos%20serviços." target="_blank" rel="noopener noreferrer" className="btn" style={{
-                                    backgroundColor: '#25D366',
-                                    boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)'
-                                }}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
-                                    Falar no WhatsApp
-                                </a>
-
-                                <a href="tel:+244946776397" className="btn">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                    Ligar Agora (+244 946 776 397)
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <RevealOnScroll delay={400}>
+              <div className="home-stat-item">
+                <span className="home-stat-number">100%</span>
+                <span className="home-stat-label">Compromisso com qualidade</span>
+              </div>
+            </RevealOnScroll>
+          </div>
         </div>
-    );
+      </section>
+
+      {/* ═══════ 6. PROJETOS REALIZADOS (Âncora #projetos) ═══════ */}
+      <section
+        id="projetos"
+        className="section"
+        aria-labelledby="home-projects-title"
+        style={{ paddingTop: '4.5rem', paddingBottom: '4.5rem' }}
+      >
+        <div className="container">
+          <RevealOnScroll>
+            <span className="home-eyebrow">Projetos realizados</span>
+            <h2 id="home-projects-title" className="home-section-title">
+              Trabalhos que falam por nós
+            </h2>
+          </RevealOnScroll>
+
+          <div className="home-projects-grid">
+            {gallery.map((img, i) => (
+              <RevealOnScroll key={img.src} delay={DELAYS[i % DELAYS.length]}>
+                <div className="home-project-item">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ 7. SOBRE NÓS (Âncora #sobre) ═══════ */}
+      <section
+        id="sobre"
+        className="section"
+        aria-labelledby="home-about-title"
+        style={{ backgroundColor: 'var(--bg-secondary)', paddingTop: '4.5rem', paddingBottom: '4.5rem' }}
+      >
+        <div className="container">
+          <div className="home-about-grid">
+            <RevealOnScroll>
+              <div className="home-about-image">
+                <Image
+                  src="/stock-infrastructure.jpg"
+                  alt="Instalações e infraestrutura técnica da Natlou"
+                  width={600}
+                  height={400}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                />
+              </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={200}>
+              <div className="home-about-content">
+                <span className="home-eyebrow">Sobre a NATLOU</span>
+                <h2 id="home-about-title">
+                  De uma empresa angolana para mais de 300 lares confortáveis.
+                </h2>
+                <p>
+                  A NATLOU é a sua parceira de confiança em climatização e frio em Angola.
+                  Oferecemos soluções completas de venda, instalação e manutenção
+                  de ar-condicionados com foco em rigor técnico, atendimento humanizado
+                  e garantia de satisfação.
+                </p>
+                <Link href="/about" className="btn-home-outline">
+                  Conheça a nossa história <ChevronRight size={16} />
+                </Link>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ 8. CALCULADORA BTU (Âncora #calculadora) ═══════ */}
+      <section
+        id="calculadora"
+        className="section"
+        aria-label="Calculadora de Carga Térmica BTU"
+        style={{ paddingTop: '4.5rem', paddingBottom: '4.5rem' }}
+      >
+        <div className="container">
+          <RevealOnScroll>
+            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+              <span className="home-eyebrow">Dimensionamento térmico</span>
+              <h2 className="home-section-title" style={{ maxWidth: '680px', margin: '0.5rem auto 1rem' }}>
+                Não sabe qual capacidade de ar-condicionado escolher?
+              </h2>
+              <p style={{ color: 'var(--text-secondary)', maxWidth: '560px', margin: '0 auto' }}>
+                Utilize a nossa calculadora técnica para estimar a potência ideal de BTUs para o seu ambiente.
+              </p>
+            </div>
+            <BtuCalculator />
+          </RevealOnScroll>
+        </div>
+      </section>
+
+      {/* ═══════ 9. SECÇÃO DE CONTACTOS & ATENDIMENTO (Âncora #contactos) ═══════ */}
+      <ContactSection />
+    </div>
+  );
 }

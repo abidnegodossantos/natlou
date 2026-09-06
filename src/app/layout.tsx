@@ -26,8 +26,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-    title: 'Natlou - Climatização e Vendas',
-    description: 'Serviços de manutenção, instalação e venda de Ar Condicionado.',
+    title: 'NATLOU Climatização | Soluções em Climatização em Angola',
+    description: 'Venda, instalação, reparação e manutenção profissional de ar-condicionados em Luanda e Bengo. Soluções completas com qualidade, eficiência e garantia técnica.',
     manifest: '/manifest.json',
 };
 
@@ -51,9 +51,11 @@ export default function RootLayout({
                                     if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                                         document.documentElement.classList.add('dark');
                                         document.documentElement.classList.remove('light');
+                                        document.documentElement.setAttribute('data-theme', 'dark');
                                     } else {
                                         document.documentElement.classList.add('light');
                                         document.documentElement.classList.remove('dark');
+                                        document.documentElement.setAttribute('data-theme', 'light');
                                     }
                                 } catch (e) {}
                             })();

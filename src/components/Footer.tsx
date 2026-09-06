@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 
@@ -6,247 +5,203 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="footer" style={{
-            backgroundColor: '#0b1120',
-            color: '#e2e8f0',
-            padding: '3.5rem 0 2rem',
-            borderTop: '4px solid #fbbf24',
-            position: 'relative',
-            zIndex: 10
-        }}>
-            <div className="container">
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                    gap: '2.5rem',
-                    marginBottom: '2.5rem'
-                }}>
-                    {/* Column 1: Company Info */}
+        <footer id="contactos" className="footer-premium" aria-label="Rodapé institucional Natlou">
+            {/* Subtle background air conditioner watermark */}
+            <div className="footer-ac-watermark" aria-hidden="true">
+                <Image
+                    src="/ac-9000-btu.png"
+                    alt=""
+                    width={420}
+                    height={260}
+                    sizes="420px"
+                    style={{ objectFit: 'contain' }}
+                />
+            </div>
+
+            <div className="container footer-inner-content">
+                {/* 1. Bloco Superior / CTA Bar */}
+                <div className="footer-cta-bar">
+                    <p className="footer-cta-text">
+                        Fale com um dos nossos especialistas e solicite o seu orçamento gratuito.
+                    </p>
+
+                    <div className="footer-cta-buttons">
+                        <a
+                            href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20gratuito%20para%20climatização."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-footer-cta-primary"
+                            aria-label="Falar no WhatsApp"
+                        >
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            <span>Falar no WhatsApp</span>
+                        </a>
+
+                        <a
+                            href="tel:+244946776397"
+                            className="btn-footer-cta-secondary"
+                            aria-label="Ligar agora"
+                        >
+                            <Phone size={17} />
+                            <span>Ligar agora</span>
+                        </a>
+                    </div>
+                </div>
+
+                {/* 2. Colunas Principais */}
+                <div className="footer-main-grid">
+                    {/* COLUNA 1 — NATLOU */}
                     <div>
                         <div style={{ marginBottom: '1.25rem' }}>
                             <Image
                                 src="/logo-natlou-official.png"
-                                alt="Natlou - Comércio & Prestação de Serviços"
-                                width={160}
-                                height={78}
+                                alt="Natlou Climatização"
+                                width={140}
+                                height={68}
                                 style={{
                                     objectFit: 'contain',
                                     height: 'auto',
-                                    maxHeight: '54px',
+                                    maxHeight: '48px',
                                     width: 'auto',
-                                    maxWidth: '150px',
+                                    maxWidth: '140px',
                                     aspectRatio: '532 / 261',
                                 }}
                             />
                         </div>
-                        <div style={{ color: '#fbbf24', fontWeight: '700', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>
-                            🇦🇴 Empresa 100% Angolana
-                        </div>
-                        <p style={{ color: '#ffffff', fontWeight: '700', fontSize: '0.95rem', marginBottom: '0.25rem', lineHeight: '1.4' }}>
-                            NATLOU - Comércio & Prestação de Serviços, (SU), Lda
+                        <p className="footer-company-desc">
+                            Soluções completas em climatização para sua casa, empresa ou indústria.
+                            Conforto que você sente, qualidade que você confia.
                         </p>
-                        <p style={{ color: '#fbbf24', fontSize: '0.85rem', fontWeight: '600', marginBottom: '1rem' }}>
-                            NIF: 5001650564
-                        </p>
-                        <p style={{ color: '#cbd5e1', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-                            A sua parceira de confiança em climatização e frio. Soluções completas de venda, instalação e manutenção para o seu conforto.
-                        </p>
+                    </div>
 
-                        {/* Redes Sociais */}
-                        <div style={{ display: 'flex', gap: '0.75rem' }}>
+                    {/* COLUNA 2 — NAVEGAÇÃO */}
+                    <div>
+                        <h4 className="footer-col-title">Navegação</h4>
+                        <ul className="footer-nav-list">
+                            <li><a href="/#inicio" className="footer-nav-link">Início</a></li>
+                            <li><a href="/#produtos" className="footer-nav-link">Produtos</a></li>
+                            <li><a href="/#servicos" className="footer-nav-link">Serviços</a></li>
+                            <li><a href="/#sobre" className="footer-nav-link">Sobre Nós</a></li>
+                            <li><a href="/#projetos" className="footer-nav-link">Projetos</a></li>
+                            <li><a href="/#contactos" className="footer-nav-link">Contactos</a></li>
+                        </ul>
+                    </div>
+
+                    {/* COLUNA 3 — SERVIÇOS */}
+                    <div>
+                        <h4 className="footer-col-title">Serviços</h4>
+                        <ul className="footer-nav-list">
+                            <li><a href="/#produtos" className="footer-nav-link">Venda de Equipamentos</a></li>
+                            <li><a href="/#servicos" className="footer-nav-link">Instalação</a></li>
+                            <li><a href="/#servicos" className="footer-nav-link">Manutenção</a></li>
+                            <li><a href="/#servicos" className="footer-nav-link">Reparação</a></li>
+                            <li><a href="/#servicos" className="footer-nav-link">Higienização</a></li>
+                            <li><a href="/#servicos" className="footer-nav-link">Assistência Técnica</a></li>
+                        </ul>
+                    </div>
+
+                    {/* COLUNA 4 — CONTACTOS */}
+                    <div>
+                        <h4 className="footer-col-title">Contactos</h4>
+                        <div className="footer-contacts-list">
+                            <div className="footer-contact-item">
+                                <Phone size={16} />
+                                <a href="tel:+244946776397" className="footer-contact-link">+244 946 776 397</a>
+                            </div>
+                            <div className="footer-contact-item">
+                                <Phone size={16} />
+                                <a href="tel:+244922643541" className="footer-contact-link">+244 922 643 541</a>
+                            </div>
+                            <div className="footer-contact-item">
+                                <Mail size={16} />
+                                <a href="mailto:natlou.limitada@gmail.com" className="footer-contact-link">natlou.limitada@gmail.com</a>
+                            </div>
+                            <div className="footer-contact-item">
+                                <MapPin size={16} />
+                                <span>Luanda, Angola</span>
+                            </div>
+                            <div className="footer-contact-item">
+                                <Clock size={16} />
+                                <div>
+                                    <span>Seg - Sex: 08h00 - 17h00</span>
+                                    <br />
+                                    <span style={{ color: '#94a3b8' }}>Sáb: 08h00 - 13h00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* COLUNA 5 — SIGA-NOS */}
+                    <div>
+                        <h4 className="footer-col-title">Siga-nos</h4>
+                        <div className="footer-social-row">
                             {/* Facebook */}
-                            <a href="https://web.facebook.com/profile.php?id=61578679590280&locale=pt_BR" target="_blank" rel="noopener noreferrer" style={{
-                                width: '40px', height: '40px',
-                                backgroundColor: '#1877F2',
-                                borderRadius: '50%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                color: 'white',
-                                transition: 'transform 0.2s ease, opacity 0.2s ease',
-                                boxShadow: '0 4px 10px rgba(0,0,0,0.25)',
-                                border: 'none'
-                            }} className="social-icon" aria-label="Facebook da Natlou">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                            <a
+                                href="https://web.facebook.com/profile.php?id=61578679590280&locale=pt_BR"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-btn"
+                                aria-label="Facebook da Natlou"
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
                             </a>
 
                             {/* Instagram */}
-                            <a href="https://www.instagram.com/natlou_lda" target="_blank" rel="noopener noreferrer" style={{
-                                width: '40px', height: '40px',
-                                background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
-                                borderRadius: '50%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                color: 'white',
-                                transition: 'transform 0.2s ease, opacity 0.2s ease',
-                                boxShadow: '0 4px 10px rgba(0,0,0,0.25)',
-                                border: 'none'
-                            }} className="social-icon" aria-label="Instagram da Natlou">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            <a
+                                href="https://www.instagram.com/natlou_lda"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-btn"
+                                aria-label="Instagram da Natlou"
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
                             </a>
 
-                            {/* TikTok */}
-                            <a href="https://www.tiktok.com/@natlouoficial" target="_blank" rel="noopener noreferrer" style={{
-                                width: '40px', height: '40px',
-                                backgroundColor: '#000000',
-                                borderRadius: '50%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                color: 'white',
-                                transition: 'transform 0.2s ease, opacity 0.2s ease',
-                                boxShadow: '0 4px 10px rgba(0,0,0,0.25)',
-                                border: '1px solid rgba(255,255,255,0.15)'
-                            }} className="social-icon" aria-label="TikTok da Natlou">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" /></svg>
+                            {/* WhatsApp */}
+                            <a
+                                href="https://wa.me/244955475575"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-btn"
+                                aria-label="WhatsApp da Natlou"
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
                             </a>
-                        </div>
-                    </div>
 
-                    {/* Column 2: Contacts */}
-                    <div>
-                        <h3 style={{ fontSize: '1.35rem', marginBottom: '1.25rem', fontWeight: '700', color: '#fbbf24' }}>Contactos</h3>
-
-                        <div style={{ marginBottom: '1.5rem' }}>
-                            <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginBottom: '0.6rem', fontWeight: '500' }}>Contactos Oficiais:</p>
-
-                            {/* WhatsApp Principal */}
-                            <div style={{
-                                backgroundColor: 'rgba(15, 23, 42, 0.8)',
-                                border: '1px solid rgba(37, 211, 102, 0.35)',
-                                borderRadius: '10px',
-                                padding: '0.75rem 1rem',
-                                marginBottom: '1.25rem',
-                                display: 'inline-block',
-                                width: '100%',
-                                maxWidth: '320px'
-                            }}>
-                                <a href="https://wa.me/244955475575?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Natlou." target="_blank" rel="noopener noreferrer" style={{
-                                    fontSize: '1.15rem',
-                                    fontWeight: '700',
-                                    color: '#ffffff',
-                                    textDecoration: 'none',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '0.6rem',
-                                    whiteSpace: 'nowrap'
-                                }}>
-                                    <span style={{ color: '#25D366', display: 'flex', alignItems: 'center' }}><Phone size={17} /></span> +244 955 475 575
-                                </a>
-                                <p style={{ color: '#94a3b8', fontSize: '0.8rem', marginTop: '0.2rem', margin: 0 }}>WhatsApp Principal</p>
-                            </div>
-
-                            {/* Telefones Linhas Diretas (Dispostos Verticalmente Sem Quebras) */}
-                            <div style={{ marginBottom: '1.1rem' }}>
-                                <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginBottom: '0.4rem', fontWeight: '500' }}>Linhas de Chamada Direta:</p>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                                    <a href="tel:+244946776397" style={{
-                                        fontSize: '1.05rem',
-                                        fontWeight: '600',
-                                        color: '#e2e8f0',
-                                        textDecoration: 'none',
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        gap: '0.5rem',
-                                        whiteSpace: 'nowrap',
-                                        transition: 'color 0.2s ease'
-                                    }}>
-                                        <span style={{ color: '#38bdf8', display: 'flex', alignItems: 'center' }}><Phone size={15} /></span> +244 946 776 397
-                                    </a>
-                                    <a href="tel:+244922643541" style={{
-                                        fontSize: '1.05rem',
-                                        fontWeight: '600',
-                                        color: '#e2e8f0',
-                                        textDecoration: 'none',
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        gap: '0.5rem',
-                                        whiteSpace: 'nowrap',
-                                        transition: 'color 0.2s ease'
-                                    }}>
-                                        <span style={{ color: '#38bdf8', display: 'flex', alignItems: 'center' }}><Phone size={15} /></span> +244 922 643 541
-                                    </a>
-                                </div>
-                            </div>
-
-                            {/* E-mail */}
-                            <a href="mailto:natlou.limitada@gmail.com" style={{
-                                color: '#38bdf8',
-                                textDecoration: 'none',
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '0.4rem',
-                                fontSize: '0.92rem',
-                                fontWeight: '500',
-                                marginTop: '0.2rem'
-                            }}>
-                                <Mail size={15} /> natlou.limitada@gmail.com
+                            {/* LinkedIn */}
+                            <a
+                                href="https://www.linkedin.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-btn"
+                                aria-label="LinkedIn da Natlou"
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
                             </a>
-                        </div>
-
-                        <div>
-                            <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginBottom: '0.35rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                                <Clock size={14} /> Horário de Funcionamento:
-                            </p>
-                            <p style={{ color: '#ffffff', fontWeight: '500', fontSize: '0.88rem' }}>
-                                Segunda a Sexta: 8h00 - 17h00
-                            </p>
-                            <p style={{ color: '#cbd5e1', fontSize: '0.88rem', marginTop: '0.15rem' }}>
-                                Sábado: 8h00 - 13h00
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Column 3: Map */}
-                    <div>
-                        <h3 style={{ fontSize: '1.35rem', marginBottom: '1.25rem', fontWeight: '700', color: '#fbbf24' }}>Onde Estamos</h3>
-                        <p style={{ color: '#cbd5e1', marginBottom: '0.85rem', lineHeight: '1.5', fontSize: '0.9rem', display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
-                            <MapPin size={16} style={{ flexShrink: 0, marginTop: '0.2rem', color: '#fbbf24' }} />
-                            <span>
-                                <strong>Sede:</strong> Zango II - Junto ao IMAG,<br />
-                                Viana, Luanda - Angola
-                            </span>
-                        </p>
-                        <div style={{
-                            width: '100%',
-                            height: '190px',
-                            borderRadius: '12px',
-                            overflow: 'hidden',
-                            border: '1px solid rgba(255,255,255,0.15)',
-                            boxShadow: '0 4px 16px rgba(0,0,0,0.3)'
-                        }}>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.626880378876!2d13.3888!3d-8.9167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNTUnMDAuMSJTIDEzwrAyMycyMC4wIkU!5e0!3m2!1spt-PT!2sao"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Mapa da Localização da Natlou"
-                            ></iframe>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Legal & Copyright Bar */}
-                <div style={{
-                    borderTop: '1px solid rgba(255,255,255,0.1)',
-                    paddingTop: '1.5rem',
-                    textAlign: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '0.75rem'
-                }}>
-                    <p style={{ color: '#94a3b8', fontSize: '0.85rem' }}>
-                        &copy; {currentYear} NATLOU - Comércio & Prestação de Serviços, (SU), Lda. Todos os direitos reservados.
+                {/* 3. Copyright & Créditos */}
+                <div className="footer-bottom-bar">
+                    <p className="footer-copyright">
+                        &copy; {currentYear} NATLOU Climatização. Todos os direitos reservados.
                     </p>
-                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.5rem', fontSize: '0.85rem' }}>
-                        <Link href="/faq" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s ease' }}>Perguntas Frequentes (FAQ)</Link>
-                        <Link href="/politica-de-privacidade" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s ease' }}>Política de Privacidade</Link>
-                        <Link href="/termos-de-uso" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s ease' }}>Termos de Uso</Link>
-                    </div>
+                    <p className="footer-credits">
+                        Desenvolvido por <span className="footer-credit-author">abi|dev.me</span>
+                    </p>
                 </div>
             </div>
         </footer>
