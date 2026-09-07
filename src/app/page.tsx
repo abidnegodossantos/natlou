@@ -6,6 +6,7 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import BtuCalculator from '@/components/BtuCalculator';
 import ContactSection from '@/components/ContactSection';
+import CompanyGallery from '@/components/CompanyGallery';
 import {
   Wrench,
   ShieldCheck,
@@ -95,12 +96,12 @@ const products = [
 ];
 
 const gallery = [
+  { src: '/projeto-instalacao-kien.webp', alt: 'Instalação profissional de compressores e climatização exterior — Natlou' },
   { src: '/installation-team.jpg', alt: 'Instalação técnica de ar condicionado pela equipa Natlou' },
   { src: '/installation-team-v2.jpg', alt: 'Equipa de montagem técnica Natlou' },
   { src: '/stock-infrastructure-v2.jpg', alt: 'Infraestrutura de equipamentos e peças Natlou' },
   { src: '/warehouse-natlou.jpg', alt: 'Stock e armazém oficial da Natlou' },
   { src: '/maintenance-team.jpg', alt: 'Manutenção preventiva e higienização em campo' },
-  { src: '/team-natlou.jpg', alt: 'Equipa técnica profissional Natlou' },
 ];
 
 /* ── componente principal (Landing Page One-Page) ────── */
@@ -112,15 +113,14 @@ export default function Home() {
       <section id="inicio" className="home-hero" aria-label="Natlou — Climatização que transforma espaços">
         <div className="home-hero-bg-layer" aria-hidden="true">
           <Image
-            src="/hero-slide-2.jpg"
-            alt=""
+            src="/hero-prydumano.webp"
+            alt="Climatização que transforma espaços — Ar-condicionado Natlou em ambiente residencial premium"
             fill
             priority
-            sizes="100vw"
+            unoptimized
             className="home-hero-bg-image"
           />
           <div className="home-hero-overlay home-hero-overlay-dark" />
-          <div className="home-hero-overlay home-hero-overlay-light" />
         </div>
 
         <div className="container home-hero-inner">
@@ -341,16 +341,24 @@ export default function Home() {
         <div className="container">
           <div className="home-about-grid">
             <RevealOnScroll>
-              <div className="home-about-image">
-                <Image
-                  src="/stock-infrastructure.jpg"
-                  alt="Instalações e infraestrutura técnica da Natlou"
-                  width={600}
-                  height={400}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  loading="lazy"
-                />
+              <div className="home-about-image-wrapper">
+                <div className="home-about-image">
+                  <Image
+                    src="/natlou-armazem-haier.webp"
+                    alt="Colaborador da Natlou no armazém central junto ao stock próprio de ar condicionados Haier"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 520px"
+                    priority={false}
+                    loading="lazy"
+                  />
+                  <div className="home-about-img-badge">
+                    <span className="home-about-badge-dot" aria-hidden="true" />
+                    <div className="home-about-badge-text">
+                      <span className="home-about-badge-title">Armazém Central NATLOU · Luanda</span>
+                      <span className="home-about-badge-sub">Stock próprio Haier pronto para entrega imediata</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </RevealOnScroll>
 
@@ -372,6 +380,11 @@ export default function Home() {
               </div>
             </RevealOnScroll>
           </div>
+
+          {/* Galeria de fotos reais e operações no terreno */}
+          <RevealOnScroll delay={200}>
+            <CompanyGallery />
+          </RevealOnScroll>
         </div>
       </section>
 

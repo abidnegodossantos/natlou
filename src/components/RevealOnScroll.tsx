@@ -17,6 +17,12 @@ export default function RevealOnScroll({ children, className = "", delay = 0, th
         const element = ref.current;
         if (!element) return;
 
+        // Suporte a navegadores headless, testes automatizados e crawlers
+        if (typeof window !== 'undefined' && window.navigator.webdriver) {
+            setIsVisible(true);
+            return;
+        }
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 // Trigger only once
